@@ -1,0 +1,26 @@
+<h5>Cadastrar Mensalidade</h5>
+<form #formMensalidade="ngForm" (ngSubmit)="onSubmit(formMensalidade)">
+    <div class="form-group">
+      <label for="dataMensalidade">Data da Mensalidade</label>
+      <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
+      <input type="date" class="form-control" name="dataMensal" id="campoDataMensalidade" [(ngModel)]="mensalidade.dataMensal" required>
+      <label for="valorMensalidade">Valor da Mensalidade</label>
+      <!-- No [(ngModel)]="" usamos o two-way data-binding - famoso banana na caixa-->
+      <input type="text" class="form-control" name="valorMensal" id="campoValorMensalidade" placeholder="Insira o valor da mensalidade" [(ngModel)]="mensalidade.valorMensal" required>
+      <label for="dataPagamento">Data de Pagamento</label>
+      <input type="date" class="form-control" name="dataPagto" id="campoDataPagamento" [(ngModel)]="mensalidade.dataPagto" required>
+      <label for="jurosMensalidade">Juros</label>
+      <input type="text" class="form-control" name="jurosensal" id="campoJurosMensalidade" placeholder="Insira o juros" [(ngModel)]="mensalidade.jurosMensal" required>
+      <label for="valorPagamento">Valor do Pagamento</label>
+      <input type="text" class="form-control" name="valorPgto" id="campoValorPagamento" [(ngModel)]="mensalidade.valorPagto" required>
+    </div>
+    <div class="form-group">
+      <label for="quitacaoMensalidade">Quitação</label>
+      <select class="form-control" name="quitacaoMensal" id="campoQuitacaoMensalidade" [(ngModel)]="mensalidade.quitacaoMensal" required>
+        <option>Pago</option>
+        <option>Em Aberto</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
+  </form>

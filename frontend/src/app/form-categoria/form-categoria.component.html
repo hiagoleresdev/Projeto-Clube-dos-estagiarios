@@ -1,0 +1,10 @@
+<h5>Cadastrar Categoria</h5>
+<form #formCategoria="ngForm" (ngSubmit)="onSubmit(formCategoria)">
+    <div class="form-group">
+      <label for="nomeCategoria">Nome da Categoria</label>
+      <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
+      <input type="text" class="form-control" name="nome" id="campoNomeCategoria" placeholder="Insira o nome da categoria" [(ngModel)]="categoria.nome" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
+</form>

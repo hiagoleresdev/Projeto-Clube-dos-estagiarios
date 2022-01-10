@@ -1,0 +1,23 @@
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+
+  nav a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown-item {
+    background-color: #007bff;
+    color: rgb(0, 0, 0);
+  }

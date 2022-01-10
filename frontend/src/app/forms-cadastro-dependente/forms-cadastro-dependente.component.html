@@ -1,0 +1,38 @@
+<h5>Cadastrar Dependente</h5>
+<form #formDependente="ngForm" (ngSubmit)="onSubmit(formDependente)">
+    <div class="form-group">
+      <label for="nomeDependente">Nome</label>
+      <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
+      <input type="text" class="form-control" name="nome" id="campoNomeDependente" placeholder="Insira seu nome" [(ngModel)]="usuario.nome" required #nome="ngModel">
+      <div *ngIf="!nome.valid && nome.touched" 
+            class="alert alert-danger" role="alert">
+            Nome é obrigatório.
+      </div>
+      <label for="emailDependente">Email</label>
+      <input type="email" class="form-control" name="email"  id="campoEmailDependente" placeholder="Insira seu email" [(ngModel)]="usuario.email" required email #email="ngModel">
+      <div *ngIf="!email.valid && email.touched" 
+            class="alert alert-danger" role="alert">
+            Email inválido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="parentescoDependente">Parentesco</label>
+      <select class="form-control" name="parentesco" id="campoParentescoSocio" [(ngModel)]="usuario.parentesco">
+        <option>Mãe</option>
+        <option>Pai</option>
+        <option>Esposa</option>
+        <option>Esposo</option>
+        <option>Filha</option>
+        <option>Filho</option>
+      </select>
+    </div>
+    <div class="form-group">
+            <label for="nroCartaoDependente">Número do Cartão</label>
+            <input type="text" class="form-control" id="campoNroCartaoDependente" placeholder="Insira o número do seu cartão" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formDependente.valid">Salvar</button>
+    <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
+
+    
+  </form>
+

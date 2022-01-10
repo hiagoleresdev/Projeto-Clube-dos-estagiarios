@@ -1,0 +1,23 @@
+<h5>Login</h5>
+  <div class="row">
+      <div class="input-field col s12">
+        <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate" required #nome="ngModel">
+        <label class="active" for="usuario">Usuário</label>
+        <div *ngIf="!nome.valid && nome.touched"
+              class="alert alert-danger" role="alert">
+              Usuário é obrigatório.
+        </div>
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="input-field col s12">
+        <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate" required #password="ngModel">
+        <label class="active" for="senha">Senha</label>
+        <div *ngIf="!password.valid && password.touched"
+              class="alert alert-danger" role="alert">
+              Senha é obrigatório.
+        </div>
+      </div>
+    </div>
+  <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>

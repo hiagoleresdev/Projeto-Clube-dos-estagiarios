@@ -1,0 +1,58 @@
+<h5>Cadastrar Sócio</h5>
+<form #formSocio="ngForm" (ngSubmit)="onSubmit(formSocio)">
+    <div class="form-group">
+      <label for="nomeSocio">Nome</label>
+      <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
+      <input type="text" class="form-control" name="nome" id="campoNomeSocio" placeholder="Insira seu nome" [(ngModel)]="usuario.nome" required #nome="ngModel">
+      <div *ngIf="!nome.valid && nome.touched" 
+            class="alert alert-danger" role="alert">
+            Nome é obrigatório.
+      </div>
+      <label for="enderecoSocio">Endereço</label>
+      <!-- No [(ngModel)]="" usamos o two-way data-binding - famoso banana na caixa-->
+      <input type="text" class="form-control" name="endereco" id="campoEnderecoSocio" placeholder="Insira seu endereço" [(ngModel)]="usuario.endereco" required #endereco="ngModel">
+      <div *ngIf="!endereco.valid && endereco.touched" 
+            class="alert alert-danger" role="alert">
+            Endereço é obrigatório.
+      </div>
+      <label for="telefoneSocio">Telefone</label>
+      <input type="text" class="form-control" name="telefone" id="campoTelefoneSocio" placeholder="Insira seu telefone" [(ngModel)]="usuario.telefone" required #telefone="ngModel">
+      <!--Método de validação para campos obrigatórios, #telefone é uma variável local-->
+      <div *ngIf="!telefone.valid && telefone.touched" 
+            class="alert alert-danger" role="alert">
+            Telefone é obrigatório.
+      </div>
+      <label for="emailSocio">Email</label>
+      <input type="email" class="form-control" name="email"  id="campoEmailSocio" placeholder="Insira seu email" [(ngModel)]="usuario.email" required email #email="ngModel">
+      <div *ngIf="!email.valid && email.touched" 
+            class="alert alert-danger" role="alert">
+            Email inválido.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="statusSocio">Status</label>
+      <select class="form-control" name="status" id="campoStatusSocio" [(ngModel)]="usuario.status">
+        <option>Ativo</option>
+        <option>Bloqueado</option>
+        <option>Inativo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="categoriaSocio">Categorias</label>
+      <select multiple class="form-control" name="categoria" id="campoCategoriaSocio" [(ngModel)]="usuario.categoria">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+            <label for="nroCartaoSocio">Número do Cartão</label>
+            <input type="text" class="form-control" name="nro_cartao" id="campoNroCartaoSocio" [(ngModel)]="usuario.nro_cartao" placeholder="Insira o número do seu cartão" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formSocio.valid" (click)="salvarDados()">Salvar</button>
+    <button type="button" class="btn btn-danger espacamento-btn" (click)="btnFechar()">Fechar</button>
+
+    
+  </form>

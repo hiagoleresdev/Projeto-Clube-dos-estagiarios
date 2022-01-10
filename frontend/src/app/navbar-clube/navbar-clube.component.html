@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+    <a class="navbar-brand" [routerLink]="['/']">Summer Clube</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Linkando as rotas definidas no app-routing-->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/home']">Quem somos</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/login']">Login</a>
+          </li>
+          <li ngbDropdown class="nav-item dropdown"  routerLinkActive="active">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cadastros
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a ngbDropdownItem class="dropdown-item" [routerLink]="['/socio']">Sócio</a>
+              <a ngbDropdownItem class="dropdown-item" [routerLink]="['/dependente']">Dependente</a>
+            </div>
+          </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/categoria']">Categorias</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/mensalidade']">Mensalidades</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Chamando o conjunto de rotas que definimos-->
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
