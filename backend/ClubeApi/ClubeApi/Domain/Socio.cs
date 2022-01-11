@@ -1,13 +1,17 @@
 ﻿namespace ClubeApi.Domain
 {
-    public class Socio
+    public class Socio : Pessoa
     {
-        public int? Id{ get; set; }
-        public string Nome { get; set; }
-        public int NumeroCartao { get; set; }
-        public string Parentesco { get; set; }
-
-        public string Email { get; set; }
-
+        //Declaração de atributos
+        private int NumeroCartao { get; set; }
+        private String telefone { get; set; }
+        private String Cep { get; set; }
+        private String Uf { get; set; }
+        private String Cidade { get; set; }
+        private String Bairro { get; set; }
+        private String Logradouro { get; set; }
+        private Categoria Categoria { get; set; }
+        private List<Mensalidade> Mensalidades { get; set; }
+        private List<Dependente> Dependentes { get; set; }
     }
 }

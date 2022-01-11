@@ -1,12 +1,10 @@
 ﻿namespace ClubeApi.Domain
 {
-    public class Dependente
+    public class Dependente : Pessoa
     {
-
-        public int? Id { get; set; }
-        public int Nome { get; set; }
-        public int NumeroCartao { get; set; }
-        public string Email { get; set; }   
-
+        //Declaração de atributos
+        private int NumeroCartao { get; set; }
+        private string Parentesco { get; set; }
+        private Socio Socio { get; set; }
     }
 }
