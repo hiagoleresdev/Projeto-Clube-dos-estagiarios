@@ -3,6 +3,7 @@
     public class Mensalidade
     {
         //Declaração dos atributos
+        private int Id { get; set; }
         private DateTime DataVencimento { get; set; }
         private double ValorInicial { get; set; }
         private DateTime DataPagamento { get; set; }
