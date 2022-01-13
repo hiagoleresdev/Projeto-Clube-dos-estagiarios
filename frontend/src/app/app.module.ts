@@ -16,6 +16,7 @@ import { LoginAutenticacaoService } from './form-login/login-autenticacao.servic
 import { routing } from './app-routing.module';
 import { HomeClubeComponent } from './home-clube/home-clube.component';
 import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/forms-cadastro-dependente.component';
+import { AnimacaoOndasComponent } from './animacao-ondas/animacao-ondas.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/fo
     FormMensalidadeComponent,
     FormLoginComponent,
     HomeClubeComponent,
-    FormsCadastroDependenteComponent
+    FormsCadastroDependenteComponent,
+    AnimacaoOndasComponent
   ],
   imports: [
     BrowserModule,

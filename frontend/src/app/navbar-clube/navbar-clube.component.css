@@ -18,6 +18,10 @@ li a {
   }
 
   .dropdown-item {
-    background-color: #007bff;
+    background-color: #0477BF;
     color: rgb(0, 0, 0);
+  }
+
+  #nav-color {
+    background-image: linear-gradient(to right, #0477BF, #5CE3F2);
   }
