@@ -10,35 +10,52 @@ namespace ClubeApi.Infraestruture.Maps
     {
         public void Configure(EntityTypeBuilder<Socio> builder)
         {
-            builder.ToTable("socio");
+            //Especificações da entidade Socio
+            builder.ToTable("socios");
 
-            builder.HasKey(socio => socio.Id);
-
-            builder.Property(socio => socio.Id)
-                .HasColumnName("idSocio")
-                .HasColumnType("INTEGER")
+            builder.Property(socio => socio.NumeroCartao)
+                .HasColumnName("cartao")
+                .HasColumnType("NUMERIC(9)")
                 .IsRequired();
 
-            builder.Property(pessoa => pessoa.Nome)
-                .HasColumnName("nome")
+            builder.Property(socio => socio.Telefone)
+                .HasColumnName("telefone")
+                .HasColumnType("VARCHAR(11)")
+                .IsRequired();
+
+            builder.Property(socio => socio.Cep)
+                .HasColumnName("cep")
+                .HasColumnType("CHAR(8)")
+                .IsRequired();
+            
+            builder.Property(socio => socio.Uf)
+                .HasColumnName("uf")
+                .HasColumnType("CHAR(2)")
+                .IsRequired();
+
+            builder.Property(socio => socio.Cidade)
+                .HasColumnName("cidade")
+                .HasColumnType("VARCHAR(25)")
+                .IsRequired();
+
+            builder.Property(socio => socio.Bairro)
+                .HasColumnName("bairro")
+                .HasColumnType("VARCHAR(20)")
+                .IsRequired();
+
+            builder.Property(socio => socio.Logradouro)
+                .HasColumnName("logradouro")
                 .HasColumnType("VARCHAR(30)")
                 .IsRequired();
 
-            builder.Property(pessoa => pessoa.NumeroCartao)
-                .HasColumnName("numeroCartao")
+            builder.Property("fkCategoria")
+                .HasColumnName("fkCategoria")
                 .HasColumnType("INTEGER")
                 .IsRequired();
 
-            builder.Property(pessoa => pessoa.Parentesco)
-                .HasColumnName("parentesco")
-                .HasColumnType("VARCHAR(30)")
-                .IsRequired();
-
-            builder.Property(pessoa => pessoa.Email)
-               .HasColumnName("email")
-               .HasColumnType("VARCHAR(30)")
-               .IsRequired();
-
+            builder.HasOne(socio => socio.Categoria)
+                .WithMany(categoria => categoria.Socios)
+                .HasForeignKey("fkCategoria");
         }
     }
 }

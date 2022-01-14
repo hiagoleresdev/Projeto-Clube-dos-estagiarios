@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Controllers\\V1",
+    "\\Infraestruture",
+    "\\Infraestruture\\Maps",
+    "\\Infraestruture\\Repository",
+    "\\Infraestruture\\Repository\\Intefaces",
+    "\\Service\\Interfaces"
   ],
+  "SelectedNode": "\\Infraestruture\\Repository\\Intefaces\\ICategoriaRepository.cs",
   "PreviewInSolutionExplorer": false
 }

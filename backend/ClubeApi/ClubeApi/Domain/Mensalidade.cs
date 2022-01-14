@@ -3,13 +3,13 @@
     public class Mensalidade
     {
         //Declaração dos atributos
-        private int Id { get; set; }
-        private DateTime DataVencimento { get; set; }
-        private double ValorInicial { get; set; }
-        private DateTime DataPagamento { get; set; }
-        private int Juros { get; set; }
-        private double ValorFinal { get; set; }
-        private int Quitada { get; set; }
-        private Socio Socio { get; set; }
+        public int Id { get; set; }
+        public DateTime DataVencimento { get; set; }
+        public double ValorInicial { get; set; }
+        public DateTime DataPagamento { get; set; }
+        public int Juros { get; set; }
+        public double ValorFinal { get; set; }
+        public int Quitada { get; set; }
+        public Socio Socio { get; set; }
     }
 }

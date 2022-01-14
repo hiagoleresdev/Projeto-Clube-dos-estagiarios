@@ -3,15 +3,15 @@
     public class Socio : Pessoa
     {
         //Declaração de atributos
-        private int NumeroCartao { get; set; }
-        private String telefone { get; set; }
-        private String Cep { get; set; }
-        private String Uf { get; set; }
-        private String Cidade { get; set; }
-        private String Bairro { get; set; }
-        private String Logradouro { get; set; }
-        private Categoria Categoria { get; set; }
-        private List<Mensalidade> Mensalidades { get; set; }
-        private List<Dependente> Dependentes { get; set; }
+        public int NumeroCartao { get; set; }
+        public String Telefone { get; set; }
+        public String Cep { get; set; }
+        public String Uf { get; set; }
+        public String Cidade { get; set; }
+        public String Bairro { get; set; }
+        public String Logradouro { get; set; }
+        public Categoria Categoria { get; set; }
+        public List<Mensalidade> Mensalidades { get; set; }
+        public List<Dependente> Dependentes { get; set; }
     }
 }

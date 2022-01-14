@@ -5,12 +5,19 @@ using ClubeApi.Domain;
 
 namespace ClubeApi.Infraestruture
 {
-    public interface ISocioRepository {
+    public interface ISocioRepository 
+    {
+        //Métodos a serem desenvolvidos
+        Task<IEnumerable<Socio>> GetSociosAsync();
 
-       
-        Task PostSocioAsync(Socio socio);
-        
+        Task<Socio> GetSocioAsync(int idSocio);
 
+        Task PostSocioAsync(Socio Socio);
 
+        /*
+        Task PutSocioAsync(int idSocio);
+
+        Task DeleteSocioAsync(int idSocio);
+        */
     }
 }

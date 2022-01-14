@@ -3,8 +3,8 @@
     public class Pessoa
     {
         //Declaração de atributos
-        protected int Id { get; set; }
-        protected string Nome { get; set; }
-        protected string Email { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
     }
 }
