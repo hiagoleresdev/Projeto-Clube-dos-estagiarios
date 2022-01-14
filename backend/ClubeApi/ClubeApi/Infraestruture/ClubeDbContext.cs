@@ -1,5 +1,4 @@
-﻿
-using ClubeApi.Domain;
+﻿using ClubeApi.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace ClubeApi.Infraestruture
@@ -11,13 +10,14 @@ namespace ClubeApi.Infraestruture
         public ClubeDbContext(DbContextOptions<ClubeDbContext> opcoes) : base(opcoes) { }
 
 
+        public DbSet<Pessoa> Pessoas { get; set; } = null!;
         public DbSet<Socio> Socios { get; set; } = null!;
+        public DbSet<Funcionario> Funcionarios { get; set; } = null!;
+        public DbSet<Categoria> Categorias { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
         }
-
-
     }
 }

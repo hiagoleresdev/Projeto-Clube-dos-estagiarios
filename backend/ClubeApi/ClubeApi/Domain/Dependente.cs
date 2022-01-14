@@ -3,8 +3,8 @@
     public class Dependente : Pessoa
     {
         //Declaração de atributos
-        private int NumeroCartao { get; set; }
-        private string Parentesco { get; set; }
-        private Socio Socio { get; set; }
+        public int NumeroCartao { get; set; }
+        public string Parentesco { get; set; }
+        public Socio Socio { get; set; }
     }
 }

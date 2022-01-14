@@ -10,8 +10,6 @@ namespace ClubeApi.Controllers
     [ApiController]
     public class SocioController : ControllerBase
     {
-       
-
         private readonly ISocioService _socioService;
       
 
@@ -42,12 +40,5 @@ namespace ClubeApi.Controllers
             }
         }
 
-
-        [HttpGet()]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Socio))]
-        public async Task<ActionResult<Socio>> GetSocio()
-        {
-            return Ok(new Socio { Id = 1, Nome = "Hiago", NumeroCartao = 12341234, Email = "hiagoleres2@gmail.com", Parentesco="" });
-        }
     }
 }
