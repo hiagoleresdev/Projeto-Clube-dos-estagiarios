@@ -1,24 +1,30 @@
 <h5>Login</h5>
+<form>
   <div class="row">
-      <div class="input-field col s12">
-        <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate" required #nome="ngModel">
-        <label class="active" for="usuario">Usuário</label>
-        <div *ngIf="!nome.valid && nome.touched"
-              class="alert alert-danger" role="alert">
-              Usuário é obrigatório.
-        </div>
+    <div class="input-field col s12">
+      <label class="active" for="usuario">Usuário</label>
+      <input [(ngModel)]="usuario.nome" id="usuario" type="email" class="form-control" required #nome="ngModel">
+      <div *ngIf="!nome.valid && nome.touched"
+                class="alert alert-danger" role="alert">
+                Usuário é obrigatório.
       </div>
     </div>
-   
-    <div class="row">
-      <div class="input-field col s12">
-        <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate" required #password="ngModel">
-        <label class="active" for="senha">Senha</label>
-        <div *ngIf="!password.valid && password.touched"
-              class="alert alert-danger" role="alert">
-              Senha é obrigatório.
-        </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <label class="active" for="senha">Senha</label>
+      <input [(ngModel)]="usuario.senha" id="senha" type="password" class="form-control" required #password="ngModel">
+      <div *ngIf="!password.valid && password.touched"
+                class="alert alert-danger" role="alert">
+                Senha é obrigatório.
       </div>
     </div>
-  <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
-  <animacao-ondas></animacao-ondas>
+  </div>
+  <br>
+  <div class="input-field col s12">
+    <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
+  </div>
+</form>
+<animacao-ondas></animacao-ondas>
+  
+  
