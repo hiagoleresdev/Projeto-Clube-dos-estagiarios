@@ -1,7 +1,5 @@
 ﻿using ClubeApi.Domain;
-using ClubeApi.Domain;
 using Microsoft.EntityFrameworkCore;
-
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ClubeApi.Infraestruture.Maps
@@ -48,7 +46,7 @@ namespace ClubeApi.Infraestruture.Maps
                 .HasColumnType("VARCHAR(30)")
                 .IsRequired();
 
-            builder.Property("fkCategoria")
+            builder.Property<int>("fkCategoria")
                 .HasColumnName("fkCategoria")
                 .HasColumnType("INTEGER")
                 .IsRequired();

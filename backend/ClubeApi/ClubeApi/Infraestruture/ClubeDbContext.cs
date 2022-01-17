@@ -14,6 +14,8 @@ namespace ClubeApi.Infraestruture
         public DbSet<Socio> Socios { get; set; } = null!;
         public DbSet<Funcionario> Funcionarios { get; set; } = null!;
         public DbSet<Categoria> Categorias { get; set; } = null!;
+        public DbSet<Mensalidade> Mensalidades { get; set; } = null!;
+        public DbSet<Dependente> Dependentes { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

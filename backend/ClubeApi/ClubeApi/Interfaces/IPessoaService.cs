@@ -1,10 +1,9 @@
-using ClubeApi.Infraestruture.Repository;
 using Microsoft.EntityFrameworkCore;
 using ClubeApi.Domain;
 
-namespace ClubeApi.Infraestruture
+namespace ClubeApi.Interfaces
 {
-    public interface IPessoaRepository
+    public interface IPessoaService
     {
         //Métodos a serem desenvolvidos
         Task<IEnumerable<Pessoa>> GetPessoasAsync();

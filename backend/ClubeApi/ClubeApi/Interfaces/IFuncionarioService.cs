@@ -1,10 +1,9 @@
-using ClubeApi.Infraestruture.Repository;
 using Microsoft.EntityFrameworkCore;
 using ClubeApi.Domain;
 
-namespace ClubeApi.Infraestruture
+namespace ClubeApi.Interfaces
 {
-    public interface IFuncionarioRepository
+    public interface IFuncionarioService
     {
         //Métodos a serem desenvolvidos
         Task GetFuncionarioAsync(Funcionario funcionario);

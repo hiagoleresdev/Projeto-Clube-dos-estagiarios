@@ -1,18 +1,16 @@
 ﻿using ClubeApi.Domain;
-using ClubeApi.Infraestruture.Repository;
 using Microsoft.EntityFrameworkCore;
-using ClubeApi.Domain;
 
-namespace ClubeApi.Infraestruture
+namespace ClubeApi.Interfaces
 {
-    public interface ISocioRepository 
+    public interface ISocioService
     {
         //Métodos a serem desenvolvidos
         Task<IEnumerable<Socio>> GetSociosAsync();
 
         Task<Socio> GetSocioAsync(int idSocio);
 
-        Task PostSocioAsync(Socio Socio);
+        Task PostSocioAsync(Socio socio);
 
         /*
         Task PutSocioAsync(int idSocio);

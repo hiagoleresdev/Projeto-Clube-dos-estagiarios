@@ -42,7 +42,7 @@ namespace ClubeApi.Infraestruture.Maps
                .HasColumnType("BIT")
                .IsRequired();
 
-            builder.Property("fkSocio")
+            builder.Property<int>("fkSocio")
                .HasColumnName("fkSocio")
                .HasColumnType("INTEGER")
                .IsRequired();

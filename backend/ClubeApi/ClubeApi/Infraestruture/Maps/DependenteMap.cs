@@ -21,7 +21,7 @@ namespace ClubeApi.Infraestruture.Maps
                 .HasColumnType("VARCHAR(10)")
                 .IsRequired();
 
-            builder.Property("fkSocio")
+            builder.Property<int>("fkSocio")
                 .HasColumnName("fkSocio")
                 .HasColumnType("INTEGER")
                 .IsRequired();

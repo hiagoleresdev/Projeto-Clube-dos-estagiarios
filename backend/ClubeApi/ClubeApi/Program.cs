@@ -1,10 +1,7 @@
 using ClubeApi.Infraestruture;
-using ClubeApi.Infraestruture.Repository;
-using ClubeApi.Infraestruture.Repository.Intefaces;
-using ClubeApi.Infraestruture.UnityOfWork;
-using ClubeApi.Service;
-
 using Microsoft.EntityFrameworkCore;
+using ClubeApi.Controllers;
+using ClubeApi.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,12 +15,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ClubeDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-
-builder.Services.AddScoped<ISocioService,SocioService>();
-builder.Services.AddScoped<ISocioUnityOfWork, SocioUnityOfWork>();
-builder.Services.AddScoped<ISocioRepository,  SocioRepository>();
-
 
 var app = builder.Build();
 
