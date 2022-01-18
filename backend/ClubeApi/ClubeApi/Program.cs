@@ -1,7 +1,7 @@
 using ClubeApi.Infraestruture;
 using Microsoft.EntityFrameworkCore;
 using ClubeApi.Controllers;
-using ClubeApi.Interfaces;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

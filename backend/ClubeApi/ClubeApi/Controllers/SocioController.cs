@@ -1,4 +1,5 @@
 ﻿using ClubeApi.Domain;
+using ClubeApi.Infraestruture;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Data.Entity;
@@ -10,29 +11,33 @@ namespace ClubeApi.Controllers
     public class SocioController : ControllerBase
     {
         
-        private readonly DbContext _context;
-      
-        public SocioController(DbContext context)
+        private readonly ClubeDbContext _context;
+
+        //Método get
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Socio>> GetSocio(long id)
         {
-            _context = context;
+            var todoItem = await _context.Socios.FindAsync(id);
+
+            if (todoItem == null)
+            {
+                return NotFound();
+            }
+
+            return todoItem;
         }
 
-        [HttpPost()]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [SwaggerResponse(409, "Domain Exception", typeof(string))]
-        public async Task<ActionResult<int>> PostSocioAsync(Socio socio)
+        //Método post
+        [HttpPost]
+        public async Task<ActionResult<Socio>> PostTodoItem(Socio socio)
         {
-            try
-            {
-                /*
-                var id = _context.PostSocioAsync(socio); 
+            _context.Socios.Add(socio);
+            await _context.SaveChangesAsync();
 
-                return Ok(id);*/
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction(nameof(GetSocio), new { id = socio.Id }, socio);
         }
+
+
     }
 }

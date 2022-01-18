@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ClubeApi",
-    "\\ClubeApi\\Controllers",
-    "\\ClubeApi\\Controllers\\V1"
+    "\\ClubeApi\\Controllers"
   ],
-  "SelectedNode": "\\ClubeApi\\Controllers\\V1\\SocioController.cs",
+  "SelectedNode": "\\ClubeApi.sln",
   "PreviewInSolutionExplorer": false
 }

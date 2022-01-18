@@ -10,12 +10,11 @@ namespace ClubeApi.Controllers
     public class CategoriaController : ControllerBase
     {
         private readonly ClubeDbContext _context;
-      
-        public CategoriaController(ClubeDbContext categoria)
-        {
-            _context = categoria;
-        }
 
+      
+
+
+        /*
     
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
@@ -32,6 +31,6 @@ namespace ClubeApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
-        }
+        }*/
     }
 }

@@ -7,7 +7,10 @@ namespace ClubeApi.Infraestruture
     {
         public ClubeDbContext() {}
 
-        public ClubeDbContext(DbContextOptions<ClubeDbContext> opcoes) : base(opcoes) { }
+        public ClubeDbContext(DbContextOptions<ClubeDbContext> opcoes)
+            : base(opcoes) 
+        {
+        }
 
 
         public DbSet<Pessoa> Pessoas { get; set; } = null!;
