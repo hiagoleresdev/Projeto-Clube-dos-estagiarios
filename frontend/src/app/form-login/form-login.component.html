@@ -3,7 +3,7 @@
   <div class="row">
     <div class="input-field col s12">
       <label class="active" for="usuario">Usuário</label>
-      <input [(ngModel)]="usuario.nome" id="usuario" type="email" class="form-control" required #nome="ngModel">
+      <input [(ngModel)]="usuario.nome" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required #nome="ngModel">
       <div *ngIf="!nome.valid && nome.touched"
                 class="alert alert-danger" role="alert">
                 Usuário é obrigatório.
@@ -13,7 +13,7 @@
   <div class="row">
     <div class="input-field col s12">
       <label class="active" for="senha">Senha</label>
-      <input [(ngModel)]="usuario.senha" id="senha" type="password" class="form-control" required #password="ngModel">
+      <input [(ngModel)]="usuario.senha" type="password" class="form-control" id="senha" placeholder="Password" required #password="ngModel">
       <div *ngIf="!password.valid && password.touched"
                 class="alert alert-danger" role="alert">
                 Senha é obrigatório.
@@ -21,9 +21,9 @@
     </div>
   </div>
   <br>
-  <div class="input-field col s12">
+  
     <button type="submit" class="btn btn-primary" (click)="fazerLogin()">Login</button>
-  </div>
+ 
 </form>
 <animacao-ondas></animacao-ondas>
   
