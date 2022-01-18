@@ -1,16 +1,11 @@
 {
   "Version": 1,
   "ProjectMap": {
-    "644fd36a-6ac0-44e2-940f-fee00b6c1626": {
-      "ProjectGuid": "644fd36a-6ac0-44e2-940f-fee00b6c1626",
-      "DisplayName": "ClubeApi",
-      "ColorIndex": 0
-    },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Arquivos Diversos",
       "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 0
 }

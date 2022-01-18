@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ClubeApi",
-    "\\ClubeApi\\ClubeApi"
+    "\\ClubeApi\\ClubeApi",
+    "\\ClubeApi\\ClubeApi\\Migrations"
   ],
-  "SelectedNode": "\\ClubeApi\\ClubeApi.sln",
+  "SelectedNode": "\\ClubeApi\\ClubeApi\\Migrations",
   "PreviewInSolutionExplorer": false
 }

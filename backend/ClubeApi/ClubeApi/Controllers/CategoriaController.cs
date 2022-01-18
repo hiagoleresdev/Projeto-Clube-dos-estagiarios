@@ -1,33 +1,32 @@
 ﻿using ClubeApi.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using System.Data.Entity;
+using ClubeApi.Infraestruture;
 
 namespace ClubeApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SocioController : ControllerBase
+    public class CategoriaController : ControllerBase
     {
-        
-        private readonly DbContext _context;
+        private readonly ClubeDbContext _context;
       
-        public SocioController(DbContext context)
+        public CategoriaController(ClubeDbContext categoria)
         {
-            _context = context;
+            _context = categoria;
         }
 
+    
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [SwaggerResponse(409, "Domain Exception", typeof(string))]
-        public async Task<ActionResult<int>> PostSocioAsync(Socio socio)
+        public async Task<ActionResult<int>> PostCategoriaAsync(Categoria categoria)
         {
             try
             {
-                /*
-                var id = _context.PostSocioAsync(socio); 
+                var id = _context.PostCategoriaAsync(categoria); 
 
-                return Ok(id);*/
+                return Ok(id);
             }
             catch(Exception ex)
             {
