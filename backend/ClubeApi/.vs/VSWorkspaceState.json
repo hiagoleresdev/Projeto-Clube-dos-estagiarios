@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClubeApi",
-    "\\ClubeApi\\Controllers",
-    "\\ClubeApi\\Controllers\\V1"
+    "\\ClubeApi"
   ],
-  "SelectedNode": "\\ClubeApi\\Controllers\\V1\\SocioController.cs",
+  "SelectedNode": "\\ClubeApi\\bin",
   "PreviewInSolutionExplorer": false
 }
