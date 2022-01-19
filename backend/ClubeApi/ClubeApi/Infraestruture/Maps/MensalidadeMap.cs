@@ -47,9 +47,16 @@ namespace ClubeApi.Infraestruture.Maps
                .HasColumnType("INTEGER")
                .IsRequired();
 
+            builder.Property(mensalidade => mensalidade.idSocio)
+             .HasColumnName("idSocio")
+             .HasColumnType("INTEGER")
+             .IsRequired();
+
+
+            /*
             builder.HasOne(mensalidade => mensalidade.Socio)
                 .WithMany(socio => socio.Mensalidades)
-                .HasForeignKey("fkSocio");
+                .HasForeignKey("fkSocio");*/
         }
     }
 }

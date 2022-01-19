@@ -10,8 +10,11 @@
         public String Cidade { get; set; }
         public String Bairro { get; set; }
         public String Logradouro { get; set; }
-        public Categoria Categoria { get; set; }
+
+        public int idCategoria { get; set; }
+
+        /*
         public List<Mensalidade> Mensalidades { get; set; }
-        public List<Dependente> Dependentes { get; set; }
+        public List<Dependente> Dependentes { get; set; }*/
     }
 }

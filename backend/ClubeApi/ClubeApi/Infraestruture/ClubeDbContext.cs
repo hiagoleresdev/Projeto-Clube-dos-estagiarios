@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClubeApi.Infraestruture
 {
-    public class ClubeDbContext: DbContext
+    public  class ClubeDbContext: DbContext
     {
-        public ClubeDbContext() {}
+        
 
         public ClubeDbContext(DbContextOptions<ClubeDbContext> opcoes)
             : base(opcoes) 
@@ -20,9 +20,15 @@ namespace ClubeApi.Infraestruture
         public DbSet<Mensalidade> Mensalidades { get; set; } = null!;
         public DbSet<Dependente> Dependentes { get; set; } = null!;
 
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
         }
+
+        //Seguindo o vídeo que o riul mandou, mas nn temos o service
+        // public abstract Task<Socio> GetAllSocio(bool includeSocio);
     }
 }

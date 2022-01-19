@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClubeApi.Migrations
 {
     [DbContext(typeof(ClubeDbContext))]
-    [Migration("20220117225933_criandoDB")]
-    partial class criandoDB
+    [Migration("20220119171612_UsandoPOG")]
+    partial class UsandoPOG
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,9 +80,11 @@ namespace ClubeApi.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("fkSocio");
 
-                    b.HasKey("Id");
+                    b.Property<int>("idSocio")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("idSocio");
 
-                    b.HasIndex("fkSocio");
+                    b.HasKey("Id");
 
                     b.ToTable("mensalidades", (string)null);
                 });
@@ -127,7 +129,9 @@ namespace ClubeApi.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("fkSocio");
 
-                    b.HasIndex("fkSocio");
+                    b.Property<int>("idSocio")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("idSocio");
 
                     b.ToTable("dependentes", (string)null);
                 });
@@ -189,24 +193,11 @@ namespace ClubeApi.Migrations
                         .HasColumnType("CHAR(2)")
                         .HasColumnName("uf");
 
-                    b.Property<int>("fkCategoria")
+                    b.Property<int>("idCategoria")
                         .HasColumnType("INTEGER")
-                        .HasColumnName("fkCategoria");
-
-                    b.HasIndex("fkCategoria");
+                        .HasColumnName("idCategoria");
 
                     b.ToTable("socios", (string)null);
-                });
-
-            modelBuilder.Entity("ClubeApi.Domain.Mensalidade", b =>
-                {
-                    b.HasOne("ClubeApi.Domain.Socio", "Socio")
-                        .WithMany("Mensalidades")
-                        .HasForeignKey("fkSocio")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Socio");
                 });
 
             modelBuilder.Entity("ClubeApi.Domain.Dependente", b =>
@@ -216,14 +207,6 @@ namespace ClubeApi.Migrations
                         .HasForeignKey("ClubeApi.Domain.Dependente", "Id")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
-
-                    b.HasOne("ClubeApi.Domain.Socio", "Socio")
-                        .WithMany("Dependentes")
-                        .HasForeignKey("fkSocio")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Socio");
                 });
 
             modelBuilder.Entity("ClubeApi.Domain.Funcionario", b =>
@@ -242,26 +225,6 @@ namespace ClubeApi.Migrations
                         .HasForeignKey("ClubeApi.Domain.Socio", "Id")
                         .OnDelete(DeleteBehavior.ClientCascade)
                         .IsRequired();
-
-                    b.HasOne("ClubeApi.Domain.Categoria", "Categoria")
-                        .WithMany("Socios")
-                        .HasForeignKey("fkCategoria")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Categoria");
-                });
-
-            modelBuilder.Entity("ClubeApi.Domain.Categoria", b =>
-                {
-                    b.Navigation("Socios");
-                });
-
-            modelBuilder.Entity("ClubeApi.Domain.Socio", b =>
-                {
-                    b.Navigation("Dependentes");
-
-                    b.Navigation("Mensalidades");
                 });
 #pragma warning restore 612, 618
         }

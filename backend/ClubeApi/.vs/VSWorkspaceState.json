@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\ClubeApi",
-    "\\ClubeApi\\Controllers"
+    "\\ClubeApi\\Controllers",
+    "\\ClubeApi\\Migrations"
   ],
   "SelectedNode": "\\ClubeApi.sln",
   "PreviewInSolutionExplorer": false

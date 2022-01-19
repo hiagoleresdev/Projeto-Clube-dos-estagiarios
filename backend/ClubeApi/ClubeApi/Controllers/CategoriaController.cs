@@ -11,26 +11,35 @@ namespace ClubeApi.Controllers
     {
         private readonly ClubeDbContext _context;
 
-      
-
-
-        /*
-    
-        [HttpPost()]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [SwaggerResponse(409, "Domain Exception", typeof(string))]
-        public async Task<ActionResult<int>> PostCategoriaAsync(Categoria categoria)
+        public CategoriaController(ClubeDbContext context)
         {
-            try
-            {
-                var id = _context.PostCategoriaAsync(categoria); 
+            _context = context;
+        }
 
-                return Ok(id);
-            }
-            catch(Exception ex)
+        //Método get
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Categoria>> GetCategoria(int id)
+        {
+            var todoItem = await _context.Categorias.FindAsync(id);
+
+            if (todoItem == null)
             {
-                return BadRequest(ex.Message);
+                return NotFound();
             }
-        }*/
+
+            return todoItem;
+        }
+
+        //Método post
+        [HttpPost]
+        public async Task<ActionResult<Categoria>> PostTodoItem(Categoria categoria)
+        {
+            _context.Categorias.Add(categoria);
+            await _context.SaveChangesAsync();
+
+            //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction(nameof(GetCategoria), new { id = categoria.Id }, categoria);
+        }
+
     }
 }

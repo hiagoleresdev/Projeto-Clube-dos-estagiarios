@@ -10,6 +10,7 @@
         public int Juros { get; set; }
         public double? ValorFinal { get; set; }
         public bool Quitada { get; set; }
-        public Socio Socio { get; set; }
+        
+        public int  idSocio { get; set; }
     }
 }
