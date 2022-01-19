@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Data.Entity;
+using ClubeApi.Infrastructure;
 
 namespace ClubeApi.Controllers
 {
@@ -10,24 +11,55 @@ namespace ClubeApi.Controllers
     public class SocioController : ControllerBase
     {
         
-        private readonly DbContext _context;
+        private readonly ClubeDbContext _context;
       
-        public SocioController(DbContext context)
+        public SocioController(ClubeDbContext context)
         {
             _context = context;
         }
 
-        [HttpPost()]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [SwaggerResponse(409, "Domain Exception", typeof(string))]
+        //Método para listar sócios
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Socio>>> GetSociosAsync()
+        {
+            try
+            {
+                return await _context.Socios.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //Método para selecionar sócio por ID
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<Socio>> GetSocioAsync(int id)
+        {
+            try
+            {
+                Socio socio = await _context.Socios.FindAsync(id);
+
+                if(socio == null)
+                    return NotFound();
+
+                return socio;
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //Método para cadastrar sócio
+        [HttpPost]
         public async Task<ActionResult<int>> PostSocioAsync(Socio socio)
         {
             try
             {
-                /*
-                var id = _context.PostSocioAsync(socio); 
-
-                return Ok(id);*/
+                await _context.Socios.AddAsync(socio);
+                await _context.SaveChangesAsync();
+                return Ok();
             }
             catch(Exception ex)
             {

@@ -1,7 +1,7 @@
 ﻿using ClubeApi.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using ClubeApi.Infraestruture;
+using ClubeApi.Infrastructure;
 
 namespace ClubeApi.Controllers
 {
@@ -17,6 +17,7 @@ namespace ClubeApi.Controllers
         }
 
     
+        /*
         [HttpPost()]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
         [SwaggerResponse(409, "Domain Exception", typeof(string))]
@@ -33,5 +34,6 @@ namespace ClubeApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        */
     }
 }

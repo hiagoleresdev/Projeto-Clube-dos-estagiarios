@@ -2503,19 +2503,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hiago.leres\\.nuget\\packages\\": {}
+    "C:\\Users\\marco.almeida\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
+      "projectUniqueName": "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
       "projectName": "ClubeApi",
-      "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
-      "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi\\obj\\",
+      "projectPath": "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
+      "packagesPath": "C:\\Users\\marco.almeida\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marco.almeida\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2590,7 +2590,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
