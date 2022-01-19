@@ -1,7 +1,7 @@
 ﻿using ClubeApi.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClubeApi.Infraestruture
+namespace ClubeApi.Infrastructure
 {
     public class ClubeDbContext: DbContext
     {

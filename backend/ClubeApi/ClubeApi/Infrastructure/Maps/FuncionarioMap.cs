@@ -2,7 +2,7 @@ using ClubeApi.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ClubeApi.Infraestruture.Maps
+namespace ClubeApi.Infrastructure.Maps
 {
     public class FuncionarioMap : IEntityTypeConfiguration<Funcionario>
     {

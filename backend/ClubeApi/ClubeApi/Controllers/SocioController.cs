@@ -10,7 +10,6 @@ namespace ClubeApi.Controllers
     [ApiController]
     public class SocioController : ControllerBase
     {
-        
         private readonly ClubeDbContext _context;
       
         public SocioController(ClubeDbContext context)
