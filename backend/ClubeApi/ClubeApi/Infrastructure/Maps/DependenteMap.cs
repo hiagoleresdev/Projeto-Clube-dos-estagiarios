@@ -21,14 +21,9 @@ namespace ClubeApi.Infrastructure.Maps
                 .HasColumnType("VARCHAR(10)")
                 .IsRequired();
 
-            builder.Property<int>("fkSocio")
-                .HasColumnName("fkSocio")
-                .HasColumnType("INTEGER")
-                .IsRequired();
-
             builder.HasOne(dependente => dependente.Socio)
                 .WithMany(socio => socio.Dependentes)
-                .HasForeignKey("fkSocio");
+                .HasForeignKey(dependente => dependente.FkSocio);
         }
     }
 }

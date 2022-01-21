@@ -16,20 +16,17 @@ namespace ClubeApi.Controllers
             _context = categoria;
         }
 
-    
         /*
-        [HttpPost()]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(int))]
-        [SwaggerResponse(409, "Domain Exception", typeof(string))]
-        public async Task<ActionResult<int>> PostCategoriaAsync(Categoria categoria)
+        //Método para listar categorias
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetCategoriasAsync()
         {
             try
             {
-                var id = _context.PostCategoriaAsync(categoria); 
-
-                return Ok(id);
+                return await _context.Categorias.ToListAsync();
+                return Ok();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }

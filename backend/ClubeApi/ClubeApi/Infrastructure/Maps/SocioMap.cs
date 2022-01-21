@@ -46,14 +46,10 @@ namespace ClubeApi.Infrastructure.Maps
                 .HasColumnType("VARCHAR(30)")
                 .IsRequired();
 
-            builder.Property<int>("fkCategoria")
-                .HasColumnName("fkCategoria")
-                .HasColumnType("INTEGER")
-                .IsRequired();
-
             builder.HasOne(socio => socio.Categoria)
                 .WithMany(categoria => categoria.Socios)
-                .HasForeignKey("fkCategoria");
+                .HasForeignKey(socio => socio.FkCategoria)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

@@ -11,6 +11,7 @@
         public String Bairro { get; set; }
         public String Logradouro { get; set; }
         public Categoria Categoria { get; set; }
+        public int FkCategoria { get; set; }
         public List<Mensalidade> Mensalidades { get; set; }
         public List<Dependente> Dependentes { get; set; }
     }

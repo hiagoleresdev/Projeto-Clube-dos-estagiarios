@@ -24,6 +24,7 @@ namespace ClubeApi.Controllers
             try
             {
                 return await _context.Socios.ToListAsync();
+                return Ok();
             }
             catch (Exception ex)
             {

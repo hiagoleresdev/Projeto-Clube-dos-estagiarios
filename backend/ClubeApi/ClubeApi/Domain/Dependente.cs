@@ -6,5 +6,6 @@
         public int NumeroCartao { get; set; }
         public string Parentesco { get; set; }
         public Socio Socio { get; set; }
+        public int FkSocio { get; set; }
     }
 }
