@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ClubeApi.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ClubeApi.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClubeApi.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ClubeApi.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ClubeApi.Domain/ClubeApi.Domain.csproj",
+      "msbuildProject": "../ClubeApi.Domain/ClubeApi.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ClubeApi.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\marco.almeida\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
+              "projectPath": "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

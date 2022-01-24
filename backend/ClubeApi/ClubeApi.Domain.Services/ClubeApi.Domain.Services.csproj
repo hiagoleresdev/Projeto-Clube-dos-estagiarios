@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClubeApi.Domain.Core\ClubeApi.Domain.Core.csproj" />
+    <ProjectReference Include="..\ClubeApi.Infrastructure\ClubeApi.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

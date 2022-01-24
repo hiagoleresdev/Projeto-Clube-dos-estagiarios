@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
-    <Folder Include="Interfaces\Repositories\" />
+    <ProjectReference Include="..\ClubeApi.Domain\ClubeApi.Domain.csproj" />
   </ItemGroup>
 
 </Project>
