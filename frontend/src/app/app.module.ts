@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +16,7 @@ import { LoginAutenticacaoService } from './form-login/login-autenticacao.servic
 import { routing } from './app-routing.module';
 import { HomeClubeComponent } from './home-clube/home-clube.component';
 import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/forms-cadastro-dependente.component';
+import { AnimacaoOndasComponent } from './animacao-ondas/animacao-ondas.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,16 @@ import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/fo
     FormMensalidadeComponent,
     FormLoginComponent,
     HomeClubeComponent,
-    FormsCadastroDependenteComponent
+    FormsCadastroDependenteComponent,
+    AnimacaoOndasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule, 
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [LoginAutenticacaoService],
   bootstrap: [AppComponent]

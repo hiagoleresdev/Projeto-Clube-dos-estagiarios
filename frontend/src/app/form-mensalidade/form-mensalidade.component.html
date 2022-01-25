@@ -23,4 +23,37 @@
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
     <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
+
+    <br><br>
+
+    <div>
+      <table class="table table-hover">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data de Pagamento</th>
+            <th scope="col">Valor da Mensalidade</th>
+            <th scope="col">Data Paga</th>
+            <th scope="col">Juros</th>
+            <th scope="col">Valor Pago</th>
+            <th scope="col">Quitação</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mensal of mensalidade"
+          style="cursor: pointer;">
+            <td scope="row">{{mensal.id}}</td>
+            <td>{{ mensal.dataMensal }}</td>
+            <td>{{ mensal.valorMensal }}</td>
+            <td>{{ mensal.dataPagto }}</td>
+            <td>{{ mensal.jurosMensal }}</td>
+            <td>{{ mensal.valorPagto }}</td>
+            <td>{{ mensal.quitacaoMensal }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </form>
+  <animacao-ondas></animacao-ondas>
