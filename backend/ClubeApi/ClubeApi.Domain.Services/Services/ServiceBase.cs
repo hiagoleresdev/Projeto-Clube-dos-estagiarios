@@ -19,9 +19,9 @@ namespace ClubeApi.Domain.Services.Services
             repository.Add(obj);
         }
 
-        public void Delete(int id)
+        public void Delete(TEntity obj)
         {
-            repository.Delete(id);
+            repository.Delete(obj);
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -34,9 +34,9 @@ namespace ClubeApi.Domain.Services.Services
             return repository.GetById(id);
         }
 
-        public void Update(int id)
+        public void Update(TEntity obj)
         {
-            repository.Update(id);
+            repository.Update(obj);
         }
     }
 }

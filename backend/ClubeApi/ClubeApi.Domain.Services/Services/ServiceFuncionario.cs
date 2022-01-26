@@ -17,22 +17,22 @@ namespace ClubeApi.Domain.Services.Services
 
         public void Add(Funcionario obj)
         {
-            throw new NotImplementedException();
+            repository.Add(obj);
         }
 
-        public void Delete(int id)
+        public void Delete(Funcionario obj)
         {
-            throw new NotImplementedException();
+            repository.Delete(obj);
         }
 
-        public void Update(int id)
+        public void Update(Funcionario obj)
         {
-            throw new NotImplementedException();
+            repository.Update(obj);
         }
 
         public int Validate(Funcionario obj)
         {
-            throw new NotImplementedException();
+            return repository.Validate(obj);
         }
     }
 }

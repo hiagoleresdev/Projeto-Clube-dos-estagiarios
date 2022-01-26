@@ -7,9 +7,11 @@ namespace ClubeApi.Domain.Core.Interfaces.Services
         //Métodos a serem desenvolvidos para esta classe(segue o padrão do repositório)
         void Add(Funcionario obj);
 
-        void Update(int id);
+        Funcionario GetById(int id);
 
-        void Delete(int id);
+        void Update(Funcionario obj);
+
+        void Delete(Funcionario obj);
 
         int Validate(Funcionario obj);
     }

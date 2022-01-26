@@ -1,11 +1,11 @@
 ﻿using Autofac;
-using ClubeApi.Application.Interfaces.ApplicationServices;
 using ClubeApi.Application.ApplicationServices;
+using ClubeApi.Application.Interfaces.ApplicationServices;
 using ClubeApi.Application.Interfaces.Mappers;
 using ClubeApi.Application.Mappers;
 using ClubeApi.Domain.Core.Interfaces.Repositories;
-using ClubeApi.Infrastructure.Data.Repositories;
 using ClubeApi.Domain.Core.Interfaces.Services;
+using ClubeApi.Infrastructure.Data.Repositories;
 
 namespace ClubeApi.Infrastructure.CrossCutting.IOC
 {

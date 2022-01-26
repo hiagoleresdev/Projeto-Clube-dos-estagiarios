@@ -5,9 +5,9 @@
         //Métodos a serem desenvolvidos para esta classe(segue o padrão do repositório)
         void Add(TEntity obj);
 
-        void Update(int id);
+        void Update(TEntity obj);
 
-        void Delete(int id);
+        void Delete(TEntity obj);
 
         IEnumerable<TEntity> GetAll();
 

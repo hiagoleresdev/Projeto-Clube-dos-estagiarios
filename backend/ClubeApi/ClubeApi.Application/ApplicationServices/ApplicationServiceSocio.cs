@@ -25,9 +25,10 @@ namespace ClubeApi.Application.ApplicationServices
             service.Add(socio);
         }
 
-        public void Delete(int id)
+        public void Delete(SocioDTO socioDTO)
         {
-            service.Delete(id);
+            Socio socio = mapper.MapperDTOToEntity(socioDTO);
+            service.Delete(socio);
         }
 
         public IEnumerable<SocioDTO> GetAll()
@@ -42,9 +43,10 @@ namespace ClubeApi.Application.ApplicationServices
             return mapper.MapperEntityToDTO(socio);
         }
 
-        public void Update(int id)
+        public void Update(SocioDTO socioDTO)
         {
-            service.Update(id);
+            Socio socio = mapper.MapperDTOToEntity(socioDTO);
+            service.Update(socio);
         }
     }
 }

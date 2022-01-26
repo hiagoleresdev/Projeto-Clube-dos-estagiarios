@@ -7,9 +7,11 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
         //Métodos a serem desenvolvidos para a classe DTO(segue o padrão do repositório)
         void Add(FuncionarioDTO funcionarioDTO);
 
-        void Update(int id);
+        void Update(FuncionarioDTO funcionarioDTO);
 
-        void Delete(int id);
+        FuncionarioDTO GetById(int id);
+
+        void Delete(FuncionarioDTO funcionarioDTO);
 
         int Validate(FuncionarioDTO funcionarioDTO);
     }

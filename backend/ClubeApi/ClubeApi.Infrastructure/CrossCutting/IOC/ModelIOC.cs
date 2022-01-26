@@ -6,7 +6,7 @@ namespace ClubeApi.Infrastructure.CrossCutting.IOC
     {
         protected override void Load(ContainerBuilder builder)
         {
-            base.Load(builder);
+            ConfigurationIOC.Load(builder);
         }
     }
 }

@@ -27,11 +27,10 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Delete(int id)
+        public void Delete(Funcionario obj)
         {
             try
             {
-                Funcionario obj = context.Set<Funcionario>().Find(id);
                 context.Remove(obj);
                 context.SaveChanges();
             }
@@ -41,11 +40,22 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Update(int id)
+        public Funcionario GetById(int id)
         {
             try
             {
-                Funcionario obj = context.Set<Funcionario>().Find(id);
+                return context.Set<Funcionario>().Find(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Update(Funcionario obj)
+        {
+            try
+            {
                 context.Update(obj);
                 context.SaveChanges();
             }

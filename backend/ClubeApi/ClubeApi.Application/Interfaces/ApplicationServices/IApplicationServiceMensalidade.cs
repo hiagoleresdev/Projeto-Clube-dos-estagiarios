@@ -7,9 +7,9 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
         //Métodos a serem desenvolvidos para a classe DTO(segue o padrão do repositório)
         void Add(MensalidadeDTO mensalidadeDTO);
 
-        void Update(int id);
+        void Update(MensalidadeDTO mensalidadeDTO);
 
-        void Delete(int id);
+        void Delete(MensalidadeDTO mensalidadeDTO);
 
         IEnumerable<MensalidadeDTO> GetAll();
 

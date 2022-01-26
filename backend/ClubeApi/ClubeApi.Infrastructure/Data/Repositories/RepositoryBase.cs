@@ -27,11 +27,10 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Delete(int id)
+        public void Delete(TEntity obj)
         {
             try
             {
-                TEntity obj = context.Set<TEntity>().Find(id);
                 context.Set<TEntity>().Remove(obj);
                 context.SaveChanges();
             }
@@ -65,11 +64,10 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Update(int id)
+        public void Update(TEntity obj)
         {
             try
             {
-                TEntity obj = context.Set<TEntity>().Find(id);
                 context.Set<TEntity>().Update(obj);
                 context.SaveChanges();
             }
