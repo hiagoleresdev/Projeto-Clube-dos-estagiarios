@@ -1,18 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-primary bg-primary" id="nav-color">
   <img src="../../assets/imagens/Logo_clube.png"  width="75" height="50" class="d-inline-block align-top" alt="">
-    <a class="navbar-brand" [routerLink]="['/']">Clube MAG | IT</a>
+    <a class="navbar-brand" [routerLink]="['/home']">Clube MAG | IT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <!-- Linkando as rotas definidas no app-routing-->
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/home']">Quem somos</a>
-        </li>
-        <!-- <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['/login']">Login</a>
-          </li> -->
           <li ngbDropdown class="nav-item dropdown"  routerLinkActive="active">
             <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Cadastros
