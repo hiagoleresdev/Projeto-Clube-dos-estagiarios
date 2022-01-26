@@ -10,7 +10,7 @@ import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/fo
 
 const routes: Routes = [
   
-  { path: "", redirectTo: "/home", pathMatch: 'full'},
+  { path: "", redirectTo: "login", pathMatch: 'full'},
   { path: "login", component: FormLoginComponent},
   { path: "socio", component: FormsCadastroSocioComponent},
   { path: "dependente", component: FormsCadastroDependenteComponent},
