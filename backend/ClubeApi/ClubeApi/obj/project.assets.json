@@ -2503,19 +2503,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hiago.leres\\.nuget\\packages\\": {}
+    "C:\\Users\\lucas.riul\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hiago.leres\\source\\repos\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
+      "projectUniqueName": "C:\\Users\\lucas.riul\\Desktop\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
       "projectName": "ClubeApi",
-      "projectPath": "C:\\Users\\hiago.leres\\source\\repos\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
-      "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hiago.leres\\source\\repos\\ClubeApi\\ClubeApi\\obj\\",
+      "projectPath": "C:\\Users\\lucas.riul\\Desktop\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\ClubeApi.csproj",
+      "packagesPath": "C:\\Users\\lucas.riul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lucas.riul\\Desktop\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas.riul\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
