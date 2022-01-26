@@ -1,10 +1,11 @@
 ﻿using ClubeApi.Domain;
 using ClubeApi.Infraestruture;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Annotations;
-using System.Data.Entity;
 
+using Swashbuckle.AspNetCore.Annotations;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 
 namespace ClubeApi.Controllers
 {
@@ -34,21 +35,12 @@ namespace ClubeApi.Controllers
             return todoItem;
         }
 
-        //Método get all
-        /*
+        
         [HttpGet]
-        public  async Task<IActionResult> Get()
+        public  async Task<ActionResult<IEnumerable<Socio>>> Get()
         {
-            try
-            {
-                var result = await _context.GetAllSocio(true);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest("Erro: " + ex);
-            }
-        }*/
+            return await _context.Socios.ToListAsync();
+        }
 
         //Método post
         [HttpPost]

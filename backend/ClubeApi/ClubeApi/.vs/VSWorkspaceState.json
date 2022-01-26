@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\Controllers",
+    "\\Domain",
+    "\\Infraestruture",
+    "\\Migrations"
   ],
   "PreviewInSolutionExplorer": false
 }

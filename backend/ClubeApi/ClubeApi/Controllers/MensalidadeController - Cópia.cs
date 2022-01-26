@@ -8,50 +8,50 @@ namespace ClubeApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class MensalidadeController : ControllerBase
     {
         private readonly ClubeDbContext _context;
 
-        public CategoriaController(ClubeDbContext context)
+        public MensalidadeController(ClubeDbContext context)
         {
             _context = context;
         }
 
         //Método get
         [HttpGet("{id}")]
-        public async Task<ActionResult<Categoria>> GetCategoria(int id)
+        public async Task<ActionResult<Mensalidade>> GetMensalidade(int id)
         {
-            var todoItem = await _context.Categorias.FindAsync(id);
+            var mensalidade = await _context.Mensalidades.FindAsync(id);
 
-            if (todoItem == null)
+            if (mensalidade == null)
             {
                 return NotFound();
             }
 
-            return todoItem;
+            return mensalidade;
         }
 
         //Método post
         [HttpPost]
-        public async Task<ActionResult<Categoria>> PostTodoItem(Categoria categoria)
+        public async Task<ActionResult<Mensalidade>> PostTodoItem(Mensalidade mensalidade)
         {
-            _context.Categorias.Add(categoria);
+            _context.Mensalidades.Add(mensalidade);
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
-            return CreatedAtAction(nameof(GetCategoria), new { id = categoria.Id }, categoria);
+            return CreatedAtAction(nameof(GetMensalidade), new { id = mensalidade.Id }, mensalidade);
         }
 
         //método put
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategoria(int id, Categoria categoria)
+        public async Task<IActionResult> PutMensalidade(int id, Mensalidade mensalidade)
         {
-            if (id != categoria.Id)
+            if (id != mensalidade.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(categoria).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.Entry(mensalidade).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace ClubeApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CategoriaExists(id))
+                if (!MensalidadeExists(id))
                 {
                     return NotFound();
                 }
@@ -79,13 +79,13 @@ namespace ClubeApi.Controllers
         public async Task<IActionResult> DeleteCategpria(int id)
         {
 
-            var categoria = await _context.Categorias.FindAsync(id);
-            if (categoria == null)
+            var mensalidade = await _context.Mensalidades.FindAsync(id);
+            if (mensalidade == null)
             {
                 return NotFound();
             }
 
-            _context.Categorias.Remove(categoria);
+            _context.Mensalidades.Remove(mensalidade);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -93,9 +93,9 @@ namespace ClubeApi.Controllers
 
         }
 
-        private bool CategoriaExists(int id)
+        private bool MensalidadeExists(int id)
         {
-            return _context.Categorias.Any(e => e.Id == id);
+            return _context.Mensalidades.Any(e => e.Id == id);
         }
 
 
