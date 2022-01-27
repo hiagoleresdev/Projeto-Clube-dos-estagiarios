@@ -12,6 +12,6 @@
         public String Logradouro { get; set; }
         public Categoria Categoria { get; set; }
         public List<Mensalidade> Mensalidades { get; set; }
-        public List<Dependente> Dependentes { get; set; }
+        public List<Dependente>? Dependentes { get; set; }
     }
 }

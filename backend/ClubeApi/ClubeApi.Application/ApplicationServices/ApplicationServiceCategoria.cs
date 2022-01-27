@@ -25,9 +25,10 @@ namespace ClubeApi.Application.ApplicationServices
             service.Add(categoria);
         }
 
-        public void Delete(int id)
+        public void Delete(CategoriaDTO categoriaDTO)
         {
-            service.Delete(id);
+            Categoria categoria = mapper.MapperDTOToEntity(categoriaDTO);
+            service.Delete(categoria);
         }
 
         public IEnumerable<CategoriaDTO> GetAll()
@@ -36,9 +37,16 @@ namespace ClubeApi.Application.ApplicationServices
             return mapper.MapperListEntityToDTO(categorias);
         }
 
-        public void Update(int id)
+        public CategoriaDTO GetById(int id)
         {
-            service.Update(id);
+            Categoria categoria = service.GetById(id);
+            return mapper.MapperEntityToDTO(categoria);
+        }
+
+        public void Update(CategoriaDTO categoriaDTO)
+        {
+            Categoria categoria = mapper.MapperDTOToEntity(categoriaDTO);
+            service.Update(categoria);
         }
     }
 }

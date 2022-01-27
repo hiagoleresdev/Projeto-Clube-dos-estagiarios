@@ -7,7 +7,7 @@
         void Add(TEntity obj);
 
         //Método para atualizar objeto
-        void Update(int id);
+        void Update(TEntity obj);
 
         //Método para deletar objeto
         void Delete(int id);

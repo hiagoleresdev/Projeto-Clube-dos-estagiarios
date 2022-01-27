@@ -14,9 +14,6 @@ namespace ClubeApi.Infrastructure.Data
         public DbSet<Mensalidade> Mensalidades { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
 
-        //Construtor padrão
-        public SqlDbContext() { }
-
         //Construtor sobrecarregado
         public SqlDbContext(DbContextOptions<SqlDbContext> options) : base(options)
         {

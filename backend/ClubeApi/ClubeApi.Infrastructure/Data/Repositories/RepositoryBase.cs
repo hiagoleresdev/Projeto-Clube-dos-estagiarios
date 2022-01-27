@@ -65,11 +65,10 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Update(int id)
+        public void Update(TEntity obj)
         {
             try
             {
-                TEntity obj = context.Set<TEntity>().Find(id);
                 context.Set<TEntity>().Update(obj);
                 context.SaveChanges();
             }

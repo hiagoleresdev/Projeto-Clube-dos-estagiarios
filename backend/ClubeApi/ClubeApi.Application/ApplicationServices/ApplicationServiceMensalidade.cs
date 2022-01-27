@@ -25,9 +25,10 @@ namespace ClubeApi.Application.ApplicationServices
             service.Add(mensalidade);
         }
 
-        public void Delete(int id)
+        public void Delete(MensalidadeDTO mensalidadeDTO)
         {
-            service.Delete(id);
+            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO);
+            service.Delete(mensalidade);
         }
 
         public IEnumerable<MensalidadeDTO> GetAll()
@@ -42,9 +43,10 @@ namespace ClubeApi.Application.ApplicationServices
             return mapper.MapperEntityToDTO(mensalidade);
         }
 
-        public void Update(int id)
+        public void Update(MensalidadeDTO mensalidadeDTO)
         {
-            service.Update(id);
+            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO);
+            service.Update(mensalidade);
         }
     }
 }

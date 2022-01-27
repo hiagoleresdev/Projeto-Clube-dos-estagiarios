@@ -17,3 +17,7 @@ C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeA
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\obj\Debug\net6.0\ClubeApi.Infrastructure.pdb
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\bin\Debug\net6.0\ClubeApi.Application.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\bin\Debug\net6.0\ClubeApi.Application.pdb
+C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\bin\Debug\net6.0\ClubeApi.Domain.Services.dll
+C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\bin\Debug\net6.0\ClubeApi.Domain.Services.pdb
+C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\bin\Debug\net6.0\ClubeApi.Infrastructure.runtimeconfig.json
+C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Infrastructure\obj\Debug\net6.0\ClubeApi.Infrastructure.genruntimeconfig.cache

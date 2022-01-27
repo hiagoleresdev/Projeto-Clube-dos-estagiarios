@@ -25,9 +25,10 @@ namespace ClubeApi.Application.ApplicationServices
             service.Add(dependente);
         }
 
-        public void Delete(int id)
+        public void Delete(DependenteDTO dependenteDTO)
         {
-            service.Delete(id);
+            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO);
+            service.Delete(dependente);
         }
 
         public IEnumerable<DependenteDTO> GetAll()
@@ -42,9 +43,10 @@ namespace ClubeApi.Application.ApplicationServices
             return mapper.MapperEntityToDTO(dependente);
         }
 
-        public void Update(int id)
+        public void Update(DependenteDTO dependenteDTO)
         {
-            service.Update(id);
+            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO);
+            service.Update(dependente);
         }
     }
 }

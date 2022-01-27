@@ -17,22 +17,27 @@ namespace ClubeApi.Domain.Services.Services
 
         public void Add(Categoria obj)
         {
-            throw new NotImplementedException();
+            repository.Add(obj);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            repository.Delete(id);
         }
 
         public IEnumerable<Categoria> GetAll()
         {
-            throw new NotImplementedException();
+            return repository.GetAll();
         }
 
-        public void Update(int id)
+        public Categoria GetById(int id)
         {
-            throw new NotImplementedException();
+            return repository.GetById(id);
+        }
+
+        public void Update(Categoria obj)
+        {
+            repository.Update(obj);
         }
     }
 }

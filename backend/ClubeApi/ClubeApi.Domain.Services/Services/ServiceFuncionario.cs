@@ -4,7 +4,7 @@ using ClubeApi.Domain.Models;
 
 namespace ClubeApi.Domain.Services.Services
 {
-    internal class ServiceFuncionario : IServiceFuncionario
+    public class ServiceFuncionario : IServiceFuncionario
     {
         //Atributo de referência ao repositório para implementa-lo
         private readonly IRepositoryFuncionario repository;
@@ -17,22 +17,27 @@ namespace ClubeApi.Domain.Services.Services
 
         public void Add(Funcionario obj)
         {
-            throw new NotImplementedException();
+            repository.Add(obj);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            repository.Delete(id);
         }
 
-        public void Update(int id)
+        public Funcionario GetById(int id)
         {
-            throw new NotImplementedException();
+            return repository.GetById(id);
+        }
+
+        public void Update(Funcionario obj)
+        {
+            repository.Update(obj);
         }
 
         public int Validate(Funcionario obj)
         {
-            throw new NotImplementedException();
+            return repository.Validate(obj);
         }
     }
 }

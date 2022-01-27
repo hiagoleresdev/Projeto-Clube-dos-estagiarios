@@ -34,9 +34,9 @@ namespace ClubeApi.Domain.Services.Services
             return repository.GetById(id);
         }
 
-        public void Update(int id)
+        public void Update(TEntity obj)
         {
-            repository.Update(id);
+            repository.Update(obj);
         }
     }
 }

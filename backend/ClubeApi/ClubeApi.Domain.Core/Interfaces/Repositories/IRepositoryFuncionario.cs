@@ -8,8 +8,11 @@ namespace ClubeApi.Domain.Core.Interfaces.Repositories
         //Método para cadastrar funcionário
         void Add(Funcionario obj);
 
+        //Método para selecionar funcionário por ID
+        Funcionario GetById(int id);
+
         //Método para atualizar funcionário
-        void Update(int id);
+        void Update(Funcionario obj);
 
         //Método para deletar funcionário
         void Delete(int id);
