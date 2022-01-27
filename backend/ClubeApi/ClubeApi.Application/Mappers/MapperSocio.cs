@@ -6,7 +6,7 @@ namespace ClubeApi.Application.Mappers
 {
     public class MapperSocio : IMapperSocio
     {
-        public Socio MapperDTOToEntity(SocioDTO socioDTO)
+        public Socio MapperDTOToEntity(SocioDTO socioDTO, Categoria categoria)
         {
             Socio socio = new Socio()
             {
@@ -19,7 +19,8 @@ namespace ClubeApi.Application.Mappers
                 Uf = socioDTO.Uf,
                 Cidade = socioDTO.Cidade,
                 Bairro = socioDTO.Bairro,
-                Logradouro = socioDTO.Logradouro
+                Logradouro = socioDTO.Logradouro,
+                Categoria = categoria
             };
 
             return socio;
@@ -38,7 +39,7 @@ namespace ClubeApi.Application.Mappers
                 Uf = socio.Uf,
                 Cidade = socio.Cidade,
                 Bairro = socio.Bairro,
-                Logradouro = socio.Logradouro
+                Logradouro = socio.Logradouro,
             };
 
             return socioDTO;
@@ -57,7 +58,7 @@ namespace ClubeApi.Application.Mappers
                 Uf = s.Uf,
                 Cidade = s.Cidade,
                 Bairro = s.Bairro,
-                Logradouro = s.Logradouro
+                Logradouro = s.Logradouro,
             });
 
             return sociosDTO;

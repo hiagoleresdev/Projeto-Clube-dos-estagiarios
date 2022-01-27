@@ -6,7 +6,7 @@ namespace ClubeApi.Application.Interfaces.Mappers
     public interface IMapperSocio
     {
         //Métodos a serem desenvolvidos para esta classe para maepamento
-        Socio MapperDTOToEntity(SocioDTO socioDTO);
+        Socio MapperDTOToEntity(SocioDTO socioDTO, Categoria categoria);
 
         IEnumerable<SocioDTO> MapperListEntityToDTO(IEnumerable<Socio> socios);
 

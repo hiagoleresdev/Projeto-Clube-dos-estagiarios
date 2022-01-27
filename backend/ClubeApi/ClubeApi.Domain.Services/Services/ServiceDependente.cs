@@ -4,7 +4,7 @@ using ClubeApi.Domain.Models;
 
 namespace ClubeApi.Domain.Services.Services
 {
-    internal class ServiceDependente : ServiceBase<Dependente>, IServiceDependente
+    public class ServiceDependente : ServiceBase<Dependente>, IServiceDependente
     {
         //Atributo de referência ao repositório para implementa-lo
         private readonly IRepositoryDependente repository;

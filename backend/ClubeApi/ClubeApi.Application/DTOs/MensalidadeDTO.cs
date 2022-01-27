@@ -10,5 +10,6 @@
         public int Juros { get; set; }
         public double? ValorFinal { get; set; }
         public bool Quitada { get; set; }
+        public int FkSocio { get; set; }
     }
 }

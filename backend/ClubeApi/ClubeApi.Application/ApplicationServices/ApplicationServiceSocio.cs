@@ -9,44 +9,47 @@ namespace ClubeApi.Application.ApplicationServices
     public class ApplicationServiceSocio : IApplicationServiceSocio
     {
         //Atributos de referência às estrutura de serviço e mapeamento
-        private readonly IServiceSocio service;
+        private readonly IServiceSocio serviceSocio;
+        private readonly IServiceCategoria serviceCategoria;
         private readonly IMapperSocio mapper;
 
         //Construtor
-        public ApplicationServiceSocio(IServiceSocio service, IMapperSocio mapper)
+        public ApplicationServiceSocio(IServiceSocio serviceSocio, IServiceCategoria serviceCategoria, IMapperSocio mapper)
         {
-            this.service = service;
+            this.serviceSocio = serviceSocio;
+            this.serviceCategoria = serviceCategoria;
             this.mapper = mapper;
         }
 
         public void Add(SocioDTO socioDTO)
         {
-            Socio socio = mapper.MapperDTOToEntity(socioDTO);
-            service.Add(socio);
+            Categoria categoria = serviceCategoria.GetById(socioDTO.FkCategoria);
+            Socio socio = mapper.MapperDTOToEntity(socioDTO, categoria);          
+            serviceSocio.Add(socio);
         }
 
         public void Delete(SocioDTO socioDTO)
         {
-            Socio socio = mapper.MapperDTOToEntity(socioDTO);
-            service.Delete(socio);
+            //Socio socio = mapper.MapperDTOToEntity(socioDTO);
+            serviceSocio.Delete(new Socio());
         }
 
         public IEnumerable<SocioDTO> GetAll()
         {
-            IEnumerable<Socio> socios = service.GetAll();
+            IEnumerable<Socio> socios = serviceSocio.GetAll();
             return mapper.MapperListEntityToDTO(socios);
         }
 
         public SocioDTO GetById(int id)
         {
-            Socio socio = service.GetById(id);
+            Socio socio = serviceSocio.GetById(id);
             return mapper.MapperEntityToDTO(socio);
         }
 
         public void Update(SocioDTO socioDTO)
         {
-            Socio socio = mapper.MapperDTOToEntity(socioDTO);
-            service.Update(socio);
+            //Socio socio = mapper.MapperDTOToEntity(socioDTO);
+            serviceSocio.Update(new Socio());
         }
     }
 }
