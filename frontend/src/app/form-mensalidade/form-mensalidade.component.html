@@ -1,4 +1,4 @@
-<h5>Cadastrar Mensalidade</h5>
+<h4>Cadastrar Mensalidade</h4>
 <form #formMensalidade="ngForm" (ngSubmit)="onSubmit(formMensalidade)">
     <div class="form-group">
       <label for="dataMensalidade">Data da Mensalidade</label>
@@ -23,36 +23,5 @@
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
     <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
-
-    <br><br>
-
-    <div>
-      <table class="table table-hover">
-
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Data de Pagamento</th>
-            <th scope="col">Valor da Mensalidade</th>
-            <th scope="col">Data Paga</th>
-            <th scope="col">Juros</th>
-            <th scope="col">Valor Pago</th>
-            <th scope="col">Quitação</th>
-
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="cursor: pointer;">
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </form>
   <animacao-ondas></animacao-ondas>

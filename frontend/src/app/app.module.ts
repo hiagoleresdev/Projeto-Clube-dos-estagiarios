@@ -26,6 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { Funcionario } from './Domain/Funcionario';
 import { Socio } from './Domain/Socio';
+import { FormListagemSocioComponent } from './form-listagem-socio/form-listagem-socio.component';
+import { FormListagemDependenteComponent } from './form-listagem-dependente/form-listagem-dependente.component';
+import { FormListagemMensalidadeComponent } from './form-listagem-mensalidade/form-listagem-mensalidade.component';
+import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-listagem-categoria.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { Socio } from './Domain/Socio';
     FormLoginComponent,
     HomeClubeComponent,
     FormsCadastroDependenteComponent,
-    AnimacaoOndasComponent
+    AnimacaoOndasComponent,
+    FormListagemSocioComponent,
+    FormListagemDependenteComponent,
+    FormListagemMensalidadeComponent,
+    FormListagemCategoriaComponent
   ],
   imports: [
     BrowserModule,

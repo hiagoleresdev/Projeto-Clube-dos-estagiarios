@@ -22,6 +22,17 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/mensalidade']">Mensalidades</a>
         </li>
+        <li ngbDropdown class="nav-item dropdown"  routerLinkActive="active">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Listagens
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem class="dropdown-item" [routerLink]="['/socio/listagem']">Sócio</a>
+            <a ngbDropdownItem class="dropdown-item" [routerLink]="['/dependente/listagem']">Dependente</a>
+            <a ngbDropdownItem class="dropdown-item" [routerLink]="['/mensalidade/listagem']">Mensalidade</a>
+            <a ngbDropdownItem class="dropdown-item" [routerLink]="['/categoria/listagem']">Categoria</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>

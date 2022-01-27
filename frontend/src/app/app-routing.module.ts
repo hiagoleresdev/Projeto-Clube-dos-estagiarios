@@ -7,6 +7,10 @@ import { FormCategoriaComponent } from './form-categoria/form-categoria.componen
 import { FormMensalidadeComponent } from './form-mensalidade/form-mensalidade.component';
 import { HomeClubeComponent } from './home-clube/home-clube.component';
 import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/forms-cadastro-dependente.component';
+import { FormListagemSocioComponent } from './form-listagem-socio/form-listagem-socio.component';
+import { FormListagemDependenteComponent } from './form-listagem-dependente/form-listagem-dependente.component';
+import { FormListagemMensalidadeComponent } from './form-listagem-mensalidade/form-listagem-mensalidade.component';
+import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-listagem-categoria.component';
 
 const routes: Routes = [
   
@@ -16,7 +20,11 @@ const routes: Routes = [
   { path: "dependente", component: FormsCadastroDependenteComponent},
   { path: "categoria", component: FormCategoriaComponent},
   { path: "mensalidade", component: FormMensalidadeComponent},
-  { path: "home", component: HomeClubeComponent}
+  { path: "home", component: HomeClubeComponent},
+  { path: "socio/listagem", component: FormListagemSocioComponent},
+  { path: "dependente/listagem", component: FormListagemDependenteComponent},
+  { path: "mensalidade/listagem", component: FormListagemMensalidadeComponent},
+  { path: "categoria/listagem", component: FormListagemCategoriaComponent},
 
 ];
 
