@@ -1,4 +1,3 @@
-import { SocketOptions } from "dgram";
 import { Socio } from "./Socio";
 
 export class Mensalidades{
