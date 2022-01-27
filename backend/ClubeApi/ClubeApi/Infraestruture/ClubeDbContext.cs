@@ -5,7 +5,9 @@ namespace ClubeApi.Infraestruture
 {
     public  class ClubeDbContext: DbContext
     {
-        
+        public ClubeDbContext()
+        {
+        }
 
         public ClubeDbContext(DbContextOptions<ClubeDbContext> opcoes)
             : base(opcoes) 

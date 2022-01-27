@@ -6,6 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Net;
 
 namespace ClubeApi.Controllers
 {
@@ -35,12 +36,30 @@ namespace ClubeApi.Controllers
             return todoItem;
         }
 
-        
-        [HttpGet]
-        public  async Task<ActionResult<IEnumerable<Socio>>> Get()
+
+        //get allasdfas
+
+        /*
+
+        public IActionResult Get()
         {
-            return await _context.Socios.ToListAsync();
-        }
+            try
+            {
+                IEnumerable<Socio> dtos = _productAplicationService.Get();
+
+                return Ok(dtos);
+            }
+            catch (DomainException de)
+            {
+                return Conflict(de.Message);
+            }
+            catch (Exception)
+            {
+                return BadRequest(_error);
+            }
+        } */
+
+
 
         //Método post
         [HttpPost]
@@ -103,7 +122,6 @@ namespace ClubeApi.Controllers
 
             return NoContent();
 
-     
         }
 
         private bool SocioExists(int id)
