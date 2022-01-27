@@ -19,9 +19,9 @@ namespace ClubeApi.Domain.Services.Services
             repository.Add(obj);
         }
 
-        public void Delete(TEntity obj)
+        public void Delete(int id)
         {
-            repository.Delete(obj);
+            repository.Delete(id);
         }
 
         public IEnumerable<TEntity> GetAll()

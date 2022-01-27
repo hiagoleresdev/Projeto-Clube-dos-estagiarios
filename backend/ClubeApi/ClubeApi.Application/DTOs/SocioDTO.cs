@@ -10,5 +10,6 @@
         public String Cidade { get; set; }
         public String Bairro { get; set; }
         public String Logradouro { get; set; }
+        public int FkCategoria { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace ClubeApi.Application.Mappers
                 Nome = dependenteDTO.Nome,
                 Email = dependenteDTO.Email,
                 NumeroCartao = dependenteDTO.NumeroCartao,
-                Parentesco = dependenteDTO.Parentesco
+                Parentesco = dependenteDTO.Parentesco,
             };
 
             return dependente;
@@ -28,7 +28,7 @@ namespace ClubeApi.Application.Mappers
                 Nome = dependente.Nome,
                 Email = dependente.Email,
                 NumeroCartao = dependente.NumeroCartao,
-                Parentesco = dependente.Parentesco
+                Parentesco = dependente.Parentesco,
             };
 
             return dependenteDTO;
@@ -42,7 +42,7 @@ namespace ClubeApi.Application.Mappers
                 Nome = d.Nome,
                 Email = d.Email,
                 NumeroCartao = d.NumeroCartao,
-                Parentesco = d.Parentesco
+                Parentesco = d.Parentesco,
             });
 
             return dependentesDTO;

@@ -16,7 +16,7 @@ namespace ClubeApi.Application.Mappers
                 DataPagamento = mensalidadeDTO.DataPagamento,
                 Juros = mensalidadeDTO.Juros,
                 ValorFinal = mensalidadeDTO.ValorFinal,
-                Quitada = mensalidadeDTO.Quitada
+                Quitada = mensalidadeDTO.Quitada,
             };
 
             return mensalidade;
@@ -32,7 +32,7 @@ namespace ClubeApi.Application.Mappers
                 DataPagamento = mensalidade.DataPagamento,
                 Juros = mensalidade.Juros,
                 ValorFinal = mensalidade.ValorFinal,
-                Quitada = mensalidade.Quitada
+                Quitada = mensalidade.Quitada,
             };
 
             return mensalidadeDTO;
@@ -48,7 +48,7 @@ namespace ClubeApi.Application.Mappers
                 DataPagamento = m.DataPagamento,
                 Juros = m.Juros,
                 ValorFinal = m.ValorFinal,
-                Quitada = m.Quitada
+                Quitada = m.Quitada,
             });
 
             return mensalidadesDTO;

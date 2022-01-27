@@ -10,7 +10,7 @@
         void Update(TEntity obj);
 
         //Método para deletar objeto
-        void Delete(TEntity obj);
+        void Delete(int id);
 
         //Método para listar objetos
         IEnumerable<TEntity> GetAll();

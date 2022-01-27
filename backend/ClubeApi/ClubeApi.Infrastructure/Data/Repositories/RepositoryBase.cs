@@ -27,10 +27,11 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Delete(TEntity obj)
+        public void Delete(int id)
         {
             try
             {
+                TEntity obj = context.Set<TEntity>().Find(id);
                 context.Set<TEntity>().Remove(obj);
                 context.SaveChanges();
             }

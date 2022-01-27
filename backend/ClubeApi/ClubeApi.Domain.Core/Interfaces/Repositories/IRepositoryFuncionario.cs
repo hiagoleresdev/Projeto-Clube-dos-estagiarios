@@ -15,7 +15,7 @@ namespace ClubeApi.Domain.Core.Interfaces.Repositories
         void Update(Funcionario obj);
 
         //Método para deletar funcionário
-        void Delete(Funcionario obj);
+        void Delete(int id);
 
         //Método para validar usuário do funcionário
         int Validate(Funcionario obj);

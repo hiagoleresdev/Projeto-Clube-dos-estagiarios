@@ -27,10 +27,11 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public void Delete(Funcionario obj)
+        public void Delete(int id)
         {
             try
             {
+                Funcionario obj = context.Set<Funcionario>().Find(id);
                 context.Remove(obj);
                 context.SaveChanges();
             }

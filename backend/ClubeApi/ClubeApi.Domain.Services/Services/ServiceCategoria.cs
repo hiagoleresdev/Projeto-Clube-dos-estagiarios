@@ -20,14 +20,19 @@ namespace ClubeApi.Domain.Services.Services
             repository.Add(obj);
         }
 
-        public void Delete(Categoria obj)
+        public void Delete(int id)
         {
-            repository.Delete(obj);
+            repository.Delete(id);
         }
 
         public IEnumerable<Categoria> GetAll()
         {
             return repository.GetAll();
+        }
+
+        public Categoria GetById(int id)
+        {
+            return repository.GetById(id);
         }
 
         public void Update(Categoria obj)

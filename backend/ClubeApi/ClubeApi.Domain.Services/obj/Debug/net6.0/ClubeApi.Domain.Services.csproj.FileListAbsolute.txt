@@ -4,9 +4,7 @@ C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeA
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Domain.Services.pdb
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Domain.Core.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Domain.dll
-C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Infrastructure.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Domain.Core.pdb
-C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Infrastructure.pdb
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Domain.pdb
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\obj\Debug\net6.0\ClubeApi.Domain.Services.csproj.AssemblyReference.cache
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\obj\Debug\net6.0\ClubeApi.Domain.Services.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,5 +15,3 @@ C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeA
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\obj\Debug\net6.0\ClubeApi.Domain.Services.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\obj\Debug\net6.0\ref\ClubeApi.Domain.Services.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\obj\Debug\net6.0\ClubeApi.Domain.Services.pdb
-C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Application.dll
-C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Domain.Services\bin\Debug\net6.0\ClubeApi.Application.pdb
