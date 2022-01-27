@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "jqxCPBQmYlIlN4AvhMDYCNkJXNkyaBP3kp3du8m90S3Oo8M4UL3qxlX1rrANmTE6hVDvExqlsa9wgFIWAF04VA==",
+  "dgSpecHash": "bIITIUkAnp0L3mCeaPhNjNZFLXuMehYIUKjDhlzXrYQdnnKLA65Jd7XGDTcWeEP9MvaxnpxF6ndUS0sBhLfMag==",
   "success": true,
   "projectFilePath": "C:\\Users\\marco.almeida\\source\\repos\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marco.almeida\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\marco.almeida\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "C:\\Users\\marco.almeida\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
     "C:\\Users\\marco.almeida\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.1\\microsoft.entityframeworkcore.analyzers.6.0.1.nupkg.sha512",
