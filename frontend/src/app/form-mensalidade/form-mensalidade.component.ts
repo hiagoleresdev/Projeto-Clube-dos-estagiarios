@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Mensalidades } from '../Domain/Mensalidades';
+import { DependenteService } from '../Domain/Services/dependente.service';
+import { MensalidadesService } from '../Domain/Services/mensalidades.service';
 
 @Component({
   selector: 'form-mensalidade',
@@ -30,7 +33,15 @@ export class FormMensalidadeComponent implements OnInit {
     console.log(this.mensalidade);
   }
 
-  constructor() { }
+  EnviarMensalidade(): void {
+    const mensalidade : Mensalidades = this.mensalidade.value;
+
+    this.mensalidadeservice.SalvarMensalidades(mensalidade).subscribe(resultado => {
+      alert('Mensalidade inserida com sucesso!');
+    });
+  }
+
+  constructor(private mensalidadeservice: MensalidadesService) { }
 
   ngOnInit(): void {
   }

@@ -1,5 +1,5 @@
 <h4>Cadastrar Dependente</h4>
-<form #formDependente="ngForm" (ngSubmit)="onSubmit(formDependente)">
+<form #formDependente="ngForm" (ngSubmit)="onSubmit(formDependente)" (ngSubmit)="EnviarDependente()">
     <div class="form-group">
       <label for="nomeDependente">Nome</label>
       <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
