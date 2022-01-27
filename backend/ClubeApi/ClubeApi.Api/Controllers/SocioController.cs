@@ -53,13 +53,13 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if(socioDTO == null)
+                if (socioDTO == null)
                     return NotFound();
 
                 applicationServiceSocio.Add(socioDTO);
                 return Ok("Sócio cadastrado com sucesso");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

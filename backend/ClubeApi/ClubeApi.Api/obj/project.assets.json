@@ -14,6 +14,28 @@
           "lib/net5.0/Autofac.dll": {}
         }
       },
+      "Autofac.Extensions.DependencyInjection/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -109,6 +131,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/6.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/net6.0/_._": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
@@ -714,6 +752,19 @@
           "bin/placeholder/ClubeApi.Domain.Core.dll": {}
         }
       },
+      "ClubeApi.Domain.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ClubeApi.Domain.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClubeApi.Domain.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClubeApi.Domain.Services.dll": {}
+        }
+      },
       "ClubeApi.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -722,7 +773,9 @@
           "ClubeApi.Application": "1.0.0",
           "ClubeApi.Domain": "1.0.0",
           "ClubeApi.Domain.Core": "1.0.0",
+          "ClubeApi.Domain.Services": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.Design": "6.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1"
         },
         "compile": {
@@ -754,6 +807,46 @@
         "lib/netstandard2.1/Autofac.dll",
         "lib/netstandard2.1/Autofac.pdb",
         "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/7.2.0": {
+      "sha512": "S2Jor8pTV+8QSs96ENq/FhGdnrWsntGs93z0OXYlIivUWGPNXQHNCjFPfSBeBlHClvJFEXMvlkY32bAKy2YkPg==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.extensions.dependencyinjection.7.2.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/net5.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net5.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/net5.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.pdb",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -951,6 +1044,21 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.6.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.1": {
+      "sha512": "odZLopaluipZXgJxue4VbBXe9YoTOOmg324rkyr0XqXWR7DSdWy5Mi0+99OvsOmvl6LxEqK4IOgNnycB+oF3pQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/6.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.6.0.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
@@ -2057,6 +2165,11 @@
       "path": "../ClubeApi.Domain.Core/ClubeApi.Domain.Core.csproj",
       "msbuildProject": "../ClubeApi.Domain.Core/ClubeApi.Domain.Core.csproj"
     },
+    "ClubeApi.Domain.Services/1.0.0": {
+      "type": "project",
+      "path": "../ClubeApi.Domain.Services/ClubeApi.Domain.Services.csproj",
+      "msbuildProject": "../ClubeApi.Domain.Services/ClubeApi.Domain.Services.csproj"
+    },
     "ClubeApi.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../ClubeApi.Infrastructure/ClubeApi.Infrastructure.csproj",
@@ -2066,6 +2179,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Autofac >= 6.3.0",
+      "Autofac.Extensions.DependencyInjection >= 7.2.0",
       "ClubeApi.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2116,6 +2230,10 @@
           "Autofac": {
             "target": "Package",
             "version": "[6.3.0, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[7.2.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

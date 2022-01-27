@@ -17,6 +17,21 @@ namespace ClubeApi.Api.Controllers
             this.applicationServiceCategoria = applicationServiceCategoria;
         }
 
+        // GET: Listar categorias
+        [HttpGet]
+        public ActionResult<IEnumerable<string>> GetAll()
+        {
+            try
+            {
+                return Ok(applicationServiceCategoria.GetAll());
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         // GET: Selecionar categoria por ID
         [HttpGet("{id}")]
         public ActionResult<string> GetById(int id)
