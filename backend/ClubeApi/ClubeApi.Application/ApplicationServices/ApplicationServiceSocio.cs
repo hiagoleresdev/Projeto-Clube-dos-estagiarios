@@ -36,14 +36,12 @@ namespace ClubeApi.Application.ApplicationServices
         public IEnumerable<Socio> GetAll()
         {
             IEnumerable<Socio> socios = serviceSocio.GetAll();
-            //return mapper.MapperListEntityToDTO(socios);
             return socios;
         }
 
         public Socio GetById(int id)
         {
             Socio socio = serviceSocio.GetById(id);
-            //return mapper.MapperEntityToDTO(socio);
             return socio;
         }
 

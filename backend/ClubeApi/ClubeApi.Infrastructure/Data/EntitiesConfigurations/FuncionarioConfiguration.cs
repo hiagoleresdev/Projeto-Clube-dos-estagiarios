@@ -18,8 +18,7 @@ namespace ClubeApi.Infrastructure.Data.EntitiesConfigurations
 
             builder.Property(pessoa => pessoa.Senha)
                .HasColumnName("senha")
-               .HasColumnType("VARCHAR(32)")
-               .HasComputedColumnSql("CONVERT(VARCHAR(32), HashBytes('MD5', '[Senha]'), 2)")
+               .HasColumnType("CHAR(10)")
                .IsRequired();
         }
     }

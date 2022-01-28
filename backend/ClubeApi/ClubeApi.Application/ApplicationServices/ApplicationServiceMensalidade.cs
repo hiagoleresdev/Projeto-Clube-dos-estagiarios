@@ -36,14 +36,12 @@ namespace ClubeApi.Application.ApplicationServices
         public IEnumerable<Mensalidade> GetAll()
         {
             IEnumerable<Mensalidade> mensalidades = serviceMensalidade.GetAll();
-            //return mapper.MapperListEntityToDTO(mensalidades);
             return mensalidades;
         }
 
         public Mensalidade GetById(int id)
         {
             Mensalidade mensalidade = serviceMensalidade.GetById(id);
-            //return mapper.MapperEntityToDTO(mensalidade);
             return mensalidade;
         }
 

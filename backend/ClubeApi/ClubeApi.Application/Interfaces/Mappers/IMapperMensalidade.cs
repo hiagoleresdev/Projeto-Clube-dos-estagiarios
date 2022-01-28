@@ -7,9 +7,5 @@ namespace ClubeApi.Application.Interfaces.Mappers
     {
         //Métodos a serem desenvolvidos para esta classe para maepamento
         Mensalidade MapperDTOToEntity(MensalidadeDTO mensalidadeDTO, Socio socio);
-
-        IEnumerable<MensalidadeDTO> MapperListEntityToDTO(IEnumerable<Mensalidade> mensalidades);
-
-        MensalidadeDTO MapperEntityToDTO(Mensalidade mensalidade);
     }
 }

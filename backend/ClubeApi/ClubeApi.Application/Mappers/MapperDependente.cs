@@ -20,35 +20,5 @@ namespace ClubeApi.Application.Mappers
 
             return dependente;
         }
-
-        public DependenteDTO MapperEntityToDTO(Dependente dependente)
-        {
-            DependenteDTO dependenteDTO = new DependenteDTO()
-            {
-                Id = dependente.Id,
-                Nome = dependente.Nome,
-                Email = dependente.Email,
-                NumeroCartao = dependente.NumeroCartao,
-                Parentesco = dependente.Parentesco,
-                FkSocio = dependente.Socio.Id
-            };
-
-            return dependenteDTO;
-        }
-
-        public IEnumerable<DependenteDTO> MapperListEntityToDTO(IEnumerable<Dependente> dependentes)
-        {
-            IEnumerable<DependenteDTO> dependentesDTO = dependentes.Select(d => new DependenteDTO()
-            {
-                Id = d.Id,
-                Nome = d.Nome,
-                Email = d.Email,
-                NumeroCartao = d.NumeroCartao,
-                Parentesco = d.Parentesco,
-                FkSocio = d.Socio.Id
-            });
-
-            return dependentesDTO;
-        }
     }
 }

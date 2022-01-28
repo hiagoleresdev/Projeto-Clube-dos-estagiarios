@@ -15,6 +15,6 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
 
         void Delete(int id);
 
-        int Validate(FuncionarioDTO funcionarioDTO);
+        int Validate(string usuario, string senha);
     }
 }
