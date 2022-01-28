@@ -24,32 +24,34 @@ namespace ClubeApi.Application.ApplicationServices
         public void Add(SocioDTO socioDTO)
         {
             Categoria categoria = serviceCategoria.GetById(socioDTO.FkCategoria);
-            Socio socio = mapper.MapperDTOToEntity(socioDTO, categoria);          
+            Socio socio = mapper.MapperDTOToEntity(socioDTO, categoria);
             serviceSocio.Add(socio);
         }
 
         public void Delete(int id)
         {
-            //Socio socio = mapper.MapperDTOToEntity(socioDTO);
             serviceSocio.Delete(id);
         }
 
-        public IEnumerable<SocioDTO> GetAll()
+        public IEnumerable<Socio> GetAll()
         {
             IEnumerable<Socio> socios = serviceSocio.GetAll();
-            return mapper.MapperListEntityToDTO(socios);
+            //return mapper.MapperListEntityToDTO(socios);
+            return socios;
         }
 
-        public SocioDTO GetById(int id)
+        public Socio GetById(int id)
         {
             Socio socio = serviceSocio.GetById(id);
-            return mapper.MapperEntityToDTO(socio);
+            //return mapper.MapperEntityToDTO(socio);
+            return socio;
         }
 
         public void Update(SocioDTO socioDTO)
         {
-            //Socio socio = mapper.MapperDTOToEntity(socioDTO);
-            serviceSocio.Update(new Socio());
+            Categoria categoria = serviceCategoria.GetById(socioDTO.FkCategoria);
+            Socio socio = mapper.MapperDTOToEntity(socioDTO, categoria);
+            serviceSocio.Update(socio);
         }
     }
 }

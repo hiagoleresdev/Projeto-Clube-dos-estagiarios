@@ -30,6 +30,7 @@ import { FormListagemSocioComponent } from './form-listagem-socio/form-listagem-
 import { FormListagemDependenteComponent } from './form-listagem-dependente/form-listagem-dependente.component';
 import { FormListagemMensalidadeComponent } from './form-listagem-mensalidade/form-listagem-mensalidade.component';
 import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-listagem-categoria.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-l
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService, 
   DependenteService, FuncionarioService, MensalidadesService, SocioService ],

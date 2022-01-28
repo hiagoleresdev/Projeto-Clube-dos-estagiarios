@@ -1,4 +1,5 @@
 ﻿using ClubeApi.Application.DTOs;
+using ClubeApi.Domain.Models;
 
 namespace ClubeApi.Application.Interfaces.ApplicationServices
 {
@@ -9,9 +10,10 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
 
         void Update(FuncionarioDTO funcionarioDTO);
 
-        FuncionarioDTO GetById(int id);
+        //FuncionarioDTO GetById(int id);
+        Funcionario GetById(int id);
 
-        void Delete(FuncionarioDTO funcionarioDTO);
+        void Delete(int id);
 
         int Validate(FuncionarioDTO funcionarioDTO);
     }

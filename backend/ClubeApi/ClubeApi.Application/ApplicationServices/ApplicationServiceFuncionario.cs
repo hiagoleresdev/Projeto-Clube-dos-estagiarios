@@ -25,16 +25,16 @@ namespace ClubeApi.Application.ApplicationServices
             service.Add(funcionario);
         }
 
-        public void Delete(FuncionarioDTO funcionarioDTO)
+        public void Delete(int id)
         {
-            Funcionario funcionario = mapper.MapperDTOToEntity(funcionarioDTO);
-            service.Delete(funcionario);
+            service.Delete(id);
         }
 
-        public FuncionarioDTO GetById(int id)
+        public Funcionario GetById(int id)
         {
             Funcionario funcionario = service.GetById(id);
-            return mapper.MapperEntityToDTO(funcionario);
+            //return mapper.MapperEntityToDTO(funcionario);
+            return funcionario;
         }
 
         public void Update(FuncionarioDTO funcionarioDTO)

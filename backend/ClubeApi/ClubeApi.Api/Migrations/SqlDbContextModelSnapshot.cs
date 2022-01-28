@@ -61,7 +61,8 @@ namespace ClubeApi.Api.Migrations
                         .HasColumnName("Vencimento");
 
                     b.Property<int>("FkSocio")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkSocio");
 
                     b.Property<int>("Juros")
                         .ValueGeneratedOnAdd()
@@ -116,7 +117,8 @@ namespace ClubeApi.Api.Migrations
                     b.HasBaseType("ClubeApi.Domain.Models.Pessoa");
 
                     b.Property<int>("FkSocio")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkSocio");
 
                     b.Property<decimal>("NumeroCartao")
                         .HasColumnType("NUMERIC(9)")
@@ -171,7 +173,8 @@ namespace ClubeApi.Api.Migrations
                         .HasColumnName("Cidade");
 
                     b.Property<int>("FkCategoria")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkCategoria");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()

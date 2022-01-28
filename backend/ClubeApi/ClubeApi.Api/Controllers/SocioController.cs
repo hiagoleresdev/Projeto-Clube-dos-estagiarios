@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -41,8 +40,7 @@ namespace ClubeApi.Api.Controllers
                 return Ok(applicationServiceSocio.GetById(id));
             }
             catch (Exception ex)
-            {
-
+            { 
                 throw ex;
             }
         }
@@ -79,26 +77,21 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
         // DELETE: Deletar sócio
-        [HttpDelete]
-        public ActionResult Delete([FromBody] SocioDTO socioDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
-            {
-                if (socioDTO == null)
-                    return NotFound();
-
-                applicationServiceSocio.Update(socioDTO);
+            { 
+                applicationServiceSocio.Delete(id);
                 return Ok("Sócio deletado com sucesso");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

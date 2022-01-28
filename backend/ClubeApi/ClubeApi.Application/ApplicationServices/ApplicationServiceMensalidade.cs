@@ -9,44 +9,49 @@ namespace ClubeApi.Application.ApplicationServices
     public class ApplicationServiceMensalidade : IApplicationServiceMensalidade
     {
         //Atributos de referência às estrutura de serviço e mapeamento
-        private readonly IServiceMensalidade service;
+        private readonly IServiceMensalidade serviceMensalidade;
+        private readonly IServiceSocio serviceSocio;
         private readonly IMapperMensalidade mapper;
 
         //Construtor
-        public ApplicationServiceMensalidade(IServiceMensalidade service, IMapperMensalidade mapper)
+        public ApplicationServiceMensalidade(IServiceMensalidade serviceMensalidade, IServiceSocio serviceSocio, IMapperMensalidade mapper)
         {
-            this.service = service;
+            this.serviceMensalidade = serviceMensalidade;
+            this.serviceSocio = serviceSocio;
             this.mapper = mapper;
         }
 
         public void Add(MensalidadeDTO mensalidadeDTO)
         {
-            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO);
-            service.Add(mensalidade);
+            Socio socio = serviceSocio.GetById(mensalidadeDTO.FkSocio);
+            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO, socio);
+            serviceMensalidade.Add(mensalidade);
         }
 
-        public void Delete(MensalidadeDTO mensalidadeDTO)
+        public void Delete(int id)
         {
-            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO);
-            service.Delete(mensalidade);
+            serviceMensalidade.Delete(id);
         }
 
-        public IEnumerable<MensalidadeDTO> GetAll()
+        public IEnumerable<Mensalidade> GetAll()
         {
-            IEnumerable<Mensalidade> mensalidades = service.GetAll();
-            return mapper.MapperListEntityToDTO(mensalidades);
+            IEnumerable<Mensalidade> mensalidades = serviceMensalidade.GetAll();
+            //return mapper.MapperListEntityToDTO(mensalidades);
+            return mensalidades;
         }
 
-        public MensalidadeDTO GetById(int id)
+        public Mensalidade GetById(int id)
         {
-            Mensalidade mensalidade = service.GetById(id);
-            return mapper.MapperEntityToDTO(mensalidade);
+            Mensalidade mensalidade = serviceMensalidade.GetById(id);
+            //return mapper.MapperEntityToDTO(mensalidade);
+            return mensalidade;
         }
 
         public void Update(MensalidadeDTO mensalidadeDTO)
         {
-            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO);
-            service.Update(mensalidade);
+            Socio socio = serviceSocio.GetById(mensalidadeDTO.FkSocio);
+            Mensalidade mensalidade = mapper.MapperDTOToEntity(mensalidadeDTO, socio);
+            serviceMensalidade.Update(mensalidade);
         }
     }
 }

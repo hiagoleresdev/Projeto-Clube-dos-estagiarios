@@ -22,6 +22,9 @@ namespace ClubeApi.Infrastructure.Data.EntitiesConfigurations
                 .HasColumnName("Meses")
                 .HasColumnType("INTEGER")
                 .IsRequired();
+
+            builder.HasMany(categoria => categoria.Socios)
+                .WithOne(socio => socio.Categoria);
         }
     }
 }

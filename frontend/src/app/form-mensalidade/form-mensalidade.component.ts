@@ -10,6 +10,10 @@ import { MensalidadesService } from '../Domain/Services/mensalidades.service';
 })
 export class FormMensalidadeComponent implements OnInit {
 
+  asMensalidades: Mensalidades[];
+  Idmensalidade: number;
+
+
   mensalidade: any = [{
     id: 1,
     dataMensal: "21/08",
@@ -44,6 +48,10 @@ export class FormMensalidadeComponent implements OnInit {
   constructor(private mensalidadeservice: MensalidadesService) { }
 
   ngOnInit(): void {
+    this.mensalidadeservice.PegarTodos().subscribe(resultado =>{
+      this.asMensalidades = resultado;
+    });
   }
+
 
 }
