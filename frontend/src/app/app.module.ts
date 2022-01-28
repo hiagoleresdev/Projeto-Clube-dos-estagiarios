@@ -52,7 +52,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule, 
+    FormsModule,
     routing,
     ReactiveFormsModule,
     CommonModule,
@@ -60,7 +60,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ModalModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService, 
+  providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService,
   DependenteService, FuncionarioService, MensalidadesService, SocioService ],
   bootstrap: [AppComponent]
 })
