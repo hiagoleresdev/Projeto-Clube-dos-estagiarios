@@ -6,7 +6,7 @@ namespace ClubeApi.Application.Mappers
 {
     public class MapperDependente : IMapperDependente
     {
-        public Dependente MapperDTOToEntity(DependenteDTO dependenteDTO)
+        public Dependente MapperDTOToEntity(DependenteDTO dependenteDTO, Socio socio)
         {
             Dependente dependente = new Dependente()
             {
@@ -15,6 +15,7 @@ namespace ClubeApi.Application.Mappers
                 Email = dependenteDTO.Email,
                 NumeroCartao = dependenteDTO.NumeroCartao,
                 Parentesco = dependenteDTO.Parentesco,
+                Socio = socio
             };
 
             return dependente;
@@ -29,6 +30,7 @@ namespace ClubeApi.Application.Mappers
                 Email = dependente.Email,
                 NumeroCartao = dependente.NumeroCartao,
                 Parentesco = dependente.Parentesco,
+                FkSocio = dependente.Socio.Id
             };
 
             return dependenteDTO;
@@ -43,6 +45,7 @@ namespace ClubeApi.Application.Mappers
                 Email = d.Email,
                 NumeroCartao = d.NumeroCartao,
                 Parentesco = d.Parentesco,
+                FkSocio = d.Socio.Id
             });
 
             return dependentesDTO;

@@ -1,4 +1,5 @@
 ﻿using ClubeApi.Application.DTOs;
+using ClubeApi.Domain.Models;
 
 namespace ClubeApi.Application.Interfaces.ApplicationServices
 {
@@ -9,10 +10,12 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
 
         void Update(MensalidadeDTO mensalidadeDTO);
 
-        void Delete(MensalidadeDTO mensalidadeDTO);
+        void Delete(int id);
 
-        IEnumerable<MensalidadeDTO> GetAll();
+        //IEnumerable<MensalidadeDTO> GetAll();
+        IEnumerable<Mensalidade> GetAll();
 
-        MensalidadeDTO GetById(int id);
+        //MensalidadeDTO GetById(int id);
+        Mensalidade GetById(int id);
     }
 }

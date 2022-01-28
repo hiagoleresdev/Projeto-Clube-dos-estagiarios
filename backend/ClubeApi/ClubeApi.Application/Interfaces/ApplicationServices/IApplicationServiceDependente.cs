@@ -1,4 +1,5 @@
 ﻿using ClubeApi.Application.DTOs;
+using ClubeApi.Domain.Models;
 
 namespace ClubeApi.Application.Interfaces.ApplicationServices
 {
@@ -9,10 +10,12 @@ namespace ClubeApi.Application.Interfaces.ApplicationServices
 
         void Update(DependenteDTO dependenteDTO);
 
-        void Delete(DependenteDTO dependenteDTO);
+        void Delete(int id);
 
-        IEnumerable<DependenteDTO> GetAll();
+        //IEnumerable<DependenteDTO> GetAll();
+        IEnumerable<Dependente> GetAll();
 
-        DependenteDTO GetById(int id);
+        //DependenteDTO GetById(int id);
+        Dependente GetById(int id);
     }
 }

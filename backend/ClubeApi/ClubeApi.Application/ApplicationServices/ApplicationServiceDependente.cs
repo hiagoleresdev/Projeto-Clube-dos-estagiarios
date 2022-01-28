@@ -9,44 +9,49 @@ namespace ClubeApi.Application.ApplicationServices
     public class ApplicationServiceDependente : IApplicationServiceDependente
     {
         //Atributos de referência às estrutura de serviço e mapeamento
-        private readonly IServiceDependente service;
+        private readonly IServiceDependente serviceDependente;
+        private readonly IServiceSocio serviceSocio;
         private readonly IMapperDependente mapper;
 
         //Construtor
-        public ApplicationServiceDependente(IServiceDependente service, IMapperDependente mapper)
+        public ApplicationServiceDependente(IServiceDependente serviceDependente, IServiceSocio serviceSocio, IMapperDependente mapper)
         {
-            this.service = service;
+            this.serviceDependente = serviceDependente;
+            this.serviceSocio = serviceSocio;
             this.mapper = mapper;
         }
 
         public void Add(DependenteDTO dependenteDTO)
         {
-            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO);
-            service.Add(dependente);
+            Socio socio = serviceSocio.GetById(dependenteDTO.FkSocio);
+            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO, socio);
+            serviceDependente.Add(dependente);
         }
 
-        public void Delete(DependenteDTO dependenteDTO)
+        public void Delete(int id)
         {
-            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO);
-            service.Delete(dependente);
+            serviceDependente.Delete(id);
         }
 
-        public IEnumerable<DependenteDTO> GetAll()
+        public IEnumerable<Dependente> GetAll()
         {
-            IEnumerable<Dependente> dependentes = service.GetAll();
-            return mapper.MapperListEntityToDTO(dependentes);
+            IEnumerable<Dependente> dependentes = serviceDependente.GetAll();
+            //return mapper.MapperListEntityToDTO(dependentes);
+            return dependentes;
         }
 
-        public DependenteDTO GetById(int id)
+        public Dependente GetById(int id)
         {
-            Dependente dependente = service.GetById(id);
-            return mapper.MapperEntityToDTO(dependente);
+            Dependente dependente = serviceDependente.GetById(id);
+            //return mapper.MapperEntityToDTO(dependente);
+            return dependente;
         }
 
         public void Update(DependenteDTO dependenteDTO)
         {
-            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO);
-            service.Update(dependente);
+            Socio socio = serviceSocio.GetById(dependenteDTO.FkSocio);
+            Dependente dependente = mapper.MapperDTOToEntity(dependenteDTO, socio);
+            serviceDependente.Update(dependente);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace ClubeApi.Application.Mappers
 {
     public class MapperMensalidade : IMapperMensalidade
     {
-        public Mensalidade MapperDTOToEntity(MensalidadeDTO mensalidadeDTO)
+        public Mensalidade MapperDTOToEntity(MensalidadeDTO mensalidadeDTO, Socio socio)
         {
             Mensalidade mensalidade = new Mensalidade()
             {
@@ -17,6 +17,7 @@ namespace ClubeApi.Application.Mappers
                 Juros = mensalidadeDTO.Juros,
                 ValorFinal = mensalidadeDTO.ValorFinal,
                 Quitada = mensalidadeDTO.Quitada,
+                Socio = socio
             };
 
             return mensalidade;
