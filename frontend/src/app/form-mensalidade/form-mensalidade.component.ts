@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Mensalidades } from '../Domain/Mensalidades';
-import { DependenteService } from '../Domain/Services/dependente.service';
 import { MensalidadesService } from '../Domain/Services/mensalidades.service';
 
 @Component({
@@ -9,6 +8,10 @@ import { MensalidadesService } from '../Domain/Services/mensalidades.service';
   styleUrls: ['./form-mensalidade.component.css']
 })
 export class FormMensalidadeComponent implements OnInit {
+
+  asMensalidades: Mensalidades[];
+  Idmensalidade: number;
+
 
   mensalidade: any = [{
     id: 1,
@@ -44,6 +47,10 @@ export class FormMensalidadeComponent implements OnInit {
   constructor(private mensalidadeservice: MensalidadesService) { }
 
   ngOnInit(): void {
+    this.mensalidadeservice.PegarTodos().subscribe(resultado =>{
+      this.asMensalidades = resultado;
+    });
   }
+
 
 }

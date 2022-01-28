@@ -1,42 +1,20 @@
 <h4>Listagem de Dependentes</h4>
-<br>
-<div>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Parentesco</th>
-          <th scope="col">Número do Cartão</th>
-          <th scope="col">Email</th>
+<hr/>
+   <div>
+    <table class="table table-hover"> 
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Parentesco</th>
+        <th>Numero do Cartão</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+      <tr *ngfor="let dependente of dependentes">
+        <td>{{ dependente.Nome }}</td>
+        <td>{{ dependente.Email }}</td>
+        <td>{{ dependente.Parentesco }}</td>
+        <td>{{ dependente.numeroCartao }}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+        </td>
+      </tr>
     </table>
   </div>

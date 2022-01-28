@@ -1,30 +1,25 @@
 <h4>Listagem de Mensalidades</h4>
-<br>
-<div>
-    <table class="table table-hover">
+<hr/>
+   <div>
+    <table class="table table-hover" *ngif="mensalidades">
+      <th>Data da Mensalidade</th>
+      <th>Valor da Mensalidade</th>
+      <th>Data do Pagamento</th>
+      <th>Juros</th>
+      <th>Valor do Pagamento</th>
+      <th>Quitação</th>
 
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Data de Pagamento</th>
-          <th scope="col">Valor da Mensalidade</th>
-          <th scope="col">Data Paga</th>
-          <th scope="col">Juros</th>
-          <th scope="col">Valor Pago</th>
-          <th scope="col">Quitação</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="cursor: pointer;">
-          <td scope="row"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+      <tr *ngfor="let mensalidade of mensalidades">
+        <td>{{ mensalidade.dataPagamento }}</td>
+        <td>{{ mensalidade.valorinicial }}</td>
+        <td>{{ mensalidade.dataPagamento }}</td>
+        <td>{{ mensalidade.Juros }}</td>
+        <td>{{ mensalidade.valorFinal }}</td>
+        <td>{{ mensalidade.Quitada }}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-outline-danger">
+            Excluir</button>
+        </td>
+      </tr>
     </table>
   </div>
