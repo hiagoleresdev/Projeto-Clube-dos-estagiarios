@@ -41,7 +41,7 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public TEntity GetById(int id)
+        public virtual TEntity GetById(int id)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             try
             {

@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -41,8 +40,7 @@ namespace ClubeApi.Api.Controllers
                 return Ok(applicationServiceSocio.GetById(id));
             }
             catch (Exception ex)
-            {
-
+            { 
                 throw ex;
             }
         }
@@ -79,7 +77,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -95,7 +92,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

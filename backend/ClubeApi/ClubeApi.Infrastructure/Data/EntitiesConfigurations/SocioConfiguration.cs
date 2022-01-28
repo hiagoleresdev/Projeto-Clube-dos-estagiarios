@@ -52,6 +52,12 @@ namespace ClubeApi.Infrastructure.Data.EntitiesConfigurations
             builder.HasOne(socio => socio.Categoria)
                 .WithMany(categoria => categoria.Socios)
                 .HasForeignKey("FkCategoria");
+
+            builder.HasMany(socio => socio.Mensalidades)
+                .WithOne(mensalidade => mensalidade.Socio);
+
+            builder.HasMany(socio => socio.Dependentes)
+                .WithOne(dependente => dependente.Socio);
         }
     }
 }
