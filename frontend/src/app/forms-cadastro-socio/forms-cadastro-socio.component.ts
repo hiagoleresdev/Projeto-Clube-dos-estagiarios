@@ -9,6 +9,8 @@ import { Socio } from '../Domain/Socio';
 })
 export class FormsCadastroSocioComponent implements OnInit {
 
+  socios: Socio[];
+
   usuario: any = {
     nome: "",
     endereco: "",
@@ -40,10 +42,14 @@ export class FormsCadastroSocioComponent implements OnInit {
       alert('Socio inserido com sucesso!');
     });
   }
+
  
   constructor(private sociosService: SocioService) { }
 
   ngOnInit(): void {
+    this.sociosService.PegarTodos().subscribe(resultado =>{
+      this.socios = resultado;
+    });  
   }
 
 }
