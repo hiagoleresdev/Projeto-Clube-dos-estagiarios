@@ -70,3 +70,13 @@ C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeA
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Api\bin\Debug\net6.0\Autofac.Extensions.DependencyInjection.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\marco.almeida\source\repos\Projeto-Clube-dos-estagiarios\backend\ClubeApi\ClubeApi.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.csproj.AssemblyReference.cache
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.AssemblyInfoInputs.cache
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.AssemblyInfo.cs
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.csproj.CoreCompileInputs.cache
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.dll
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ref\ClubeApi.Api.dll
+C:\Users\hiago.leres\Desktop\DEV\Clube dos estagiários\backend\ClubeApi\ClubeApi.Api\obj\Debug\net6.0\ClubeApi.Api.pdb

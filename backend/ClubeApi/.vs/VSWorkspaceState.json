@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClubeApi.Application",
+    "\\ClubeApi.Application\\ApplicationServices",
+    "\\ClubeApi.Infrastructure",
+    "\\ClubeApi.Infrastructure\\Data",
+    "\\ClubeApi.Infrastructure\\Data\\EntitiesConfigurations"
+  ],
+  "SelectedNode": "\\ClubeApi.sln",
+  "PreviewInSolutionExplorer": false
+}

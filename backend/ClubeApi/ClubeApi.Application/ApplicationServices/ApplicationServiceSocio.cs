@@ -28,10 +28,10 @@ namespace ClubeApi.Application.ApplicationServices
             serviceSocio.Add(socio);
         }
 
-        public void Delete(SocioDTO socioDTO)
+        public void Delete(int id)
         {
             //Socio socio = mapper.MapperDTOToEntity(socioDTO);
-            serviceSocio.Delete(new Socio());
+            serviceSocio.Delete(id);
         }
 
         public IEnumerable<SocioDTO> GetAll()
