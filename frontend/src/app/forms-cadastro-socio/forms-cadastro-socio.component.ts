@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocioService } from '../Domain/Services/socio.service';
+import { Socio } from '../Domain/Socio';
 
 @Component({
   selector: 'forms-cadastro-socio',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forms-cadastro-socio.component.css']
 })
 export class FormsCadastroSocioComponent implements OnInit {
+
+  socios: Socio[];
 
   usuario: any = {
     nome: "",
@@ -30,11 +34,23 @@ export class FormsCadastroSocioComponent implements OnInit {
   btnFechar(){
     
   }
- 
 
-  constructor() { }
+  EnviarSocio(): void {
+    const socio : Socio = this.usuario.value;
+
+    this.sociosService.SalvarSocio(socio).subscribe(resultado => {
+      alert('Socio inserido com sucesso!');
+    });
+  }
+
+ 
+  constructor(private sociosService: SocioService) { }
 
   ngOnInit(): void {
+    this.sociosService.PegarTodos().subscribe(resultado =>{
+      this.socios = resultado;
+    });  
   }
 
 }
+

@@ -1,5 +1,5 @@
-<h5>Cadastrar Dependente</h5>
-<form #formDependente="ngForm" (ngSubmit)="onSubmit(formDependente)">
+<h4>Cadastrar Dependente</h4>
+<form #formDependente="ngForm" (ngSubmit)="onSubmit(formDependente)" (ngSubmit)="EnviarDependente()">
     <div class="form-group">
       <label for="nomeDependente">Nome</label>
       <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
@@ -32,7 +32,5 @@
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!formDependente.valid">Salvar</button>
     <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
-
-    
   </form>
-
+  <animacao-ondas></animacao-ondas>

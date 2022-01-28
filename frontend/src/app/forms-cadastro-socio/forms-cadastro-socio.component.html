@@ -1,6 +1,5 @@
-<h5>Cadastrar Sócio</h5>
-<form #formSocio="ngForm" (ngSubmit)="onSubmit(formSocio)">
-    <div class="form-group">
+<h4>Cadastrar Sócio</h4>
+<form #formSocio="ngForm" (ngSubmit)="onSubmit(formSocio)" (ngSubmit)="EnviarSocio()">    <div class="form-group">
       <label for="nomeSocio">Nome</label>
       <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
       <input type="text" class="form-control" name="nome" id="campoNomeSocio" placeholder="Insira seu nome" [(ngModel)]="usuario.nome" required #nome="ngModel">
@@ -55,4 +54,5 @@
     <button type="button" class="btn btn-danger espacamento-btn" (click)="btnFechar()">Fechar</button>
 
     
-  </form>
+ </form>
+ <animacao-ondas></animacao-ondas>

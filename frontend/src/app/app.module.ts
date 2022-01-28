@@ -1,8 +1,6 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +14,22 @@ import { LoginAutenticacaoService } from './form-login/login-autenticacao.servic
 import { routing } from './app-routing.module';
 import { HomeClubeComponent } from './home-clube/home-clube.component';
 import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/forms-cadastro-dependente.component';
+import { AnimacaoOndasComponent } from './animacao-ondas/animacao-ondas.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+import { CategoriaService } from './Domain/Services/categoria.service';
+import { DependenteService } from './Domain/Services/dependente.service';
+import { FuncionarioService } from './Domain/Services/funcionario.service';
+import { MensalidadesService } from './Domain/Services/mensalidades.service';
+import { SocioService } from './Domain/Services/socio.service';
+
+import { CategoriaDTOService } from './DTOs/Services/categoria-dto.service';
+import { DependenteDTOService } from './DTOs/Services/dependente-dto.service';
+//import { FuncionarioDTOService } from './DTOs/Services/funcionario-dto.service';
+import { MensalidadeDTOService } from './DTOs/Services/mensalidade-dto.service';
+import { SocioDTOService } from './DTOs/Services/socio-dto.service';
 
 @NgModule({
   declarations: [
@@ -26,16 +40,22 @@ import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/fo
     FormMensalidadeComponent,
     FormLoginComponent,
     HomeClubeComponent,
-    FormsCadastroDependenteComponent
+    FormsCadastroDependenteComponent,
+    AnimacaoOndasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule, 
-    routing
+    FormsModule,
+    routing,
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
-  providers: [LoginAutenticacaoService],
+  providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService,
+  DependenteService, FuncionarioService, MensalidadesService, SocioService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

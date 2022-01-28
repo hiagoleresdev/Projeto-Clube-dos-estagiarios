@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../Domain/Categoria';
+import { Dependente } from '../Domain/Dependente';
+import { DependenteService } from '../Domain/Services/dependente.service';
 
 @Component({
   selector: 'app-forms-cadastro-dependente',
@@ -6,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forms-cadastro-dependente.component.css']
 })
 export class FormsCadastroDependenteComponent implements OnInit {
+
+  dependentes: Dependente[];
 
   usuario: any = {
     nome: "",
@@ -18,9 +23,20 @@ export class FormsCadastroDependenteComponent implements OnInit {
     console.log(form);
     console.log(this.usuario);
   }  
-  constructor() { }
 
-  ngOnInit(): void {
+  EnviarDependente(): void {
+    const dependente : Dependente = this.usuario.value;
+
+    this.dependenteservice.SalvarDependente(dependente).subscribe(resultado => {
+      alert('Dependente inserido com sucesso!');
+    });
   }
 
+  constructor(private dependenteservice : DependenteService) { }
+
+  ngOnInit(): void {
+    this.dependenteservice.PegarTodos().subscribe(resultado =>{
+      this.dependentes = resultado;
+    });
+  }
 }

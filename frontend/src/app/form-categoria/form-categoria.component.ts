@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../Domain/Categoria';
+import { CategoriaService } from '../Domain/Services/categoria.service';
 
 @Component({
   selector: 'form-categoria',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-categoria.component.css']
 })
 export class FormCategoriaComponent implements OnInit {
+
+  categorias: Categoria[];
 
   categoria: any ={
     nome: ""
@@ -15,9 +19,20 @@ export class FormCategoriaComponent implements OnInit {
     console.log(this.categoria);
   }
 
-  constructor() { }
+  EnviarCategoria(): void {
+    const categoria : Categoria = this.categoria.value;
+
+    this.categoriaservice.SalvarCategoria(categoria).subscribe(resultado => {
+      alert('Categoria inserida com sucesso!');
+    });
+  }
+
+  constructor(private categoriaservice: CategoriaService) { }
 
   ngOnInit(): void {
-  }
+    this.categoriaservice.PegarTodos().subscribe(resultado =>{
+      this.categorias = resultado;
+  });
+}
 
 }
