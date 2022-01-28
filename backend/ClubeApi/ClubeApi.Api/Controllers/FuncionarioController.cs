@@ -84,11 +84,11 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Validar login
         [HttpGet]
-        public ActionResult<string> Validate([FromBody] FuncionarioDTO FuncionarioDTO)
+        public ActionResult<string> Validate(string usuario, string senha)
         {
             try
             {
-                return Ok(applicationServiceFuncionario.Validate(FuncionarioDTO));
+                return Ok(applicationServiceFuncionario.Validate(usuario, senha));
             }
             catch (Exception ex)
             {

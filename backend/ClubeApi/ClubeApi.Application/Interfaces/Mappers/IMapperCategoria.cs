@@ -7,9 +7,5 @@ namespace ClubeApi.Application.Interfaces.Mappers
     {
         //Métodos a serem desenvolvidos para esta classe para maepamento
         Categoria MapperDTOToEntity(CategoriaDTO categoriaDTO);
-
-        IEnumerable<CategoriaDTO> MapperListEntityToDTO(IEnumerable<Categoria> categorias);
-
-        CategoriaDTO MapperEntityToDTO(Categoria categoria);
     }
 }

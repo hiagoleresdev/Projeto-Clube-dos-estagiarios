@@ -140,10 +140,8 @@ namespace ClubeApi.Api.Migrations
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("VARCHAR(32)")
-                        .HasColumnName("senha")
-                        .HasComputedColumnSql("CONVERT(VARCHAR(32), HashBytes('MD5', '[Senha]'), 2)");
+                        .HasColumnType("CHAR(10)")
+                        .HasColumnName("senha");
 
                     b.Property<string>("Usuario")
                         .IsRequired()

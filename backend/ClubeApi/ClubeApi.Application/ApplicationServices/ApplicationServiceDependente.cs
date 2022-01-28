@@ -36,14 +36,12 @@ namespace ClubeApi.Application.ApplicationServices
         public IEnumerable<Dependente> GetAll()
         {
             IEnumerable<Dependente> dependentes = serviceDependente.GetAll();
-            //return mapper.MapperListEntityToDTO(dependentes);
             return dependentes;
         }
 
         public Dependente GetById(int id)
         {
             Dependente dependente = serviceDependente.GetById(id);
-            //return mapper.MapperEntityToDTO(dependente);
             return dependente;
         }
 

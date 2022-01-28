@@ -7,7 +7,5 @@ namespace ClubeApi.Application.Interfaces.Mappers
     {
         //Métodos a serem desenvolvidos para esta classe para maepamento
         Funcionario MapperDTOToEntity(FuncionarioDTO funcionarioDTO);
-
-        FuncionarioDTO MapperEntityToDTO(Funcionario funcionario);
     }
 }

@@ -18,6 +18,6 @@ namespace ClubeApi.Domain.Core.Interfaces.Repositories
         void Delete(int id);
 
         //Método para validar usuário do funcionário
-        int Validate(Funcionario obj);
+        int Validate(string usuario, string senha);
     }
 }

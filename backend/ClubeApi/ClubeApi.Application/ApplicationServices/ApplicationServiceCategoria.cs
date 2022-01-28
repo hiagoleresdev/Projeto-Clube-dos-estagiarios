@@ -33,14 +33,12 @@ namespace ClubeApi.Application.ApplicationServices
         public IEnumerable<Categoria> GetAll()
         {
             IEnumerable<Categoria> categorias = service.GetAll();
-            //return mapper.MapperListEntityToDTO(categorias);
             return categorias;
         }
 
         public Categoria GetById(int id)
         {
             Categoria categoria = service.GetById(id);
-            //return mapper.MapperEntityToDTO(categoria);
             return categoria;
         }
 
