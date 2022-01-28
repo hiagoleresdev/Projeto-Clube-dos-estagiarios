@@ -9,6 +9,8 @@ import { CategoriaService } from '../Domain/Services/categoria.service';
 })
 export class FormCategoriaComponent implements OnInit {
 
+  categorias: Categoria[];
+
   categoria: any ={
     nome: ""
   }
@@ -28,6 +30,9 @@ export class FormCategoriaComponent implements OnInit {
   constructor(private categoriaservice: CategoriaService) { }
 
   ngOnInit(): void {
-  }
+    this.categoriaservice.PegarTodos().subscribe(resultado =>{
+      this.categorias = resultado;
+  });
+}
 
 }
