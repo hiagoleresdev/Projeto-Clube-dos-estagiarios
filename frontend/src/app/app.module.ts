@@ -15,21 +15,21 @@ import { routing } from './app-routing.module';
 import { HomeClubeComponent } from './home-clube/home-clube.component';
 import { FormsCadastroDependenteComponent } from './forms-cadastro-dependente/forms-cadastro-dependente.component';
 import { AnimacaoOndasComponent } from './animacao-ondas/animacao-ondas.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { CategoriaService } from './Domain/Services/categoria.service';
 import { DependenteService } from './Domain/Services/dependente.service';
 import { FuncionarioService } from './Domain/Services/funcionario.service';
 import { MensalidadesService } from './Domain/Services/mensalidades.service';
 import { SocioService } from './Domain/Services/socio.service';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { Funcionario } from './Domain/Funcionario';
-import { Socio } from './Domain/Socio';
-import { FormListagemSocioComponent } from './form-listagem-socio/form-listagem-socio.component';
-import { FormListagemDependenteComponent } from './form-listagem-dependente/form-listagem-dependente.component';
-import { FormListagemMensalidadeComponent } from './form-listagem-mensalidade/form-listagem-mensalidade.component';
-import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-listagem-categoria.component';
+
+import { CategoriaDTOService } from './DTOs/Services/categoria-dto.service';
+import { DependenteDTOService } from './DTOs/Services/dependente-dto.service';
+import { FuncionarioDTOService } from './DTOs/Services/funcionario-dto.service';
+import { MensalidadeDTOService } from './DTOs/Services/mensalidade-dto.service';
+import { SocioDTOService } from './DTOs/Services/socio-dto.service';
 
 @NgModule({
   declarations: [
@@ -41,11 +41,7 @@ import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-l
     FormLoginComponent,
     HomeClubeComponent,
     FormsCadastroDependenteComponent,
-    AnimacaoOndasComponent,
-    FormListagemSocioComponent,
-    FormListagemDependenteComponent,
-    FormListagemMensalidadeComponent,
-    FormListagemCategoriaComponent
+    AnimacaoOndasComponent
   ],
   imports: [
     BrowserModule,
