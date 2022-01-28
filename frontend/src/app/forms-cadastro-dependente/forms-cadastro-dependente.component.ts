@@ -39,5 +39,4 @@ export class FormsCadastroDependenteComponent implements OnInit {
       this.dependentes = resultado;
     });
   }
-
 }

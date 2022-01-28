@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Mensalidades } from '../Domain/Mensalidades';
-import { DependenteService } from '../Domain/Services/dependente.service';
 import { MensalidadesService } from '../Domain/Services/mensalidades.service';
 
 @Component({

@@ -25,8 +25,12 @@ import { DependenteService } from './Domain/Services/dependente.service';
 import { FuncionarioService } from './Domain/Services/funcionario.service';
 import { MensalidadesService } from './Domain/Services/mensalidades.service';
 import { SocioService } from './Domain/Services/socio.service';
-import { Funcionario } from './Domain/Funcionario';
-import { Socio } from './Domain/Socio';
+
+import { CategoriaDTOService } from './DTOs/Services/categoria-dto.service';
+import { DependenteDTOService } from './DTOs/Services/dependente-dto.service';
+//import { FuncionarioDTOService } from './DTOs/Services/funcionario-dto.service';
+import { MensalidadeDTOService } from './DTOs/Services/mensalidade-dto.service';
+import { SocioDTOService } from './DTOs/Services/socio-dto.service';
 
 @NgModule({
   declarations: [
