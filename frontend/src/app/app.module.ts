@@ -51,14 +51,14 @@ import { FormListagemCategoriaComponent } from './form-listagem-categoria/form-l
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule, 
+    FormsModule,
     routing,
     ReactiveFormsModule,
     CommonModule,
     HttpClientModule,
     ModalModule.forRoot()
   ],
-  providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService, 
+  providers: [LoginAutenticacaoService, HttpClientModule, CategoriaService,
   DependenteService, FuncionarioService, MensalidadesService, SocioService ],
   bootstrap: [AppComponent]
 })
