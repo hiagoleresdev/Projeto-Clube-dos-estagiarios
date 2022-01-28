@@ -7,14 +7,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <!-- Linkando as rotas definidas no app-routing-->
-          <li ngbDropdown class="nav-item dropdown"  routerLinkActive="active">
-            <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Cadastros
-            </a>
-            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a ngbDropdownItem class="dropdown-item" [routerLink]="['/socio']">Sócio</a>
-              <a ngbDropdownItem class="dropdown-item" [routerLink]="['/dependente']">Dependente</a>
-            </div>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/socio']">Socios</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/dependente']">Dependentes</a>
           </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['/categoria']">Categorias</a>
@@ -23,9 +20,6 @@
           <a class="nav-link" [routerLink]="['/mensalidade']">Mensalidades</a>
         </li>
         <li ngbDropdown class="nav-item dropdown"  routerLinkActive="active">
-          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Listagens
-          </a>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a ngbDropdownItem class="dropdown-item" [routerLink]="['/socio/listagem']">Sócio</a>
             <a ngbDropdownItem class="dropdown-item" [routerLink]="['/dependente/listagem']">Dependente</a>

@@ -27,7 +27,7 @@ import { SocioService } from './Domain/Services/socio.service';
 
 import { CategoriaDTOService } from './DTOs/Services/categoria-dto.service';
 import { DependenteDTOService } from './DTOs/Services/dependente-dto.service';
-import { FuncionarioDTOService } from './DTOs/Services/funcionario-dto.service';
+//import { FuncionarioDTOService } from './DTOs/Services/funcionario-dto.service';
 import { MensalidadeDTOService } from './DTOs/Services/mensalidade-dto.service';
 import { SocioDTOService } from './DTOs/Services/socio-dto.service';
 
