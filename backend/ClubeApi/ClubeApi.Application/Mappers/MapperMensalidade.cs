@@ -22,37 +22,5 @@ namespace ClubeApi.Application.Mappers
 
             return mensalidade;
         }
-
-        public MensalidadeDTO MapperEntityToDTO(Mensalidade mensalidade)
-        {
-            MensalidadeDTO mensalidadeDTO = new MensalidadeDTO()
-            {
-                Id = mensalidade.Id,
-                DataVencimento = mensalidade.DataVencimento,
-                ValorInicial = mensalidade.ValorInicial,
-                DataPagamento = mensalidade.DataPagamento,
-                Juros = mensalidade.Juros,
-                ValorFinal = mensalidade.ValorFinal,
-                Quitada = mensalidade.Quitada,
-            };
-
-            return mensalidadeDTO;
-        }
-
-        public IEnumerable<MensalidadeDTO> MapperListEntityToDTO(IEnumerable<Mensalidade> mensalidades)
-        {
-            IEnumerable<MensalidadeDTO> mensalidadesDTO = mensalidades.Select(m => new MensalidadeDTO()
-            {
-                Id = m.Id,
-                DataVencimento = m.DataVencimento,
-                ValorInicial = m.ValorInicial,
-                DataPagamento = m.DataPagamento,
-                Juros = m.Juros,
-                ValorFinal = m.ValorFinal,
-                Quitada = m.Quitada,
-            });
-
-            return mensalidadesDTO;
-        }
     }
 }

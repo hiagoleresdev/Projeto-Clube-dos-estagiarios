@@ -19,19 +19,5 @@ namespace ClubeApi.Application.Mappers
 
             return funcionario;
         }
-
-        public FuncionarioDTO MapperEntityToDTO(Funcionario funcionario)
-        {
-            FuncionarioDTO funcionarioDTO = new FuncionarioDTO()
-            {
-                Id = funcionario.Id,
-                Nome = funcionario.Nome,
-                Email = funcionario.Email,
-                Usuario = funcionario.Usuario,
-                Senha = funcionario.Senha
-            };
-
-            return funcionarioDTO;
-        }
     }
 }
