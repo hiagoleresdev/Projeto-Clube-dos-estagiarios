@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClubeApi.Api.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20220128002245_CriandoDB")]
+    [Migration("20220128131051_CriandoDB")]
     partial class CriandoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
