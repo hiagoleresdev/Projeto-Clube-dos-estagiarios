@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -42,7 +41,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -79,26 +77,21 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
         // DELETE: Deletar categoria
-        [HttpDelete]
-        public ActionResult Delete([FromBody] CategoriaDTO categoriaDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
             {
-                if (categoriaDTO == null)
-                    return NotFound();
-
-                applicationServiceCategoria.Update(categoriaDTO);
+                applicationServiceCategoria.Delete(id);
                 return Ok("Categoria deletada com sucesso");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

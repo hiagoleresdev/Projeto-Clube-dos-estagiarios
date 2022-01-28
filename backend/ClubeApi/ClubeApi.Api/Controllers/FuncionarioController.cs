@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -64,26 +63,21 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
         // DELETE: Deletar funcionário
-        [HttpDelete]
-        public ActionResult Delete([FromBody] FuncionarioDTO funcionarioDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
             {
-                if (funcionarioDTO == null)
-                    return NotFound();
-
-                applicationServiceFuncionario.Update(funcionarioDTO);
+                applicationServiceFuncionario.Delete(id);
                 return Ok("Funcionário deletado com sucesso");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -98,7 +92,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

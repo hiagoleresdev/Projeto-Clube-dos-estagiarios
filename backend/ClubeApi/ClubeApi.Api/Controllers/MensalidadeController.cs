@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -85,20 +84,16 @@ namespace ClubeApi.Api.Controllers
         }
 
         // DELETE: Deletar mensalidade
-        [HttpDelete]
-        public ActionResult Delete([FromBody] MensalidadeDTO mensalidadeDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
             {
-                if (mensalidadeDTO == null)
-                    return NotFound();
-
-                applicationServiceMensalidade.Update(mensalidadeDTO);
+                applicationServiceMensalidade.Delete(id);
                 return Ok("Mensalidade deletada com sucesso");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

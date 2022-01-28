@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClubeApi.Api.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20220127182836_CriandoDB")]
+    [Migration("20220128002245_CriandoDB")]
     partial class CriandoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,7 +63,8 @@ namespace ClubeApi.Api.Migrations
                         .HasColumnName("Vencimento");
 
                     b.Property<int>("FkSocio")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkSocio");
 
                     b.Property<int>("Juros")
                         .ValueGeneratedOnAdd()
@@ -118,7 +119,8 @@ namespace ClubeApi.Api.Migrations
                     b.HasBaseType("ClubeApi.Domain.Models.Pessoa");
 
                     b.Property<int>("FkSocio")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkSocio");
 
                     b.Property<decimal>("NumeroCartao")
                         .HasColumnType("NUMERIC(9)")
@@ -173,7 +175,8 @@ namespace ClubeApi.Api.Migrations
                         .HasColumnName("Cidade");
 
                     b.Property<int>("FkCategoria")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("FkCategoria");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()

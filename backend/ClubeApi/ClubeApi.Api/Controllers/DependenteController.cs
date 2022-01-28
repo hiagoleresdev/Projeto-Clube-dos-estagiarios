@@ -27,7 +27,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -42,7 +41,6 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -79,26 +77,21 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
         // DELETE: Deletar dependente
-        [HttpDelete]
-        public ActionResult Delete([FromBody] DependenteDTO dependenteDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
             {
-                if (dependenteDTO == null)
-                    return NotFound();
-
-                applicationServiceDependente.Update(dependenteDTO);
+                applicationServiceDependente.Delete(id);
                 return Ok("Dependente deletado com sucesso");
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
