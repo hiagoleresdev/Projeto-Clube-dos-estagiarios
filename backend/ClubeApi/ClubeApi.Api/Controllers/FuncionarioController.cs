@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Application.DTOs;
 using ClubeApi.Application.Interfaces.ApplicationServices;
+using ClubeApi.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClubeApi.Api.Controllers
@@ -19,15 +20,19 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Selecionar funcionário por ID
         [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public ActionResult<Funcionario> GetById(int id)
         {
             try
             {
-                return Ok(applicationServiceFuncionario.GetById(id));
+                Funcionario funcionario = applicationServiceFuncionario.GetById(id);
+                if(funcionario == null)
+                    return NotFound();
+                else
+                    return Ok(funcionario);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -37,15 +42,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (FuncionarioDTO == null)
-                    return NotFound();
-
                 applicationServiceFuncionario.Add(FuncionarioDTO);
                 return Ok("Funcionário cadastrado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -55,15 +57,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (funcionarioDTO == null)
-                    return NotFound();
-
                 applicationServiceFuncionario.Update(funcionarioDTO);
                 return Ok("Funcionario atualizado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -78,21 +77,21 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
         // GET: Validar login
         [HttpGet]
-        public ActionResult<string> Validate(string usuario, string senha)
+        public ActionResult<int> Validate(string usuario, string senha)
         {
             try
             {
-                return Ok(applicationServiceFuncionario.Validate(usuario, senha));
+                return applicationServiceFuncionario.Validate(usuario, senha);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
     }
