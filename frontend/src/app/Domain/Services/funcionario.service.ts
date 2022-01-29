@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PessoaDTO } from 'src/app/DTOs/PessoaDTO';
 import { Funcionario } from '../Funcionario';
 
 const httpOptions = {
