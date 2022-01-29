@@ -3,10 +3,10 @@ import { Socio } from "./Socio";
 export class Mensalidades{
     Id: number;
     dataVencimento: Date;
-    valorInicial: number; 
+    valorInicial: number;
     dataPagamento: Date;
-    Juros: number;
+    juros: number;
     valorFinal: number;
-    Quitada: boolean; 
+    quitada: boolean;
     Socio: Socio;
 }

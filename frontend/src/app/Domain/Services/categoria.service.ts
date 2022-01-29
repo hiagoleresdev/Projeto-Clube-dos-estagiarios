@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CategoriaService {
-  url= 'https://localhost:5001/api/categoria';
+  url= 'https://localhost:5001/api/Categoria';
 
 constructor(private http: HttpClient) { }
 
@@ -26,17 +26,5 @@ PegarPeloId(categoriaid: number): Observable<Categoria>{
   return this.http.get<Categoria>(apiUrl);
 }
 
-SalvarCategoria(categoria: Categoria) : Observable<any>{
-  return this.http.post<Categoria>(this.url, categoria, httpOptions);
-}
-
-AtualizarCategoria(categoria : Categoria) : Observable<any>{
-  return this.http.put<Categoria>(this.url, categoria, httpOptions);
-}
-
-ExcluirCategoria(categoriaid: number) : Observable<any>{
-  const apiUrl = '${this.url}/${categoriaid}';
-  return this.http.delete<number>(apiUrl, httpOptions)
-}
 
 }

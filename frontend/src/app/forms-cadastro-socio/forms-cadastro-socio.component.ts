@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { SocioService } from '../Domain/Services/socio.service';
 import { Socio } from '../Domain/Socio';
+import { SocioDTOService } from '../DTOs/Services/socio-dto.service';
+import { SocioDTO } from '../DTOs/SocioDTO';
 
 @Component({
   selector: 'forms-cadastro-socio',
@@ -9,47 +12,37 @@ import { Socio } from '../Domain/Socio';
 })
 export class FormsCadastroSocioComponent implements OnInit {
 
-  socios: Socio[];
+  constructor(private sociosServiceDto: SocioDTOService) { }
 
-  usuario: any = {
-    nome: "",
-    endereco: "",
-    telefone: "",
-    email: "",
-    status: "",
-    categoria:"",
-    nro_cartao:""
-  }
+  formulario: any;
+  socio: SocioDTO[];
 
-  onSubmit(form: any){
-    console.log(form);
-    console.log(this.usuario);
-  }  
 
-  salvarDados(){
-    debugger
-    let teste = this.usuario;
-  }
-
-  btnFechar(){
-    
-  }
-
-  EnviarSocio(): void {
-    const socio : Socio = this.usuario.value;
-
-    this.sociosService.SalvarSocio(socio).subscribe(resultado => {
-      alert('Socio inserido com sucesso!');
-    });
-  }
-
- 
-  constructor(private sociosService: SocioService) { }
 
   ngOnInit(): void {
-    this.sociosService.PegarTodos().subscribe(resultado =>{
-      this.socios = resultado;
-    });  
-  }
+    this.formulario = new FormGroup({
+      nome: new FormControl(null),
+      email: new FormControl(null),
+      numeroCartao: new FormControl(null),
+      telefone: new FormControl(null),
+      cep: new FormControl(null),
+      uf: new FormControl(null),
+      cidade: new FormControl(null),
+      bairro: new FormControl(null),
+      logradouro: new FormControl(null),
+      fkcategoria: new FormControl(null),
+    });
+    }
+
+    EnviarFormulario(): void {
+      const socio : SocioDTO = this.formulario.value;
+
+      this.sociosServiceDto.SalvarSocio(socio).subscribe(resultado => {
+        alert('Socio inserido com sucesso!');
+      });
+    }
+
+
 
 }
+

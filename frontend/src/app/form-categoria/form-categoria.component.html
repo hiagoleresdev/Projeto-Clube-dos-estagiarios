@@ -1,10 +1,38 @@
-<h4>Cadastrar Categoria</h4>
-<form #formCategoria="ngForm" (ngSubmit)="onSubmit(formCategoria)" (ngSubmit)="EnviarCategoria()">    <div class="form-group">
-      <label for="nomeCategoria">Nome da Categoria</label>
-      <!-- Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel-->
-      <input type="text" class="form-control" name="nome" id="campoNomeCategoria" placeholder="Insira o nome da categoria" [(ngModel)]="categoria.nome" required>
+
+
+  <div class="row">
+    <div class="col-6 border border-light rounded p-5 shadow" >
+      <h6>Cadastro de categorias</h6>
+      <hr>
+
+      <form [formGroup]="formulario" (ngSubmit)="EnviarCategoria()">
+
+        <div class="form-group">
+          <label>Tipo:</label>
+          <input type="text" class="form-control form-control-sm" formControlName="tipo">
+        </div>
+
+        <div class="form-group">
+          <label>Meses:</label>
+          <input type="text" class="form-control form-control-sm" formControlName="meses">
+        </div>
+
+
+
+        <div class="container">
+          <div class="row">
+            <div>
+              <button type="submit" class="btn btn-sm btn-success">Salvar</button>
+            </div>
+            <div class="pl-1">
+              <button type="submit" class="btn btn-sm btn-outline-slight">Voltar</button>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+
     </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
-        <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
-</form>
-<animacao-ondas></animacao-ondas>
+  </div>
+

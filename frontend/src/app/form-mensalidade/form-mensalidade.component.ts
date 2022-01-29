@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Mensalidades } from '../Domain/Mensalidades';
-import { DependenteService } from '../Domain/Services/dependente.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MensalidadeDTO } from '../DTOs/MensalidadeDTO';
 import { MensalidadesService } from '../Domain/Services/mensalidades.service';
+import { MensalidadeDTOService } from '../DTOs/Services/mensalidade-dto.service';
 
 @Component({
   selector: 'form-mensalidade',
@@ -10,48 +12,39 @@ import { MensalidadesService } from '../Domain/Services/mensalidades.service';
 })
 export class FormMensalidadeComponent implements OnInit {
 
-  asMensalidades: Mensalidades[];
-  Idmensalidade: number;
+  constructor(private mensalidadeServiceDto: MensalidadeDTOService) { }
+
+  mensalidades: Mensalidades[];
+  formulario: any;
 
 
-  mensalidade: any = [{
-    id: 1,
-    dataMensal: "21/08",
-    valorMensal: "500",
-    dataPagto: "21/08",
-    jurosMensal: "0",
-    valorPagto: "500",
-    quitacaoMensal: "ativo" 
-  },
-    {id: 2,
-    dataMensal: "08/08",
-    valorMensal: "321",
-    dataPagto: "08/08",
-    jurosMensal: "0",
-    valorPagto: "321",
-    quitacaoMensal: "inativo" 
-}
-  ]
 
-  onSubmit(form: any){
-    console.log(this.mensalidade);
-  }
+  ngOnInit(): void {
+    this.formulario = new FormGroup({
+      dataVencimento: new FormControl(),
+      valorInicial: new FormControl(),
+      dataPagamento: new FormControl(),
+      juros: new FormControl(),
+      valorFinal: new FormControl(),
+      quitada: new FormControl(),
+      fkSocio: new FormControl()
+    });
+    }
+
+
+
 
   EnviarMensalidade(): void {
-    const mensalidade : Mensalidades = this.mensalidade.value;
+    const mensalidade : MensalidadeDTO = this.formulario.value;
 
-    this.mensalidadeservice.SalvarMensalidades(mensalidade).subscribe(resultado => {
+    this.mensalidadeServiceDto.SalvarMensalidade(mensalidade).subscribe(resultado => {
       alert('Mensalidade inserida com sucesso!');
     });
   }
 
-  constructor(private mensalidadeservice: MensalidadesService) { }
 
-  ngOnInit(): void {
-    this.mensalidadeservice.PegarTodos().subscribe(resultado =>{
-      this.asMensalidades = resultado;
-    });
-  }
+
+
 
 
 }

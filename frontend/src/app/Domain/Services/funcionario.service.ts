@@ -12,30 +12,19 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class FuncionarioService {
+export class FuncionarioService{
   url= 'https://localhost:5001/api/funcionario';
 
 constructor(private http: HttpClient) { }
 
-PegarTodos(): Observable<Funcionario[]>{
-  return this.http.get<Funcionario[]>(this.url);
-}
-  
-PegarPeloId(funcionarioid: number): Observable<Funcionario>{
-  const apiUrl = '${this.url}/${funcionarioid}';
-  return this.http.get<Funcionario>(apiUrl);
-}
-  
-SalvarFuncionario(funcionario: Funcionario) : Observable<any>{
-  return this.http.post<Funcionario>(this.url, funcionario, httpOptions);
-}
-  
-AtualizarFuncionario(funcionario : Funcionario) : Observable<any>{
-  return this.http.put<Funcionario>(this.url, funcionario, httpOptions);
-}
-  
-ExcluirFuncionario(funcionarioid: number) : Observable<any>{
-  const apiUrl = '${this.url}/${funcionarioid}';
-  return this.http.delete<number>(apiUrl, httpOptions)
-}
+  PegarPeloId(funcionarioid: number): Observable<Funcionario>{
+    const apiUrl = '${this.url}/${funcionarioid}';
+    return this.http.get<Funcionario>(apiUrl);
+  }
+
+  ValidarFuncionario(usuario: string, senha: string) : Observable<any>{
+    return this.http.get<number>(this.url);
+  }
+
+
 }

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Categoria } from '../Domain/Categoria';
-import { Dependente } from '../Domain/Dependente';
+import { Dependente } from '../Domain/Dependente'
+import { DependenteDTO } from '../DTOs/DependenteDTO';
+import { DependenteDTOService } from '../DTOs/Services/dependente-dto.service';
 import { DependenteService } from '../Domain/Services/dependente.service';
+import { FormControl, FormGroup } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-forms-cadastro-dependente',
@@ -10,33 +14,28 @@ import { DependenteService } from '../Domain/Services/dependente.service';
 })
 export class FormsCadastroDependenteComponent implements OnInit {
 
-  dependentes: Dependente[];
+  constructor(private dependenteServiceDto: DependenteDTOService) { }
 
-  usuario: any = {
-    nome: "",
-    email: "",
-    parentesco: "",
-    nroCartao:""
-  }
+  formulario: any;
+  dependente: DependenteDTO[];
 
-  onSubmit(form: any){
-    console.log(form);
-    console.log(this.usuario);
-  }  
-
-  EnviarDependente(): void {
-    const dependente : Dependente = this.usuario.value;
-
-    this.dependenteservice.SalvarDependente(dependente).subscribe(resultado => {
-      alert('Dependente inserido com sucesso!');
-    });
-  }
-
-  constructor(private dependenteservice : DependenteService) { }
 
   ngOnInit(): void {
-    this.dependenteservice.PegarTodos().subscribe(resultado =>{
-      this.dependentes = resultado;
+    this.formulario = new FormGroup({
+      nome: new FormControl(),
+      email: new FormControl(),
+      parentesco: new FormControl(),
+      numeroCartao: new FormControl(),
+      fk_Socio: new FormControl()
+    });
+
+  }
+
+  EnviarDependente(): void {
+    const dependente : DependenteDTO = this.formulario.value;
+
+    this.dependenteServiceDto.SalvarDependente(dependente).subscribe(resultado => {
+      alert('Dependente inserido com sucesso!');
     });
   }
 
