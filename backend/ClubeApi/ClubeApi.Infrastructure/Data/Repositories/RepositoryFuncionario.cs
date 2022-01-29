@@ -46,7 +46,7 @@ namespace ClubeApi.Infrastructure.Data.Repositories
         {
             try
             {
-                return context.Set<Funcionario>().Include("Pessoa").Single(f => f.Id == id);
+                return context.Set<Funcionario>().Single(f => f.Id == id);
             }
             catch (Exception ex)
             {

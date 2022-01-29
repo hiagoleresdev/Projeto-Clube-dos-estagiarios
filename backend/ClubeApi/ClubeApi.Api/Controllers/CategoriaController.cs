@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Application.DTOs;
 using ClubeApi.Application.Interfaces.ApplicationServices;
+using ClubeApi.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClubeApi.Api.Controllers
@@ -19,7 +20,7 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Listar categorias
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetAll()
+        public async Task<ActionResult<IEnumerable<Categoria>>> GetAll()
         {
             try
             {
@@ -27,7 +28,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest(ex.Message);
             }
         }
 

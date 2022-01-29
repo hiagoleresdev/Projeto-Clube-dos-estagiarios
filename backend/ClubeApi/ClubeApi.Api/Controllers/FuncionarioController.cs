@@ -25,9 +25,9 @@ namespace ClubeApi.Api.Controllers
             {
                 return Ok(applicationServiceFuncionario.GetById(id));
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                return NotFound();
             }
         }
 
@@ -45,7 +45,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest(ex.Message);
             }
         }
 
@@ -63,7 +63,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest(ex.Message);
             }
         }
 
@@ -76,19 +76,19 @@ namespace ClubeApi.Api.Controllers
                 applicationServiceFuncionario.Delete(id);
                 return Ok("Funcionário deletado com sucesso");
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                return NotFound();
             }
         }
 
         // GET: Validar login
         [HttpGet]
-        public ActionResult<string> Validate(string usuario, string senha)
+        public ActionResult<int> Validate(string usuario, string senha)
         {
             try
             {
-                return Ok(applicationServiceFuncionario.Validate(usuario, senha));
+                return applicationServiceFuncionario.Validate(usuario, senha);
             }
             catch (Exception ex)
             {
