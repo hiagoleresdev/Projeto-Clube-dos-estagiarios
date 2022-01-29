@@ -1,5 +1,5 @@
 ﻿export class CategoriaDTO {
-    id: number;
-    tipo: string;
-    meses: number;
+    Id?: number;
+    Tipo: string;
+    Meses: number;
 }
