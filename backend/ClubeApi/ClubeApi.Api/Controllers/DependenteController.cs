@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Application.DTOs;
 using ClubeApi.Application.Interfaces.ApplicationServices;
+using ClubeApi.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClubeApi.Api.Controllers
@@ -19,7 +20,7 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Listar dependentes
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetAll()
+        public ActionResult<IEnumerable<Dependente>> GetAll()
         {
             try
             {
@@ -27,21 +28,25 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
         // GET: Selecionar dependente por ID
         [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public ActionResult<Dependente> GetById(int id)
         {
             try
             {
-                return Ok(applicationServiceDependente.GetById(id));
+                Dependente dependente = applicationServiceDependente.GetById(id);
+                if (dependente == null)
+                    return NotFound();
+                else
+                    return Ok(dependente);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -51,15 +56,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (dependenteDTO == null)
-                    return NotFound();
-
                 applicationServiceDependente.Add(dependenteDTO);
                 return Ok("Dependente cadastrado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -69,15 +71,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (dependenteDTO == null)
-                    return NotFound();
-
                 applicationServiceDependente.Update(dependenteDTO);
                 return Ok("Dependente atualizado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -92,7 +91,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
     }

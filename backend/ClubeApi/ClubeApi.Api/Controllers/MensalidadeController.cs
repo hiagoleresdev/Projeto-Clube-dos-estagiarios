@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Application.DTOs;
 using ClubeApi.Application.Interfaces.ApplicationServices;
+using ClubeApi.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClubeApi.Api.Controllers
@@ -19,7 +20,7 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Listar mensalidades
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetAll()
+        public ActionResult<IEnumerable<Mensalidade>> GetAll()
         {
             try
             {
@@ -27,22 +28,25 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
         // GET: Selecionar mensalidade por ID
         [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public ActionResult<Mensalidade> GetById(int id)
         {
             try
             {
-                return Ok(applicationServiceMensalidade.GetById(id));
+                Mensalidade mensalidade = applicationServiceMensalidade.GetById(id);
+                if (mensalidade == null)
+                    return NotFound();
+                else
+                    return Ok(mensalidade);
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -60,7 +64,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -70,16 +74,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (mensalidadeDTO == null)
-                    return NotFound();
-
                 applicationServiceMensalidade.Update(mensalidadeDTO);
                 return Ok("Mensalidade atualizada com sucesso");
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -94,7 +94,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
     }

@@ -20,7 +20,7 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Listar categorias
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Categoria>>> GetAll()
+        public ActionResult<IEnumerable<Categoria>> GetAll()
         {
             try
             {
@@ -28,21 +28,25 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
         // GET: Selecionar categoria por ID
         [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public ActionResult<Categoria> GetById(int id)
         {
             try
             {
-                return Ok(applicationServiceCategoria.GetById(id));
+                Categoria categoria = applicationServiceCategoria.GetById(id);
+                if (categoria == null)
+                    return NotFound();
+                else
+                    return Ok(categoria);
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -52,15 +56,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (categoriaDTO == null)
-                    return NotFound();
-
                 applicationServiceCategoria.Add(categoriaDTO);
                 return Ok("Categoria cadastrada com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -70,15 +71,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (categoriaDTO == null)
-                    return NotFound();
-
                 applicationServiceCategoria.Update(categoriaDTO);
                 return Ok("Categoria atualizada com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -93,7 +91,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
     }
