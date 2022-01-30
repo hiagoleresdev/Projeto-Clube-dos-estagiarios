@@ -2,7 +2,7 @@ import { Socio } from "./Socio";
 
 export class Categoria{
     Id: number;
-    Tipo: string;
-    Meses: number;
+    tipo: string;
+    meses: number;
     Socio: Socio[];
 }

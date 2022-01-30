@@ -1,6 +1,55 @@
+  <div class="border border-light rounded p-5" *ngIf="visibilidadeTabela">
+    <div>
+    <button type="button" class="btn btn-dark" (click)="ExibirFormularioCadastro()" style="border: none; background-color: #0477bf;color: white;">
+      Novo sócio
+    </button>
+    </div>
 
+
+    <br>
+
+  <table class="table table-striped table-hover table-sm" *ngIf="socios">
+    <tr class="thead" style="background-color: #0477bf; color: white">
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Numero cartão</th>
+      <th>Telefone</th>
+      <th>CEP</th>
+      <th>UF</th>
+      <th>Cidade</th>
+      <th>Bairro</th>
+      <th>Logradouro</th>
+      <th>Categoria</th>
+      <th>Ações</th>
+    </tr>
+
+    <tr *ngFor="let socio of socios">
+      <td>{{socio.nome}}</td>
+      <td>{{socio.email}}</td>
+      <td>{{socio.numeroCartao}}</td>
+      <td>{{socio.telefone}}</td>
+      <td>{{socio.cep}}</td>
+      <td>{{socio.uf}}</td>
+      <td>{{socio.cidade}}</td>
+      <td>{{socio.bairro}}</td>
+      <td>{{socio.logradouro}}</td>
+      <td>{{socio.categoria.tipo}}</td>
+
+      <td>
+        <button type="button" class="btn btn-success">Atualizar</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Excluir</button>
+      </td>
+    </tr>
+
+
+  </table>
+</div>
+
+  <!--formulario-->
   <div class="row">
-    <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formulario">
+    <div class="col-6 border border-light rounded p-5 shadow" *ngIf="visibilidadeFormulario ">
       <h6>Cadastro de sócio</h6>
       <hr>
 
@@ -64,7 +113,7 @@
               <button type="submit" class="btn btn-sm btn-success">Salvar</button>
             </div>
             <div class="pl-1">
-              <button type="submit" class="btn btn-sm btn-outline-slight">Voltar</button>
+              <button type="submit" class="btn btn-sm btn-outline-slight" (click)="Voltar()">Voltar</button>
             </div>
 
           </div>

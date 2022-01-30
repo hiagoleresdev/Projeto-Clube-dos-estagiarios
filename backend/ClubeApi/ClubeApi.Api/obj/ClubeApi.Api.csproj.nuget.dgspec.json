@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj": {}
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
         "projectName": "ClubeApi.Api",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj",
         "projectName": "ClubeApi.Application",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,8 +107,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj",
         "projectName": "ClubeApi.Domain.Core",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -165,8 +165,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj"
               }
             }
           }
@@ -199,14 +199,14 @@
         }
       }
     },
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj",
         "projectName": "ClubeApi.Domain.Services",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -223,8 +223,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
               }
             }
           }
@@ -257,14 +257,14 @@
         }
       }
     },
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj",
         "projectName": "ClubeApi.Domain",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -311,14 +311,14 @@
         }
       }
     },
-    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
+    "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
         "projectName": "ClubeApi.Infrastructure",
-        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -335,17 +335,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Application\\ClubeApi.Application.csproj"
               },
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Core\\ClubeApi.Domain.Core.csproj"
               },
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain.Services\\ClubeApi.Domain.Services.csproj"
               },
-              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
-                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj"
+              "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj": {
+                "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Domain\\ClubeApi.Domain.csproj"
               }
             }
           }

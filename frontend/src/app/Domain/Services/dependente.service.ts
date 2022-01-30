@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DependenteService {
-  url= 'https://localhost:5001/api/dependente';
+  url= 'https://localhost:7156/api/Dependente';
 
 constructor(private http: HttpClient) { }
 

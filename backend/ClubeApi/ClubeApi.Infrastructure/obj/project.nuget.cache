@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kGrKprm8YFnzFwrxQ7kjikxgR6gzjdh2kzCtd6kZPstGjy4WZPCH8s/lvo4sdpz7buZb5mgKo6ctFK0LPELmIw==",
+  "dgSpecHash": "2P0ZeCfnslIREx6YYWyIjecY8hVH8Q8+xN7kaoq4XEuFwNuOwHLCnO9ogbiDJS43K4nSpwGk7wrpmP2Bk809og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hiago.leres\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\hiago.leres\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -32,4 +32,6 @@ ExcluirCategoria(categoriaid: number) : Observable<any>{
   const apiUrl = '${this.url}/${categoriaid}';
   return this.http.delete<number>(apiUrl, httpOptions)
 }
+
+
 }

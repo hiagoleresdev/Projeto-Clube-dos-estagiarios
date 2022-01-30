@@ -2325,11 +2325,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
+      "projectUniqueName": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
       "projectName": "ClubeApi.Api",
-      "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
+      "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\ClubeApi.Api.csproj",
       "packagesPath": "C:\\Users\\hiago.leres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Api\\obj\\",
+      "outputPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hiago.leres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2346,8 +2346,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Clube dos estagiários\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj"
+            "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\hiago.leres\\Desktop\\DEV\\Backend\\Projeto-Clube-dos-estagiarios\\backend\\ClubeApi\\ClubeApi.Infrastructure\\ClubeApi.Infrastructure.csproj"
             }
           }
         }

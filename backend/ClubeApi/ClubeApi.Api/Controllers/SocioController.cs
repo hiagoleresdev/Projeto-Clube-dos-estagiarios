@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Application.DTOs;
 using ClubeApi.Application.Interfaces.ApplicationServices;
+using ClubeApi.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClubeApi.Api.Controllers
@@ -19,7 +20,7 @@ namespace ClubeApi.Api.Controllers
 
         // GET: Listar sócios
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetAll()
+        public ActionResult<IEnumerable<Socio>> GetAll()
         {
             try
             {
@@ -27,21 +28,25 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
         // GET: Selecionar sócio por ID
         [HttpGet("{id}")]
-        public ActionResult<string> GetById(int id)
+        public ActionResult<Socio> GetById(int id)
         {
             try
             {
-                return Ok(applicationServiceSocio.GetById(id));
+                Socio socio = applicationServiceSocio.GetById(id);
+                if (socio == null)
+                    return NotFound();
+                else
+                    return Ok(socio);
             }
             catch (Exception ex)
-            { 
-                throw ex;
+            {
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -51,15 +56,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (socioDTO == null)
-                    return NotFound();
-
                 applicationServiceSocio.Add(socioDTO);
                 return Ok("Sócio cadastrado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -69,15 +71,12 @@ namespace ClubeApi.Api.Controllers
         {
             try
             {
-                if (socioDTO == null)
-                    return NotFound();
-
                 applicationServiceSocio.Update(socioDTO);
                 return Ok("Sócio atualizado com sucesso");
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
 
@@ -92,7 +91,7 @@ namespace ClubeApi.Api.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                return BadRequest($"Erro: {ex.Message}");
             }
         }
     }

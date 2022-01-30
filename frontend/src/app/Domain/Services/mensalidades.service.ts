@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Mensalidades } from '../Mensalidades';
+import { Mensalidade } from '../Mensalidade';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,17 +13,16 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MensalidadesService {
-  url= 'https://localhost:5001/api/mensalidades';
+  url= 'https://localhost:7156/api/Mensalidade';
+  constructor(private http: HttpClient) { }
 
-constructor(private http: HttpClient) { }
-
-  PegarTodos(): Observable<Mensalidades[]>{
-    return this.http.get<Mensalidades[]>(this.url);
+  PegarTodos(): Observable<Mensalidade[]>{
+    return this.http.get<Mensalidade[]>(this.url);
   }
 
-  PegarPeloId(mensalidadesid: number): Observable<Mensalidades>{
+  PegarPeloId(mensalidadesid: number): Observable<Mensalidade>{
     const apiUrl = '${this.url}/${mensalidadesid}';
-    return this.http.get<Mensalidades>(apiUrl);
+    return this.http.get<Mensalidade>(apiUrl);
   }
 
 
