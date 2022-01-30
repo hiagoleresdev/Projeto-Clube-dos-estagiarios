@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { SocioService } from '../Domain/Services/socio.service';
+import { Socio } from '../Domain/Socio';
+import { SocioDTOService } from '../DTOs/Services/socio-dto.service';
+import { SocioDTO } from '../DTOs/SocioDTO';
 
 @Component({
   selector: 'forms-cadastro-socio',
@@ -7,34 +12,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormsCadastroSocioComponent implements OnInit {
 
-  usuario: any = {
-    nome: "",
-    endereco: "",
-    telefone: "",
-    email: "",
-    status: "",
-    categoria:"",
-    nro_cartao:""
-  }
+  constructor(private sociosServiceDto: SocioDTOService) { }
 
-  onSubmit(form: any){
-    console.log(form);
-    console.log(this.usuario);
-  }  
+  formulario: any;
+  socio: SocioDTO[];
 
-  salvarDados(){
-    debugger
-    let teste = this.usuario;
-  }
 
-  btnFechar(){
-    
-  }
- 
-
-  constructor() { }
 
   ngOnInit(): void {
-  }
+    this.formulario = new FormGroup({
+      nome: new FormControl(null),
+      email: new FormControl(null),
+      numeroCartao: new FormControl(null),
+      telefone: new FormControl(null),
+      cep: new FormControl(null),
+      uf: new FormControl(null),
+      cidade: new FormControl(null),
+      bairro: new FormControl(null),
+      logradouro: new FormControl(null),
+      fkcategoria: new FormControl(null),
+    });
+    }
+
+    EnviarFormulario(): void {
+      const socio : SocioDTO = this.formulario.value;
+
+      this.sociosServiceDto.SalvarSocio(socio).subscribe(resultado => {
+        alert('Socio inserido com sucesso!');
+      });
+    }
+
+
 
 }
+

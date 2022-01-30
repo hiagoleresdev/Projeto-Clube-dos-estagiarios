@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Categoria } from '../Domain/Categoria';
+import { FormControl, FormGroup } from '@angular/forms';
+import { CategoriaDTO } from '../DTOs/CategoriaDTO';
+import { CategoriaService } from '../Domain/Services/categoria.service';
+import { CategoriaDTOService } from '../DTOs/Services/categoria-dto.service';
 
 @Component({
   selector: 'form-categoria',
@@ -7,17 +12,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormCategoriaComponent implements OnInit {
 
-  categoria: any ={
-    nome: ""
-  }
- 
-  onSubmit(form: any){
-    console.log(this.categoria);
-  }
+  constructor(private categoriasServiceDto: CategoriaDTOService) { }
 
-  constructor() { }
+  formulario: any;
+
+  categoria: CategoriaDTO[];
+
 
   ngOnInit(): void {
+    this.formulario = new FormGroup({
+      tipo: new FormControl(null),
+      meses: new FormControl(null)
+    });
   }
 
+
+  EnviarCategoria(): void {
+    const categoria : CategoriaDTO = this.formulario.value;
+
+    this.categoriasServiceDto.SalvarCategoria(categoria).subscribe(resultado => {
+      alert('Categoria inserida com sucesso!');
+    });
+  }
+
+
+
+
 }
+

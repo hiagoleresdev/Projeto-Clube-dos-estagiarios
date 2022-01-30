@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Mensalidades } from '../Domain/Mensalidades';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MensalidadeDTO } from '../DTOs/MensalidadeDTO';
+import { MensalidadesService } from '../Domain/Services/mensalidades.service';
+import { MensalidadeDTOService } from '../DTOs/Services/mensalidade-dto.service';
 
 @Component({
   selector: 'form-mensalidade',
@@ -7,22 +12,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormMensalidadeComponent implements OnInit {
 
-  mensalidade: any = {
-    dataMensal: "",
-    valorMensal: "",
-    dataPagto: "",
-    jurosMensal: "",
-    valorPagto: "",
-    quitacaoMensal: "" 
-  }
+  constructor(private mensalidadeServiceDto: MensalidadeDTOService) { }
 
-  onSubmit(form: any){
-    console.log(this.mensalidade);
-  }
+  mensalidades: Mensalidades[];
+  formulario: any;
 
-  constructor() { }
+
 
   ngOnInit(): void {
+    this.formulario = new FormGroup({
+      dataVencimento: new FormControl(),
+      valorInicial: new FormControl(),
+      dataPagamento: new FormControl(),
+      juros: new FormControl(),
+      valorFinal: new FormControl(),
+      quitada: new FormControl(),
+      fkSocio: new FormControl()
+    });
+    }
+
+
+
+
+  EnviarMensalidade(): void {
+    const mensalidade : MensalidadeDTO = this.formulario.value;
+
+    this.mensalidadeServiceDto.SalvarMensalidade(mensalidade).subscribe(resultado => {
+      alert('Mensalidade inserida com sucesso!');
+    });
   }
+
+
+
+
+
 
 }
