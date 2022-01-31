@@ -1,5 +1,6 @@
 ﻿using ClubeApi.Domain.Core.Interfaces.Repositories;
 using ClubeApi.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClubeApi.Infrastructure.Data.Repositories
 {
@@ -45,7 +46,7 @@ namespace ClubeApi.Infrastructure.Data.Repositories
         {
             try
             {
-                return context.Set<Funcionario>().Find(id);
+                return context.Set<Funcionario>().Single(f => f.Id == id);
             }
             catch (Exception ex)
             {
@@ -66,20 +67,14 @@ namespace ClubeApi.Infrastructure.Data.Repositories
             }
         }
 
-        public int Validate(Funcionario obj)
+        public int Validate(string usuario, string senha)
         {
-            try
-            {
-                Funcionario obj2 = context.Set<Funcionario>().FirstOrDefault(f => f.Usuario.Equals(obj.Usuario) && f.Senha.Equals(obj.Senha));
-                if (obj2 == null)
-                    return 0;
-                else
-                    return 1;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            Funcionario obj2 = context.Set<Funcionario>().Where(f => f.Usuario.Equals(usuario) && f.Senha.Equals(senha)).FirstOrDefault();
+            Console.WriteLine(obj2);
+            if (obj2 == null)
+                return 0;
+            else
+                return 1;
         }
     }
 }

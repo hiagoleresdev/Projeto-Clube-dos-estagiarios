@@ -25,5 +25,4 @@ export class MensalidadesService {
     return this.http.get<Mensalidade>(apiUrl);
   }
 
-
 }

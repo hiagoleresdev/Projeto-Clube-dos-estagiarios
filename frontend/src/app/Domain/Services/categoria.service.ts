@@ -26,8 +26,4 @@ PegarPeloId(categoriaId: number): Observable<Categoria>{
   return this.http.get<Categoria>(apiUrl);
 }
 
-AtualizarCategoria(categoria : Categoria) : Observable<any>{
-  return this.http.put<Categoria>(this.url, categoria, httpOptions);
-}
-
 }

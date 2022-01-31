@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3B342E78-AC14-45A5-AD5F-0B3AF10AE4A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Api", "ClubeApi.Api\ClubeApi.Api.csproj", "{334C241A-EE32-40B7-B86C-31AFEEDB93AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Api", "ClubeApi.Api\ClubeApi.Api.csproj", "{334C241A-EE32-40B7-B86C-31AFEEDB93AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Application", "ClubeApi.Application\ClubeApi.Application.csproj", "{6E688235-27ED-4492-BC3F-3D7C35C62263}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Application", "ClubeApi.Application\ClubeApi.Application.csproj", "{6E688235-27ED-4492-BC3F-3D7C35C62263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Domain", "ClubeApi.Domain\ClubeApi.Domain.csproj", "{FA7251A5-BA8A-4648-9EFA-B3A87C6F68BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Domain", "ClubeApi.Domain\ClubeApi.Domain.csproj", "{FA7251A5-BA8A-4648-9EFA-B3A87C6F68BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Domain.Core", "ClubeApi.Domain.Core\ClubeApi.Domain.Core.csproj", "{9FA41078-4F26-4C5D-A4A0-B67BB2ADDC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Domain.Core", "ClubeApi.Domain.Core\ClubeApi.Domain.Core.csproj", "{9FA41078-4F26-4C5D-A4A0-B67BB2ADDC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Domain.Services", "ClubeApi.Domain.Services\ClubeApi.Domain.Services.csproj", "{C0C6CA3B-5887-4067-9659-7246D66E9117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Domain.Services", "ClubeApi.Domain.Services\ClubeApi.Domain.Services.csproj", "{C0C6CA3B-5887-4067-9659-7246D66E9117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubeApi.Infrastructure", "ClubeApi.Infrastructure\ClubeApi.Infrastructure.csproj", "{C656CB7C-9EE7-480A-A87B-85A5DDCCBD95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubeApi.Infrastructure", "ClubeApi.Infrastructure\ClubeApi.Infrastructure.csproj", "{C656CB7C-9EE7-480A-A87B-85A5DDCCBD95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

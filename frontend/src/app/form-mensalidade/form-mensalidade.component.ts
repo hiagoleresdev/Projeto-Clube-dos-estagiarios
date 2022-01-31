@@ -60,6 +60,10 @@ export class FormMensalidadeComponent implements OnInit {
         this.mensalidades = registros;
       });
     });
+
+    this.formulario = new FormGroup({
+
+    })
   }
 
 

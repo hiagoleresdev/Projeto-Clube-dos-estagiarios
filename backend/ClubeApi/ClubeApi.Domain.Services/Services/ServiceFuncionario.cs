@@ -35,9 +35,9 @@ namespace ClubeApi.Domain.Services.Services
             repository.Update(obj);
         }
 
-        public int Validate(Funcionario obj)
+        public int Validate(string usuario, string senha)
         {
-            return repository.Validate(obj);
+            return repository.Validate(usuario, senha);
         }
     }
 }

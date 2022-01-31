@@ -17,15 +17,14 @@ export class SocioService {
 
   constructor(private http: HttpClient) { }
 
-  PegarTodos(): Observable<Socio[]>{
+  PegarTodos(): Observable<Socio[]>
+  {
     return this.http.get<Socio[]>(this.url);
   }
 
-
-  PegarPeloId(socioid: number): Observable<Socio>{
-    const apiUrl = '${this.url}/${socioid}';
+  PegarPeloId(socioid: number): Observable<Socio>
+  {
+    const apiUrl = `${this.url}/${socioid}`;
     return this.http.get<Socio>(apiUrl);
   }
-
-
 }

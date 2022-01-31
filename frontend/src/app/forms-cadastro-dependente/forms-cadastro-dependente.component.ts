@@ -12,9 +12,12 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './forms-cadastro-dependente.component.html',
   styleUrls: ['./forms-cadastro-dependente.component.css']
 })
-export class FormsCadastroDependenteComponent implements OnInit {
+export class FormsCadastroDependenteComponent implements OnInit
+{
+  dependenteDTOService: any;
+  constructor(private dependenteService: DependenteService, dependenteDTOService: DependenteDTOService) { }
 
-  constructor(private dependenteServiceDto: DependenteDTOService, private dependenteService: DependenteService) { }
+
 
   formulario: any;
 
@@ -54,7 +57,7 @@ export class FormsCadastroDependenteComponent implements OnInit {
     const dependente : DependenteDTO = this.formulario.value;
     console.log(dependente)
 
-    this.dependenteServiceDto.SalvarDependente(dependente).subscribe(resultado => {
+    this.dependenteDTOService.SalvarDependente(dependente).subscribe(resultado => {
 
       this.visibilidadeFormulario = false;
       this.visibilidadeTabela = true;
@@ -66,5 +69,4 @@ export class FormsCadastroDependenteComponent implements OnInit {
       })
     });
   }
-
 }

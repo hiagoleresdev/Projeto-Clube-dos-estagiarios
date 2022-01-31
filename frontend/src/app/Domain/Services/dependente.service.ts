@@ -25,6 +25,4 @@ PegarPeloId(dependenteid: number): Observable<Dependente>{
   const apiUrl = `${this.url}/${dependenteid}`;
   return this.http.get<Dependente>(apiUrl);
 }
-
-
 }

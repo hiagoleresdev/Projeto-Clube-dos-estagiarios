@@ -17,29 +17,5 @@ namespace ClubeApi.Application.Mappers
 
             return categoria;
         }
-
-        public CategoriaDTO MapperEntityToDTO(Categoria categoria)
-        {
-            CategoriaDTO categoriaDTO = new CategoriaDTO()
-            {
-                Id = categoria.Id,
-                Tipo = categoria.Tipo,
-                Meses = categoria.Meses
-            };
-
-            return categoriaDTO;
-        }
-
-        public IEnumerable<CategoriaDTO> MapperListEntityToDTO(IEnumerable<Categoria> categorias)
-        {
-            IEnumerable<CategoriaDTO> categoriasDTO = categorias.Select(c => new CategoriaDTO()
-            {
-                Id = c.Id,
-                Tipo = c.Tipo,
-                Meses = c.Meses
-            });
-
-            return categoriasDTO;
-        }
     }
 }

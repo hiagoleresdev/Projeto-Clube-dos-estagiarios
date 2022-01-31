@@ -43,7 +43,7 @@ namespace ClubeApi.Api.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     Usuario = table.Column<string>(type: "VARCHAR(16)", nullable: false),
-                    senha = table.Column<string>(type: "VARCHAR(32)", nullable: false, computedColumnSql: "CONVERT(VARCHAR(32), HashBytes('MD5', '[Senha]'), 2)")
+                    senha = table.Column<string>(type: "CHAR(10)", nullable: false)
                 },
                 constraints: table =>
                 {

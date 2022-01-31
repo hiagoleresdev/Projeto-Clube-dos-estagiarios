@@ -33,7 +33,6 @@ namespace ClubeApi.Application.ApplicationServices
         public Funcionario GetById(int id)
         {
             Funcionario funcionario = service.GetById(id);
-            //return mapper.MapperEntityToDTO(funcionario);
             return funcionario;
         }
 
@@ -43,10 +42,9 @@ namespace ClubeApi.Application.ApplicationServices
             service.Update(funcionario);
         }
 
-        public int Validate(FuncionarioDTO funcionarioDTO)
+        public int Validate(string usuario, string senha)
         {
-            Funcionario funcionario = mapper.MapperDTOToEntity(funcionarioDTO);
-            return service.Validate(funcionario);
+            return service.Validate(usuario, senha);
         }
     }
 }
