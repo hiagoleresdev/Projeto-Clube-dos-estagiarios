@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MensalidadesService {
-  url= 'https://localhost:5001/api/mensalidades';
+  url= 'https://localhost:7156/api/mensalidades';
 
 constructor(private http: HttpClient) { }
 
@@ -25,18 +25,4 @@ PegarPeloId(mensalidadesid: number): Observable<Mensalidades>{
   const apiUrl = '${this.url}/${mensalidadesid}';
   return this.http.get<Mensalidades>(apiUrl);
 }
-  
-SalvarMensalidades(mensalidades: Mensalidades) : Observable<any>{
-  return this.http.post<Mensalidades>(this.url, mensalidades, httpOptions);
-}
-  
-AtualizarMensalidades(mensalidades : Mensalidades) : Observable<any>{
-  return this.http.put<Mensalidades>(this.url, mensalidades, httpOptions);
-}
-  
-ExcluirMensalidades(mensalidadesid: number) : Observable<any>{
-  const apiUrl = '${this.url}/${mensalidadesid}';
-  return this.http.delete<number>(apiUrl, httpOptions)
-}
-
 }

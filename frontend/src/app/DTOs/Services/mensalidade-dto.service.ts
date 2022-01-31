@@ -14,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class MensalidadeDTOService {
-  url= 'https://localhost:5001/api/MensalidadeDTO';
+  url= 'https://localhost:7156/api/Mensalidade';
 
   constructor(private http: HttpClient) { }
 
@@ -27,7 +27,7 @@ export class MensalidadeDTOService {
     return this.http.get<MensalidadeDTO>(apiUrl);
   }
   
-  SalvarDependente(mensalidadeDTO: MensalidadeDTO) : Observable<any>{
+  SalvarMensalidade(mensalidadeDTO: MensalidadeDTO) : Observable<any>{
     return this.http.post<MensalidadeDTO>(this.url, mensalidadeDTO, httpOptions);
   }
   

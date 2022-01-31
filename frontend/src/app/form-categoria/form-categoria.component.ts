@@ -1,51 +1,10 @@
 import { CategoriaDTO } from './../DTOs/CategoriaDTO';
-// import { FormCategoriaComponent } from './form-categoria.component';
-// import { FormControl, FormGroup } from '@angular/forms';
-// import { Component, OnInit } from '@angular/core';
-// import { Categoria } from '../Domain/Categoria';
-// import { CategoriaService } from '../Domain/Services/categoria.service';
-
-// @Component({
-//   selector: 'form-categoria',
-//   templateUrl: './form-categoria.component.html',
-//   styleUrls: ['./form-categoria.component.css']
-// })
-// export class FormCategoriaComponent implements OnInit {
-
-//   categorias: Categoria[];
-
-//   categoria: any ={
-//     nome: ""
-//   }  
- 
-//   onSubmit(form: any){
-//     console.log(this.categoria);
-//   }
-
-//   EnviarCategoria(): void {
-//     const categoria : Categoria = this.categoria.value;
-
-//     this.categoriaservice.SalvarCategoria(categoria).subscribe(resultado => {
-//       alert('Categoria inserida com sucesso!');
-//     });
-//   }
-
-//   constructor(private categoriaservice: CategoriaService) { }
-
-//   ngOnInit(): void {
-//     this.categoriaservice.PegarTodos().subscribe(resultado =>{
-//       this.categorias = resultado;
-//   });
-// }
-
-// }
-
 import { Categoria } from '../Domain/Categoria';
 import { CategoriaService } from '../Domain/Services/categoria.service';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { ConvertActionBindingResult } from '@angular/compiler/src/compiler_util/expression_converter';
+import { CategoriaDTOService } from '../DTOs/Services/categoria-dto.service';
 
 @Component({
   selector: 'form-categoria',
@@ -70,7 +29,7 @@ export class FormCategoriaComponent implements OnInit {
   
   modalRef: BsModalRef;
 
-  constructor(private categoriaservice: CategoriaService,
+  constructor(private categoriaDTOService: CategoriaDTOService, private categoriaservice: CategoriaService, 
     private modalService: BsModalService) {}
 
   ngOnInit(): void {
@@ -108,7 +67,7 @@ export class FormCategoriaComponent implements OnInit {
     const categoria : Categoria = this.categoria.value;
 
     if (this.categoriaId > 0) {
-      this.categoriaservice.AtualizarCategoria(categoria).subscribe((resultado) => {
+      this.categoriaDTOService.AtualizarCategoria(categoria).subscribe((resultado) => {
         this.visibilidadeFormulario = false;
         this.visibilidadeTabela = true;
         alert('Pessoa atualizada com sucesso');
@@ -117,7 +76,7 @@ export class FormCategoriaComponent implements OnInit {
         });
       });
     } else {
-      this.categoriaservice.SalvarCategoria(categoria).subscribe((resultado) => {
+      this.categoriaDTOService.SalvarCategoria(categoria).subscribe((resultado) => {
         this.visibilidadeFormulario = false;
         this.visibilidadeTabela = true;
         alert('Pessoa inserida com sucesso');
@@ -140,7 +99,7 @@ export class FormCategoriaComponent implements OnInit {
   }
 
   ExcluirCategoria(categoriaId){
-    this.categoriaservice.ExcluirCategoria(categoriaId).subscribe(resultado => {
+    this.categoriaDTOService.ExcluirCategoria(categoriaId).subscribe(resultado => {
       this.modalRef.hide();
       alert('Categoria excluída com sucesso');
       this.categoriaservice.PegarTodos().subscribe(registros => {

@@ -14,7 +14,7 @@ const httpOptions = {
 })
 
 export class CategoriaDTOService {
-  url= 'https://localhost:5001/api/CategoriaDTO';
+  url= 'https://localhost:5001/api/Categoria';
   
   constructor(private http: HttpClient) { }
 

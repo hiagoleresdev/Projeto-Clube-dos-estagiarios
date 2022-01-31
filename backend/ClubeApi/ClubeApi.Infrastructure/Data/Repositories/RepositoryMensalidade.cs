@@ -19,7 +19,7 @@ namespace ClubeApi.Infrastructure.Data.Repositories
         {
             try
             {
-                return context.Mensalidades.Include("Mensalidade").ToList();
+                return context.Mensalidades.Include("Socio").ToList();
             }
             catch (Exception ex)
             {

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Mensalidades } from '../Domain/Mensalidades';
 import { MensalidadesService } from '../Domain/Services/mensalidades.service';
+import { MensalidadeDTO } from '../DTOs/MensalidadeDTO';
+import { MensalidadeDTOService } from '../DTOs/Services/mensalidade-dto.service';
 
 @Component({
   selector: 'form-mensalidade',
@@ -11,45 +14,31 @@ export class FormMensalidadeComponent implements OnInit {
 
   asMensalidades: Mensalidades[];
   Idmensalidade: number;
+  formulario: any;
 
-
-  mensalidade: any = [{
-    id: 1,
-    dataMensal: "21/08",
-    valorMensal: "500",
-    dataPagto: "21/08",
-    jurosMensal: "0",
-    valorPagto: "500",
-    quitacaoMensal: "ativo" 
-  },
-    {id: 2,
-    dataMensal: "08/08",
-    valorMensal: "321",
-    dataPagto: "08/08",
-    jurosMensal: "0",
-    valorPagto: "321",
-    quitacaoMensal: "inativo" 
-}
-  ]
+  constructor(private mensalidadeDTOService: MensalidadeDTOService, private mensalidadeservice: MensalidadesService) { }
 
   onSubmit(form: any){
-    console.log(this.mensalidade);
   }
 
   EnviarMensalidade(): void {
-    const mensalidade : Mensalidades = this.mensalidade.value;
+    const mensalidade : MensalidadeDTO = this.formulario.value
 
-    this.mensalidadeservice.SalvarMensalidades(mensalidade).subscribe(resultado => {
+    this.mensalidadeDTOService.SalvarMensalidade(mensalidade).subscribe(resultado => {
       alert('Mensalidade inserida com sucesso!');
     });
   }
 
-  constructor(private mensalidadeservice: MensalidadesService) { }
+ 
 
   ngOnInit(): void {
     this.mensalidadeservice.PegarTodos().subscribe(resultado =>{
       this.asMensalidades = resultado;
     });
+
+    this.formulario = new FormGroup({
+
+    })
   }
 
 

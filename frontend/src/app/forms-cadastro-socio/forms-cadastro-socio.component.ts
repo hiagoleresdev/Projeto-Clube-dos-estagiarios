@@ -1,55 +1,69 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { SocioService } from '../Domain/Services/socio.service';
 import { Socio } from '../Domain/Socio';
+import { SocioDTOService } from '../DTOs/Services/socio-dto.service';
+import { SocioDTO } from '../DTOs/SocioDTO';
 
 @Component({
   selector: 'forms-cadastro-socio',
   templateUrl: './forms-cadastro-socio.component.html',
   styleUrls: ['./forms-cadastro-socio.component.css']
 })
-export class FormsCadastroSocioComponent implements OnInit {
-
+export class FormsCadastroSocioComponent implements OnInit 
+{
+  formulario: any;
+  tituloFormulario: string;
   socios: Socio[];
+  visibilidadeTabela: boolean = true;
+  visibilidadeFormulario: boolean = false;
 
-  usuario: any = {
-    nome: "",
-    endereco: "",
-    telefone: "",
-    email: "",
-    status: "",
-    categoria:"",
-    nro_cartao:""
+  constructor(private socioDTOService: SocioDTOService, private socioService: SocioService) { }
+
+  ngOnInit(): void 
+  {
+      this.socioService.PegarTodos().subscribe(resultado => {
+        this.socios = resultado;
+      });
+
+      this.tituloFormulario = 'Nova pessoa'
+      this.formulario = new FormGroup({
+        Nome: new FormControl(null),
+        Email: new FormControl(null),
+        NumeroCartao: new FormControl(null),
+        Telefone: new FormControl(null),
+        Cep: new FormControl(null),
+        Uf: new FormControl(null),
+        Cidade: new FormControl(null),
+        Bairro: new FormControl(null),
+        Logradouro: new FormControl(null),
+        Categoria: new FormControl(null)
+      })
   }
 
-  onSubmit(form: any){
-    console.log(form);
-    console.log(this.usuario);
-  }  
-
-  salvarDados(){
-    debugger
-    let teste = this.usuario;
+  ExibirFormularioCadastro() : void
+  {
+    this.visibilidadeTabela = false;
+    this.visibilidadeFormulario = true;
   }
 
-  btnFechar(){
-    
+  Voltar(): void
+  {
+    this.visibilidadeFormulario = false;
+    this.visibilidadeTabela = true;
   }
 
-  EnviarSocio(): void {
-    const socio : Socio = this.usuario.value;
+  EnviarFormulario(): void
+  {
+    const socio: SocioDTO = this.formulario.value;
 
-    this.sociosService.SalvarSocio(socio).subscribe(resultado => {
-      alert('Socio inserido com sucesso!');
-    });
-  }
-
- 
-  constructor(private sociosService: SocioService) { }
-
-  ngOnInit(): void {
-    this.sociosService.PegarTodos().subscribe(resultado =>{
-      this.socios = resultado;
-    });  
+    this.socioDTOService.SalvarSocio(socio).subscribe(resultado => {
+      this.Voltar();
+      this.socioService.PegarTodos().subscribe(resultado => 
+      {
+        this.socios = resultado;
+      });
+    })
   }
 
 }

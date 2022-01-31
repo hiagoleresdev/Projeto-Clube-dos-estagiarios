@@ -1,42 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import { Categoria } from '../Domain/Categoria';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Dependente } from '../Domain/Dependente';
 import { DependenteService } from '../Domain/Services/dependente.service';
+import { DependenteDTO } from '../DTOs/DependenteDTO';
+import { DependenteDTOService } from '../DTOs/Services/dependente-dto.service';
 
 @Component({
   selector: 'app-forms-cadastro-dependente',
   templateUrl: './forms-cadastro-dependente.component.html',
   styleUrls: ['./forms-cadastro-dependente.component.css']
 })
-export class FormsCadastroDependenteComponent implements OnInit {
+export class FormsCadastroDependenteComponent implements OnInit 
+{
+  dependenteDTOService: any;
+  constructor(private dependenteService: DependenteService, dependenteDTOService: DependenteDTOService) { }
 
   dependentes: Dependente[];
 
-  usuario: any = {
-    nome: "",
-    email: "",
-    parentesco: "",
-    nroCartao:""
-  }
+  formulario: any;
 
-  onSubmit(form: any){
-    console.log(form);
-    console.log(this.usuario);
-  }  
+  tituloFormulario: any
 
   EnviarDependente(): void {
-    const dependente : Dependente = this.usuario.value;
+    const dependente : DependenteDTO = this.formulario.value
 
-    this.dependenteservice.SalvarDependente(dependente).subscribe(resultado => {
+    this.dependenteDTOService.SalvarDependente(dependente).subscribe(resultado => {
       alert('Dependente inserido com sucesso!');
     });
   }
 
-  constructor(private dependenteservice : DependenteService) { }
-
-  ngOnInit(): void {
-    this.dependenteservice.PegarTodos().subscribe(resultado =>{
+  ngOnInit(): void 
+  {
+    this.dependenteService.PegarTodos().subscribe(resultado =>{
       this.dependentes = resultado;
+    })
+
+    this.tituloFormulario = 'Nova pessoa'
+    this.formulario = new FormGroup({
+      Nome: new FormControl(),
+      Email: new FormControl(),
+      NumeroCartao: new FormControl(),
+      Parentesco: new FormControl(),
+      FkSocio: new FormControl(),
     });
   }
 }

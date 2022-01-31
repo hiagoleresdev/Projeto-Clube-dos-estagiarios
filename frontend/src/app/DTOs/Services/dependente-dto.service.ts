@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DependenteDTOService {
-  url= 'https://localhost:5001/api/DependenteDTO';
+  url= 'https://localhost:5001/api/Dependente';
 
   constructor(private http: HttpClient) { }
 

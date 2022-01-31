@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DependenteService {
-  url= 'https://localhost:5001/api/dependente';
+  url= 'https://localhost:7156/api/dependente';
 
 constructor(private http: HttpClient) { }
 
@@ -24,19 +24,5 @@ PegarTodos(): Observable<Dependente[]>{
 PegarPeloId(dependenteid: number): Observable<Dependente>{
   const apiUrl = '${this.url}/${dependenteid}';
   return this.http.get<Dependente>(apiUrl);
-}
-  
-SalvarDependente(dependente: Dependente) : Observable<any>{
-  return this.http.post<Dependente>(this.url, dependente, httpOptions);
-}
-  
-AtualizarDependente(dependente : Dependente) : Observable<any>{
-  return this.http.put<Dependente>(this.url, dependente, httpOptions);
-}
-  
-ExcluirDependente(dependenteid: number) : Observable<any>{
-  const apiUrl = '${this.url}/${dependenteid}';
-  return this.http.delete<number>(apiUrl, httpOptions)
-}
-  
+} 
 }

@@ -4,7 +4,7 @@ import { Mensalidades } from "./Mensalidades";
 import { Pessoa } from "./Pessoa";
 
 export class Socio extends Pessoa{
-    numeroCartao: number;
+    NumeroCartao: number;
     Telefone: string;
     Cep: string;
     Uf: string;

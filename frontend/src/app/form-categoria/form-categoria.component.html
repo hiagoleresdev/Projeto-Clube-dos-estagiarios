@@ -1,34 +1,3 @@
-<!-- <h4>Cadastrar Categoria</h4>
-<form #formCategoria="ngForm" (ngSubmit)="onSubmit(formCategoria)" (ngSubmit)="EnviarCategoria()">
-    <div class="form-group">
-      <label for="nomeCategoria">Nome da Categoria</label>
-      Para associar o valor que o usuário insere no input, precisamos utilizar o name e o ngModel
-      <input type="text" class="form-control" name="nome" id="campoNomeCategoria" placeholder="Insira o nome da categoria" [(ngModel)]="categoria.nome" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
-        <button type="button" class="btn btn-danger espacamento-btn">Fechar</button>
-</form>
-<animacao-ondas></animacao-ondas>
-
-<table class = "table table-striped table-hover table-sm" *ngIf="categorias">
-  <tr class="thead-light">
-    <th>#</th>
-    <th>Tipo</th>
-    <th>Meses</th>
-  </tr>
-
-  <tr *ngFor="let cat of categorias">
-    <td> {{cat.Id}} </td>
-    <td> {{cat.Tipo}} </td>
-    <td> {{cat.Meses}} </td>
-    <td>
-      <button type="button" class="btn btn-sm btn-outline-info">Atualizar</button>
-      <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-
-    </td>    
-  </tr>
-</table> -->
-
 <div class="container p-5" *ngIf="visibilidadeTabela">
   <div class= "container p-2">
     <button type="button" class="btn  btn-primary" (click)="ExibirFormularioCadastro()">

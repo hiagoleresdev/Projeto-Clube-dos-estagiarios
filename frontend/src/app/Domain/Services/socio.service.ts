@@ -12,30 +12,20 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class SocioService {
-  url= 'https://localhost:5001/api/socio';
+export class SocioService 
+{
+  url= 'https://localhost:7156/api/socio';
 
   constructor(private http: HttpClient) { }
 
-  PegarTodos(): Observable<Socio[]>{
+  PegarTodos(): Observable<Socio[]>
+  {
     return this.http.get<Socio[]>(this.url);
   }
   
-  PegarPeloId(socioid: number): Observable<Socio>{
+  PegarPeloId(socioid: number): Observable<Socio>
+  {
     const apiUrl = '${this.url}/${socioid}';
     return this.http.get<Socio>(apiUrl);
-  }
-  
-  SalvarSocio(socio: Socio) : Observable<any>{
-    return this.http.post<Socio>(this.url, socio, httpOptions);
-  }
-  
-  AtualizarSocio(socio : Socio) : Observable<any>{
-    return this.http.put<Socio>(this.url, socio, httpOptions);
-  }
-  
-  ExcluirSocio(socioid: number) : Observable<any>{
-    const apiUrl = '${this.url}/${socioid}';
-    return this.http.delete<number>(apiUrl, httpOptions)
   }
 }

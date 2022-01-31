@@ -13,7 +13,7 @@ const httpOptions = {
   })
 
 export class FuncionarioDTO{
-    url= 'https://localhost:5001/api/FuncionarioDTO';
+    url= 'https://localhost:5001/api/Funcionario';
 
     usuario: string;
     senha: string;
