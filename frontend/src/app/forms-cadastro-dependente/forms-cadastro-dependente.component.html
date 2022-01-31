@@ -1,6 +1,6 @@
 <div class="border border-light rounded p-5" *ngIf="visibilidadeTabela">
   <div>
-  <button type="button" class="btn btn-dark" (click)="ExibirFormularioCadastro()">
+  <button type="button" class="btn btn-dark btnAdicionar" (click)="ExibirFormularioCadastro()">
     Novo dependente
   </button>
   </div>
@@ -9,7 +9,8 @@
   <br>
 
 <table class="table table-striped table-hover table-sm" *ngIf="dependentes">
-  <tr class="thead-dark">
+  <tr class="thead tabela">
+    <th>Id</th>
     <th>Nome</th>
     <th>Email</th>
     <th>Parentesco</th>
@@ -18,14 +19,15 @@
   </tr>
 
   <tr *ngFor="let dependente of dependentes">
+    <td>{{dependente.id}}</td>
     <td>{{dependente.nome}}</td>
     <td>{{dependente.email}}</td>
     <td>{{dependente.parentesco}}</td>
     <td>{{dependente.socio.numeroCartao}}</td>
 
     <td>
-      <button type="button" class="btn btn-success" style="margin-right: 20px;">Atualizar</button>
-      <button type="button" class="btn btn-danger">Excluir</button>
+      <button type="button" class="btn btn-success" style="margin-right: 20px;" (click)="ExibirFormularioAtualizacao(dependente.id)">Atualizar</button>
+      <button type="button" class="btn btn-danger" (click)="ExibirConfirmacaoExclusao(dependente.id, dependente.nome, conteudoModal)">Excluir</button>
     </td>
 
   </tr>
@@ -36,7 +38,7 @@
 
   <div class="row">
     <div class="col-6 border border-light rounded p-5 shadow" *ngIf="visibilidadeFormulario">
-      <h6>Cadastro de categorias</h6>
+      <h6>Cadastro de dependente</h6>
       <hr>
 
       <form [formGroup]="formulario" (ngSubmit)="EnviarDependente()">
@@ -83,5 +85,20 @@
     </div>
   </div>
 
+  <ng-template #conteudoModal>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Confirmação</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Prosseguir com a exclusao?
+    </div>
 
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modalRef.hide()">Não</button>
+      <button type="button" class="btn btn-outline-danger" (click)="ExcluirDependente(dependenteId)">Sim</button>
+    </div>
+  </ng-template>
 

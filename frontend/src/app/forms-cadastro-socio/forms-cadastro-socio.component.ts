@@ -64,6 +64,28 @@ export class FormsCadastroSocioComponent implements OnInit {
       });
     }
 
+    ExibirFormularioAtualizacao(socioId){
+      this.visibilidadeTabela = false;
+      this.visibilidadeFormulario = true;
+
+      this.socioService.PegarPeloId(socioId).subscribe(resultado => {
+        this.formulario = new FormGroup({
+          id: new FormControl(resultado.id),
+          nome: new FormControl(resultado.nome),
+          email: new FormControl(resultado.email),
+          numeroCartao: new FormControl(resultado.numeroCartao),
+          telefone: new FormControl(resultado.telefone),
+          cep: new FormControl(resultado.cep),
+          uf: new FormControl(resultado.uf),
+          cidade: new FormControl(resultado.cidade),
+          bairro: new FormControl(resultado.bairro),
+          logradouro: new FormControl(resultado.logradouro),
+          fkcategoria: new FormControl(resultado.categoria.id)
+        });
+      });
+    }
+
+
     Voltar():void{
       this.visibilidadeTabela = true;
       this.visibilidadeFormulario = false;
@@ -71,24 +93,32 @@ export class FormsCadastroSocioComponent implements OnInit {
 
     EnviarFormulario(): void {
       const socio : SocioDTO = this.formulario.value;
-      console.log(socio)
 
-      this.sociosServiceDto.SalvarSocio(socio).subscribe(resultado => {
-        this.visibilidadeFormulario = false;
-        this.visibilidadeTabela = true;
+      if(socio.id > 0){
+        this.sociosServiceDto.AtualizarSocio(socio).subscribe(resultado => {
+          this.visibilidadeFormulario = false;
+          this.visibilidadeTabela = true;
+          alert('Socio atualizado com sucesso!');
 
-        alert('Socio inserido com sucesso!');
+          this.socioService.PegarTodos().subscribe(registros => {
+            this.socios = registros;
+          })
+        });
+      }else{
+        this.sociosServiceDto.SalvarSocio(socio).subscribe(resultado => {
+          this.visibilidadeFormulario = false;
+          this.visibilidadeTabela = true;
 
-        this.socioService.PegarTodos().subscribe(registros =>{
-          this.socios = registros;
-        })
-      });
+          alert('Socio inserido com sucesso!');
+
+          this.socioService.PegarTodos().subscribe(registros =>{
+            this.socios = registros;
+          })
+        });
+      }
+
+
     }
-
-    Teste(){
-      alert('oi')
-    }
-
 
     ExibirConfirmacaoExclusao(socioId, nomeSocio, conteudoModal: TemplateRef<any>):void{
 
@@ -101,7 +131,7 @@ export class FormsCadastroSocioComponent implements OnInit {
       console.log(socioId)
       this.sociosServiceDto.ExcluirSocio(socioId).subscribe(resultado => {
         this.modalRef.hide();
-        alert("Marcao excluida com sucesso");
+        alert("Socio excluido com sucesso");
         this.socioService.PegarTodos().subscribe(registros => {
           this.socios = registros;
         })

@@ -1,20 +1,20 @@
 main{
     background-color: #00ac96;
   }
-  
+
   .content{
     background-color: #00ac96;
     margin: 8%;
     background-color: #fff;
     padding: 4rem 1rem 4rem 1rem;
     box-shadow: 0 0 5px 5px rgba(0,0,0,.05);
-  
+
   }
   .sigin-text{
     font-style: normal;
     font-weight: 600 !important;
   }
-  
+
   .form-control{
     display: block;
     width: 100%;
@@ -31,7 +31,7 @@ main{
     background-color: #fff;
     background-clip: padding-box;
   }
-  
+
   .form-control:focus{
     color: #495057;
     background-color: #fff;
@@ -39,12 +39,23 @@ main{
     outline: 0;
     box-shadow: none;
   }
-  
+
   .btn-class{
     border-color: #00ac96;
     color: #00ac96;
   }
-  
+
   .btn-class:hover{
     background-color: #00ac96;
   }
+
+  .btnAdicionar{
+    color: white;
+    background-color: #4988bf;
+    border: none;
+  }
+  .tabela{
+    background-color: #4988bf;
+    color: white
+  }
+

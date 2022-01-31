@@ -14,17 +14,19 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class FormCategoriaComponent implements OnInit {
 
-  constructor(private categoriasServiceDto: CategoriaDTOService, private categoriaService: CategoriaService, private modalService: BsModalService) {}
+  constructor(private categoriasServiceDto: CategoriaDTOService, private categoriaService: CategoriaService,
+    private modalService: BsModalService) {}
+
 
   titulo : string
   formulario: any;
-
+  tipoCategoria: string;
   visibilidadeTabela: boolean = true;
   visibilidadeFormulario: boolean = false;
   idCategoria: number;
 
   categorias: Categoria[];
-
+  modalRef: BsModalRef;
 
   ngOnInit(): void {
 
@@ -108,16 +110,23 @@ export class FormCategoriaComponent implements OnInit {
     this.visibilidadeFormulario = false;
   }
 
-  /*
-  ExibirConfimacaoExclusao(id,tipo,conteudoModal: TemplateRef<any>): void{
+
+  ExibirConfirmacaoExclusao(idCategoria,tipoCategoria,conteudoModal: TemplateRef<any>): void{
     this.modalRef = this.modalService.show(conteudoModal);
-    this.id = id;
-    this.categoria.tipo = tipo;
+    this.idCategoria = idCategoria;
+    this.tipoCategoria = tipoCategoria;
   }
 
-  ExcluirCategoria(id){
-
-  }*/
+  ExcluirCategoria(idCategoria){
+    console.log(idCategoria)
+      this.categoriasServiceDto.ExcluirCategoria(idCategoria).subscribe(resultado => {
+        this.modalRef.hide();
+        alert("Categoria excluida com sucesso");
+        this.categoriaService.PegarTodos().subscribe(registros => {
+          this.categorias = registros;
+        })
+      })
+  }
 
 
 }

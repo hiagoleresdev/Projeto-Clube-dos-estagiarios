@@ -1,6 +1,6 @@
   <div class="border border-light rounded p-5" *ngIf="visibilidadeTabela">
     <div>
-    <button type="button" class="btn btn-dark" (click)="ExibirFormularioCadastro()" style="border: none; background-color: #0477bf;color: white;">
+    <button type="button" class="btn btn-dark btnAdicionar" (click)="ExibirFormularioCadastro()">
       Novo sócio
     </button>
     </div>
@@ -9,7 +9,7 @@
     <br>
 
   <table class="table table-striped table-hover table-sm" *ngIf="socios">
-    <tr class="thead" style="background-color: #0477bf; color: white">
+    <tr class="thead tabela">
       <th>Id</th>
       <th>Nome</th>
       <th>Email</th>
@@ -38,11 +38,8 @@
       <td>{{socio.categoria.tipo}}</td>
 
       <td>
-        <button type="button" class="btn btn-success">Atualizar</button>
-
-      </td>
-      <td>
-        <button type="button" class="btn btn-danger" (click)="ExibirConfirmacaoExclusao(socio.id,socio.nome,conteudoModal)">Excluir</button>
+        <button type="button" class="btn btn-success"  (click)="ExibirFormularioAtualizacao(socio.id)">Atualizar</button>
+        <button type="button" class="btn btn-danger espacamento-btn" (click)="ExibirConfirmacaoExclusao(socio.id,socio.nome,conteudoModal)">Excluir</button>
       </td>
 
     </tr>
