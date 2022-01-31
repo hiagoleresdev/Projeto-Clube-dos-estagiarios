@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SocioService {
-  url= 'https://localhost:5001/api/socio';
+  url= 'https://localhost:7156/api/Socio';
 
   constructor(private http: HttpClient) { }
 
@@ -21,7 +21,7 @@ export class SocioService {
     return this.http.get<Socio[]>(this.url);
   }
 
-  
+
   PegarPeloId(socioid: number): Observable<Socio>{
     const apiUrl = '${this.url}/${socioid}';
     return this.http.get<Socio>(apiUrl);

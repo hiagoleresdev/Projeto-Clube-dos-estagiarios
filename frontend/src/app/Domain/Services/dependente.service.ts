@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DependenteService {
-  url= 'https://localhost:5001/api/dependente';
+  url= 'https://localhost:7156/api/Dependente';
 
 constructor(private http: HttpClient) { }
 
@@ -22,7 +22,7 @@ PegarTodos(): Observable<Dependente[]>{
 }
 
 PegarPeloId(dependenteid: number): Observable<Dependente>{
-  const apiUrl = '${this.url}/${dependenteid}';
+  const apiUrl = `${this.url}/${dependenteid}`;
   return this.http.get<Dependente>(apiUrl);
 }
 

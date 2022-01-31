@@ -3,5 +3,5 @@
 export class DependenteDTO extends PessoaDTO {
     numeroCartao: number;
     parentesco: string;
-    fk_Socio: number;
+    fkSocio: number;
 }

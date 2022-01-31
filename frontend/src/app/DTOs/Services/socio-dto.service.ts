@@ -26,8 +26,8 @@ export class SocioDTOService {
     return this.http.put<SocioDTO>(this.url, socio, httpOptions);
   }
 
-  ExcluirSocio(socioid: number) : Observable<any>{
-    const apiUrl = '${this.url}/${socioid}';
+  ExcluirSocio(socioId: number) : Observable<any>{
+    const apiUrl = `${this.url}/${socioId}`;
     return this.http.delete<number>(apiUrl, httpOptions)
   }
 

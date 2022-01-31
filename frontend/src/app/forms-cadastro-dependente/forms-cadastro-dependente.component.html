@@ -1,7 +1,41 @@
+<div class="border border-light rounded p-5" *ngIf="visibilidadeTabela">
+  <div>
+  <button type="button" class="btn btn-dark" (click)="ExibirFormularioCadastro()">
+    Novo dependente
+  </button>
+  </div>
 
+
+  <br>
+
+<table class="table table-striped table-hover table-sm" *ngIf="dependentes">
+  <tr class="thead-dark">
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Parentesco</th>
+    <th>Cartão sócio</th>
+    <th>Ações</th>
+  </tr>
+
+  <tr *ngFor="let dependente of dependentes">
+    <td>{{dependente.nome}}</td>
+    <td>{{dependente.email}}</td>
+    <td>{{dependente.parentesco}}</td>
+    <td>{{dependente.socio.numeroCartao}}</td>
+
+    <td>
+      <button type="button" class="btn btn-success" style="margin-right: 20px;">Atualizar</button>
+      <button type="button" class="btn btn-danger">Excluir</button>
+    </td>
+
+  </tr>
+
+
+</table>
+</div>
 
   <div class="row">
-    <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formulario">
+    <div class="col-6 border border-light rounded p-5 shadow" *ngIf="visibilidadeFormulario">
       <h6>Cadastro de categorias</h6>
       <hr>
 
@@ -29,7 +63,7 @@
 
         <div class="form-group">
           <label>Id Socio:</label>
-          <input type="number" class="form-control form-control-sm" formControlName="fk_Socio">
+          <input type="number" class="form-control form-control-sm" formControlName="fkSocio">
         </div>
 
         <div class="container">
@@ -38,7 +72,7 @@
               <button type="submit" class="btn btn-sm btn-success">Salvar</button>
             </div>
             <div class="pl-1">
-              <button type="submit" class="btn btn-sm btn-outline-slight">Voltar</button>
+              <button type="submit" class="btn btn-sm btn-outline-slight" (click)="Voltar()">Voltar</button>
             </div>
 
           </div>
@@ -50,4 +84,4 @@
   </div>
 
 
-  <animacao-ondas></animacao-ondas>
+

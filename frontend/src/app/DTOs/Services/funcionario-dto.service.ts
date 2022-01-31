@@ -13,7 +13,7 @@ const httpOptions = {
   })
 
 export class FuncionarioDTO{
-    url= 'https://localhost:5001/api/Funcionario';
+  url= 'https://localhost:7156/api/Funcionario';
 
     usuario: string;
     senha: string;
@@ -30,7 +30,7 @@ export class FuncionarioDTO{
   }
 
   ExcluirFuncionario(funcionarioid: number) : Observable<any>{
-    const apiUrl = '${this.url}/${funcionarioid}';
+    const apiUrl = `${this.url}/${funcionarioid}`;
     return this.http.delete<number>(apiUrl, httpOptions)
   }
 

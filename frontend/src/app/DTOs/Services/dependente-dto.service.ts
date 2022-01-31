@@ -26,7 +26,7 @@ export class DependenteDTOService {
   }
 
   ExcluirDependente(dependenteid: number) : Observable<any>{
-    const apiUrl = '${this.url}/${dependenteid}';
+    const apiUrl = `${this.url}/${dependenteid}`;
     return this.http.delete<number>(apiUrl, httpOptions)
   }
 }

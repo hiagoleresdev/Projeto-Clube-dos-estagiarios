@@ -1,17 +1,17 @@
 import { Categoria } from "./Categoria";
 import { Dependente } from "./Dependente";
-import { Mensalidades } from "./Mensalidades";
+import { Mensalidade } from "./Mensalidade";
 import { Pessoa } from "./Pessoa";
 
 export class Socio extends Pessoa{
     numeroCartao: number;
-    Telefone: string;
-    Cep: string;
-    Uf: string;
-    Cidade: string;
-    Bairro: string;
-    Logradouro: string;
-    Categoria: Categoria;
-    Mensalidades: Mensalidades[];
-    Dependentes: Dependente[];
+    telefone: string;
+    cep: string;
+    uf: string;
+    cidade: string;
+    bairro: string;
+    logradouro: string;
+    categoria: Categoria;
+    mensalidades: Mensalidade[];
+    dependentes: Dependente[];
 }

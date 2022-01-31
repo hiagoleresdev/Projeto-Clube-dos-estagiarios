@@ -29,7 +29,7 @@ export class MensalidadeDTOService {
   }
 
   ExcluirMensalidade(mensalidadeid: number) : Observable<any>{
-    const apiUrl = '${this.url}/${mensalidadeid}';
+    const apiUrl = `${this.url}/${mensalidadeid}`;
     return this.http.delete<number>(apiUrl, httpOptions)
   }
 }

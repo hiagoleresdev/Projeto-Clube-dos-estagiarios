@@ -29,7 +29,9 @@ AtualizarCategoria(categoriaDTO : CategoriaDTO) : Observable<any>{
 }
 
 ExcluirCategoria(categoriaid: number) : Observable<any>{
-  const apiUrl = '${this.url}/${categoriaid}';
+  const apiUrl = `${this.url}/${categoriaid}`;
   return this.http.delete<number>(apiUrl, httpOptions)
 }
+
+
 }

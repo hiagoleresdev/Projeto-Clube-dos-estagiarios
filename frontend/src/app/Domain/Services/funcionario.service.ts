@@ -13,18 +13,18 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class FuncionarioService{
-  url= 'https://localhost:5001/api/funcionario';
+  url= 'https://localhost:7156/api/Mensalidade';
 
 constructor(private http: HttpClient) { }
 
   PegarPeloId(funcionarioid: number): Observable<Funcionario>{
-    const apiUrl = '${this.url}/${funcionarioid}';
+    const apiUrl = `${this.url}/${funcionarioid}`;
     return this.http.get<Funcionario>(apiUrl);
   }
 
   ValidarFuncionario(usuario: string, senha: string) : Observable<any>{
-    return this.http.get<number>(this.url);
+    const apiUrl = `${this.url}/${usuario}/${senha}`;
+    return this.http.get(apiUrl, {responseType: "text", observe: 'response'});
   }
-
 
 }
